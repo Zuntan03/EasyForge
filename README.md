@@ -1,7 +1,5 @@
 ﻿# EasyForge
 
-**EasyForge は現在β版です。**  
-
 EasyForge は簡単・安全に新生 Forge を試せる環境です。  
 A1111 や Forge や EasySdxlWebUi などの既存環境から、モデルやLoRAなどを簡単に参照できます。
 
