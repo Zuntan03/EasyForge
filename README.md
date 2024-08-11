@@ -25,7 +25,7 @@ Flux を試してみたい方向けのインストール方法です。
 
 - `Update.bat` で **EasyForge を更新** できます。  
 - **UI の日本語化**は `Settings`-`User Interface`-`Localization` を `ja_JP` にして、`Apply settings` から `Reload UI` です。
-- **Forge 起動時の UI 状態** は、UI 状態を変更してから `Settings`-`Defaults` の `View changes` で変更内容を確認して、`Apply` で保存できます。
+- **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから `Settings`-`Defaults` の `View changes` で変更内容を確認して、`Apply` で保存できます。
 	- `Settings` 左上の絞り込み欄に `.j` と入力すると、簡単にアクセスできます。
 
 ## 最近の更新
