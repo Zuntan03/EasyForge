@@ -1,0 +1,10 @@
+﻿name,prompt,negative_prompt
+Hyper-SDXL-8steps,<lora:Hyper-SDXL-8steps-lora:1>,
+896x1152,",
+Size: 896x1152, Model hash: 0, Model: dummy",
+832x1216,",
+Size: 832x1216, Model hash: 0, Model: dummy",
+768x1344,",
+Size: 768x1344, Model hash: 0, Model: dummy",
+640x1536,",
+Size: 640x1536, Model hash: 0, Model: dummy",
