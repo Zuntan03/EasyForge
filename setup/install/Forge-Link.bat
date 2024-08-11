@@ -6,13 +6,13 @@ set LINK_DIR=%~dp0LinkDir.bat
 call %LINK_DIR% ..\models models
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-if not exist output (
-	echo mkdir output
-	mkdir output
+if not exist outputs (
+	echo mkdir outputs
+	mkdir outputs
 )
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-call %LINK_DIR% ..\output output
+call %LINK_DIR% ..\outputs outputs
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 if not exist extensions\sd-dynamic-prompts\wildcards (
