@@ -25,7 +25,7 @@ set PYTHON=%~dp0stable-diffusion-webui-forge\venv\Scripts\python.exe
 set VENV_DIR=%~dp0stable-diffusion-webui-forge\venv
 set GIT=
 where /Q git
-if %ERRORLEVEL% neq 1 ( set GIT=%~dp0setup\git\env\PortableGit\bin\git.exe )
+if %ERRORLEVEL% neq 0 ( set GIT=%~dp0setup\git\env\PortableGit\bin\git.exe )
 
 set COMMANDLINE_ARGS=--api --enable-insecure-extension-access --ui-settings-file %FORGE_CONFIG_PATH% %*
 
