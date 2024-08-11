@@ -12,7 +12,7 @@ EasySdxlWebUi とは異なり A1111 との共存はせず、Forge をなるべ�
 **Flux は Geforce RTX 30XX 以上で `EasyForgeInstaller.bat` と `download/Flux-Minimum.bat` を実行して、`Forge.bat` で生成できます。**  
 **[Flux 公式解説](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981) の `Sanity Check` で動作を確認できます。**
 
-1. [EasyForgeInstaller.bat](https://github.com/Zuntan03/EasyForge/raw/main/setup/install/EasyForgeInstaller.bat?ver=0) を右クリックから保存して、インストール先のフォルダで実行します。
+1. [EasyForgeInstaller.bat](https://github.com/Zuntan03/EasyForge/raw/main/setup/install/EasyForgeInstaller.bat?ver=1) を右クリックから保存して、インストール先のフォルダで実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 1. インストールが終わったら、モデルや LoRA などを準備します。  
 	新しくダウンロードするか、既存の生成環境のフォルダを参照します。

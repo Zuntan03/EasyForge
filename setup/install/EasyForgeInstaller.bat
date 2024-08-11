@@ -14,7 +14,7 @@ if not exist "C:\Windows\System32\where.exe" (
 	pause & popd & exit /b 1
 )
 
-%PS_CMD% -c "if ('$env:CD' -match '^[a-zA-Z0-9:_\\/-]+$') {exit 0}; exit 1"
+%PS_CMD% -c "if ('%CD%' -match '^[a-zA-Z0-9:_\\/-]+$') {exit 0}; exit 1"
 if %ERRORLEVEL% neq 0 (
 	echo "[ERROR] 現在のフォルダパスに英数字・ハイフン・アンダーバー以外が含まれています。%CD%"
 	echo "英数字・ハイフン・アンダーバーのフォルダパスに bat ファイルを移動して、再実行してください。"
