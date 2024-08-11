@@ -7,8 +7,9 @@ EasySdxlWebUi とは異なり A1111 との共存はせず、Forge をなるべ�
 
 ## インストール
 
-**Flux は Geforce RTX 30XX 以上で `EasyForgeInstaller.bat` と `download/Flux-Minimum.bat` を実行して、`Forge.bat` で生成できます。**  
-**[Flux 公式解説](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981) の `Sanity Check` で動作を確認できます。**
+**Flux は `EasyForgeInstaller.bat` と `download/Flux-Minimum.bat` を実行して、`Forge.bat` を実行します。**  
+**左上の `UI` で `flux` を選び、`Checkpoint` で `Flux\flux1-dev-bnb-nf4.safetensors` を選んで生成します。**  
+**[Flux 公式解説](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981) も確認ください。**
 
 1. [EasyForgeInstaller.bat](https://github.com/Zuntan03/EasyForge/raw/main/setup/install/EasyForgeInstaller.bat?ver=1) を右クリックから保存して、インストール先のフォルダで実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
