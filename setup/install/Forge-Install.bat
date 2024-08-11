@@ -19,4 +19,8 @@ echo python -m pip install -qq --upgrade pip
 python -m pip install -qq --upgrade pip
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+echo pip install -qq torch==2.1.2+cu121 torchvision==0.16.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+pip install -qq torch==2.1.2+cu121 torchvision==0.16.2+cu121 --index-url https://download.pytorch.org/whl/cu121
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 popd rem %~dp0..\..\stable-diffusion-webui-forge
