@@ -1,5 +1,6 @@
 ﻿# EasyForge
 
+**工事中**
 **EasyForge は現在β版です。**  
 
 EasyForge は簡単・安全に新生 Forge を試せる環境です。  
