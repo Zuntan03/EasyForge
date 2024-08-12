@@ -17,6 +17,8 @@ Flux を試してみたい方向けのインストール方法です。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
 1. 画面上部の `Checkpoint` で `Flux\flux1-dev-bnb-nf4.safetensors` を選択します。
+	- `Flux\flux1-schnell-bnb-nf4.safetensors` で `Sampling steps` を `4` にして、高速生成もできます。
+
 1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。  
 	見慣れない設定が気になる方は [公式解説](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981) もどうぞ。
 1. `InfiniteImageBrowsing.bat` で生成画像を確認できます（`Polling refresh` で自動更新）。
@@ -34,6 +36,9 @@ Flux を試してみたい方向けのインストール方法です。
 
 - README に『Flux お試しインストール』を追記しました。
 - ドキュメントに『[EasyForge のインストール](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)』を追加しました。
+- `download/Stable-diffusion/Flux/flux1-schnell-bnb-nf4.bat` を追加しました。
+	- **`download/Flux-Minimum.bat` の再実行で `flux1-schnell-bnb-nf4` もダウンロードします。**
+- torch のバージョンを `torch==2.3.1+cu121 torchvision==0.18.1+cu121` に引き上げました。
 
 ### 2024/08/11
 
