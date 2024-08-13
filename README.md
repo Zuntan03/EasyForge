@@ -1,6 +1,6 @@
 ﻿# EasyForge
 
-EasyForge は簡単・安全に新生 Forge と Flux を試せる環境です。  
+EasyForge は簡単・安全に [新生 Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge) と [Flux](https://blackforestlabs.ai/) を試せる環境です。  
 [EasySdxlWebUi](https://github.com/Zuntan03/EasySdxlWebUi) や A1111 などの既存の画像生成環境のモデルや LoRA を、簡単に共有できます。
 
 EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。  
@@ -16,21 +16,26 @@ Flux を試してみたい方向けのインストール方法です。
 1. インストールが終わったら、`download/Flux-Minimum.bat` で Flux のモデルをダウンロードします。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
-1. 画面上部の `Checkpoint` で `Flux\flux1-dev-bnb-nf4.safetensors` を選択します。
-	- **`Flux\flux1-schnell-bnb-nf4.safetensors` で `Sampling steps` を `4` にして、高速生成もできます。**
-
-1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。  
-	見慣れない設定が気になる方は [公式解説](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981) もどうぞ。
-1. `InfiniteImageBrowsing.bat` で生成画像を確認できます（`Polling refresh` で自動更新）。
+1. 画面上部の `Checkpoint` で `Flux\flux1-schnell-bnb-nf4.safetensors` を選択します。
+1. プロンプト入力欄下の `Generation`-`Sampling steps` を `4` にします。
+	- Forge の起動時に自動で `Sampling steps` を `4` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
+1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
+1. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
+	- `Polling refresh` で自動更新もできます。
 
 ### はじめの Tips
 
 - `Update.bat` で **EasyForge を更新** できます。  
 - **UI の日本語化**は `Settings`-`User Interface`-`Localization` を `ja_JP` にして、`Apply settings` から `Reload UI` です。
-- **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから `Settings`-`Defaults` の `View changes` で変更内容を確認して、`Apply` で保存できます。
+- **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して、`Apply` で保存できます。
 	- `Settings` 左上の絞り込み欄に `.j` と入力すると、簡単にアクセスできます。
 
 ## 最近の更新
+
+### 2024/08/14
+
+- `download/Flux-Minimum.bat` で `flux1-schnell-bnb-nf4` のみをダウンロードするようにしました。
+	- `flux1-dev-bnb-nf4` も必要な場合は、`download/Flux-Recommended.bat` を実行してください。
 
 ### 2024/08/13
 
