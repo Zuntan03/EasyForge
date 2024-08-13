@@ -7,34 +7,34 @@ if not exist "%SD_WEB_UI%\embeddings" (
 	pause & exit /b 1
 )
 
-call %~dp0link\Link-embeddings.bat "%SD_WEB_UI%\embeddings"
+call %~dp0ref\Ref-embeddings.bat "%SD_WEB_UI%\embeddings"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if exist "%SD_WEB_UI%\models\adetailer" (
 	setlocal enabledelayedexpansion
-	call %~dp0link\Link-adetailer.bat "%SD_WEB_UI%\models\adetailer"
+	call %~dp0ref\Ref-adetailer.bat "%SD_WEB_UI%\models\adetailer"
 	if !ERRORLEVEL! neq 0 ( endlocal & exit /b 1 )
 	endlocal
 )
 
-call %~dp0link\Link-ControlNet.bat "%SD_WEB_UI%\models\ControlNet"
+call %~dp0ref\Ref-ControlNet.bat "%SD_WEB_UI%\models\ControlNet"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-call %~dp0link\Link-ESRGAN.bat "%SD_WEB_UI%\models\ESRGAN"
+call %~dp0ref\Ref-ESRGAN.bat "%SD_WEB_UI%\models\ESRGAN"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-call %~dp0link\Link-Lora.bat "%SD_WEB_UI%\models\Lora"
+call %~dp0ref\Ref-Lora.bat "%SD_WEB_UI%\models\Lora"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-call %~dp0link\Link-Stable-diffusion.bat "%SD_WEB_UI%\models\Stable-diffusion"
+call %~dp0ref\Ref-Stable-diffusion.bat "%SD_WEB_UI%\models\Stable-diffusion"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-call %~dp0link\Link-VAE.bat "%SD_WEB_UI%\models\VAE"
+call %~dp0ref\Ref-VAE.bat "%SD_WEB_UI%\models\VAE"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if exist "%SD_WEB_UI%\extensions\sd-dynamic-prompts\wildcards" (
 	setlocal enabledelayedexpansion
-	call %~dp0link\Link-wildcards.bat "%SD_WEB_UI%\extensions\sd-dynamic-prompts\wildcards"
+	call %~dp0ref\Ref-wildcards.bat "%SD_WEB_UI%\extensions\sd-dynamic-prompts\wildcards"
 	if !ERRORLEVEL! neq 0 ( endlocal & exit /b 1 )
 	endlocal
 )

@@ -27,6 +27,7 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM call %GITHUB% BlafKing sd-civitai-browser-plus main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM Flux not supported
 @REM @REM https://github.com/Haoming02/sd-forge-couple
 @REM call %GITHUB% Haoming02 sd-forge-couple main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )

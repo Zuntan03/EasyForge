@@ -56,14 +56,6 @@ class ForgeConfig:
         #     cfg["disabled_extensions"] = ["sd-civitai-browser-plus"]
         cfg["dp_wildcard_manager_no_sort"] = True
 
-        # cfg["quick_setting_list"] = ["tac_tagFile"]
-        # cfg["extra_networks_tree_view_default_enabled"] = True
-        # cfg["extra_networks_tree_view_style"] = "Tree"
-        # cfg["lora_show_all"] = True
-        # cfg["interrupt_after_current"] = False
-        # cfg["ch_dl_lyco_to_lora"] = True
-        # cfg["ch_nsfw_threshold"] = "XXX"
-
     def update_0_1_0(self, cfg):
         cfg["easy_forge_config_version"] = "0.1.1"
         cfg["ch_nsfw_threshold"] = "XXX"
@@ -71,6 +63,13 @@ class ForgeConfig:
         if "disabled_extensions" in cfg:
             if "sd-civitai-browser-plus" in cfg["disabled_extensions"]:
                 cfg["disabled_extensions"].remove("sd-civitai-browser-plus")
+
+        # cfg["quick_setting_list"] = ["tac_tagFile"]
+        # cfg["extra_networks_tree_view_default_enabled"] = True
+        # cfg["extra_networks_tree_view_style"] = "Tree"
+        # cfg["lora_show_all"] = True
+        # cfg["interrupt_after_current"] = False
+        # cfg["ch_dl_lyco_to_lora"] = True
 
 
 if __name__ == "__main__":
