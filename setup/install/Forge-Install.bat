@@ -25,3 +25,16 @@ pip install -qq torch==2.3.1+cu121 torchvision==0.18.1+cu121 --index-url https:/
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 popd rem %~dp0..\..\stable-diffusion-webui-forge
+
+@REM Delete old files
+pushd %~dp0..\..\stable-diffusion-webui-forge\extensions
+
+if exist sd-civitai-browser-plus\ (
+	setlocal enabledelayedexpansion
+		echo rmdir /S /Q sd-civitai-browser-plus\
+		rmdir /S /Q sd-civitai-browser-plus\
+		if !ERRORLEVEL! neq 0 ( pause & endlocal & popd & exit /b 1 )
+	endlocal
+)
+
+popd rem %~dp0..\..\stable-diffusion-webui-forge\extensions

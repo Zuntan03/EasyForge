@@ -5,12 +5,24 @@ import sys
 
 class ForgeConfig:
     def __init__(self, cfg_path):
-        self.updaters = {"0.0.0": self.update_0_0_0}
-        self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
+        self.updaters = {"0.0.0": self.update_0_0_0, "0.1.0": self.update_0_1_0}
+        # self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
 
         if not os.path.exists(cfg_path):
             with open(cfg_path, "w", encoding="utf-8") as f:
-                json.dump({}, f)
+                json.dump(
+                    {  # for InfiniteImageBrowsing
+                        "outdir_samples": "",
+                        "outdir_txt2img_samples": "outputs\\txt2img-images",
+                        "outdir_img2img_samples": "outputs\\img2img-images",
+                        "outdir_extras_samples": "outputs\\extras-images",
+                        "outdir_grids": "",
+                        "outdir_txt2img_grids": "outputs\\txt2img-grids",
+                        "outdir_img2img_grids": "outputs\\img2img-grids",
+                        "outdir_save": "log\\images",
+                    },
+                    f,
+                )
 
         with open(cfg_path, "r+", encoding="utf-8") as f:
             cfg = json.load(f)
@@ -38,10 +50,10 @@ class ForgeConfig:
         cfg["lora_preferred_name"] = "Filename"
         cfg["ui_extra_networks_tab_reorder"] = "Checkpoints,LoRA,Textual Inversion"
         cfg["emphasis"] = "No norm"
-        if self.enable_civitai_browser_plus:
-            cfg["disabled_extensions"] = []
-        else:
-            cfg["disabled_extensions"] = ["sd-civitai-browser-plus"]
+        # if self.enable_civitai_browser_plus:
+        #     cfg["disabled_extensions"] = []
+        # else:
+        #     cfg["disabled_extensions"] = ["sd-civitai-browser-plus"]
         cfg["dp_wildcard_manager_no_sort"] = True
 
         # cfg["quick_setting_list"] = ["tac_tagFile"]
@@ -51,6 +63,14 @@ class ForgeConfig:
         # cfg["interrupt_after_current"] = False
         # cfg["ch_dl_lyco_to_lora"] = True
         # cfg["ch_nsfw_threshold"] = "XXX"
+
+    def update_0_1_0(self, cfg):
+        cfg["easy_forge_config_version"] = "0.1.1"
+        cfg["ch_nsfw_threshold"] = "XXX"
+
+        if "disabled_extensions" in cfg:
+            if "sd-civitai-browser-plus" in cfg["disabled_extensions"]:
+                cfg["disabled_extensions"].remove("sd-civitai-browser-plus")
 
 
 if __name__ == "__main__":

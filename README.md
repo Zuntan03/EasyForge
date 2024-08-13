@@ -32,6 +32,12 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の更新
 
+### 2024/08/13
+
+- [zixaphir 版 Civitai Helper](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper) を [新生 Forge 用のパッチ](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/pull/124) で利用できるようにしました。
+	- [Civitai Helper を利用するには API キーの登録が必要です](https://github.com/Zuntan03/EasySdxlWebUi/wiki/%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84-LoRA-%E3%81%AE%E8%BF%BD%E5%8A%A0#civitai-%E3%81%8B%E3%82%89%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84-lora-%E3%82%92%E8%BF%BD%E5%8A%A0) 。
+- 新生 Forge への対応が不十分な Civitai Browser Plus を一旦削除しました。
+
 ### 2024/08/12
 
 - README に『Flux お試しインストール』を追記しました。

@@ -23,9 +23,9 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call %GITHUB% hinablue sd-forge-adetailer main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM https://github.com/BlafKing/sd-civitai-browser-plus
-call %GITHUB% BlafKing sd-civitai-browser-plus main
-if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+@REM @REM https://github.com/BlafKing/sd-civitai-browser-plus
+@REM call %GITHUB% BlafKing sd-civitai-browser-plus main
+@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM @REM https://github.com/Haoming02/sd-forge-couple
 @REM call %GITHUB% Haoming02 sd-forge-couple main
@@ -64,9 +64,19 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM call %GITHUB% butaixianran Stable-Diffusion-Webui-Civitai-Helper master
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM @REM https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper
-@REM call %GITHUB% zixaphir Stable-Diffusion-Webui-Civitai-Helper master
-@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+@REM https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper
+call %GITHUB% zixaphir Stable-Diffusion-Webui-Civitai-Helper master
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+
+@REM echo git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
+@REM git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+@REM https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/pull/124
+echo git -C Stable-Diffusion-Webui-Civitai-Helper switch -C Gradio4 a607cd94ab65ea0433a43cbbfb91be76d0cae8f0
+git -C Stable-Diffusion-Webui-Civitai-Helper switch -C Gradio4 a607cd94ab65ea0433a43cbbfb91be76d0cae8f0
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/L4Ph/stable-diffusion-webui-localization-ja_JP
 call %GITHUB% L4Ph stable-diffusion-webui-localization-ja_JP main
