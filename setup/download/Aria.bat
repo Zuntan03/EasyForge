@@ -8,13 +8,13 @@ set DOWNLOAD_FILE=%~2
 set DOWNLOAD_URL=%~3
 
 if exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" (
-	if exist %~dp0ARIA_USE_CURL ( exit /b 0 )
+	if exist "%~dp0ARIA_USE_CURL" ( exit /b 0 )
 	if not exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%.aria2" ( exit /b 0 )
 )
 
 if not exist %DOWNLOAD_DIR%\ ( mkdir %DOWNLOAD_DIR% )
 
-if exist %~dp0ARIA_USE_CURL (
+if exist "%~dp0ARIA_USE_CURL" (
 	setlocal enabledelayedexpansion
 	echo %CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 	%CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
@@ -22,8 +22,8 @@ if exist %~dp0ARIA_USE_CURL (
 	endlocal & exit /b 0
 )
 
-if not exist Aria-MaxConnection.txt ( echo 4 > Aria-MaxConnection.txt )
-set /p ARIA_MAX_CONNECTION=<Aria-MaxConnection.txt
+if not exist "%~dp0Aria-MaxConnection.txt" ( echo 4 > "%~dp0Aria-MaxConnection.txt" )
+set /p ARIA_MAX_CONNECTION=<"%~dp0Aria-MaxConnection.txt"
 
 set ARIA_VER=1.37.0
 set ARIA_NAME=aria2-%ARIA_VER%-win-64bit-build1
