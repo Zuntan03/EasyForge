@@ -6,11 +6,15 @@ set PS_CMD=PowerShell -Version 5.1 -NoProfile -ExecutionPolicy Bypass
 set CURL_CMD=C:\Windows\System32\curl.exe
 if not exist %CURL_CMD% (
 	echo "[ERROR] %CURL_CMD% が見つかりません。"
+	echo.
+	echo "[ERROR] %CURL_CMD% not found."
 	pause & popd & exit /b 1
 )
 
 if not exist "C:\Windows\System32\where.exe" (
 	echo "[ERROR] C:\Windows\System32\where.exe が見つかりません。"
+	echo .
+	echo "[ERROR] C:\Windows\System32\where.exe not found."
 	pause & popd & exit /b 1
 )
 
@@ -18,13 +22,19 @@ if not exist "C:\Windows\System32\where.exe" (
 if %ERRORLEVEL% neq 0 (
 	echo "[ERROR] 現在のフォルダパスに英数字・ハイフン・アンダーバー以外が含まれています。%CD%"
 	echo "英数字・ハイフン・アンダーバーのフォルダパスに bat ファイルを移動して、再実行してください。"
+	echo.
+	echo "[ERROR] Current folder path contains non-alphanumeric characters, hyphens, and underscores. %CD%"
+	echo "Move the bat file to the alphanumeric/hyphen/underbar folder path and re-run."
 	pause & popd & exit /b 1
 )
 
 if exist stable-diffusion-webui-forge\venv\ (
 	setlocal enabledelayedexpansion
-	echo "更新後の動作に問題があれば、venv を削除しつつ再更新してください。"
-	echo "stable-diffusion-webui-forge\venv\ を削除しますか？ [y/n]"
+	echo "更新後の動作に問題があれば、再更新で venv を削除してください。"
+	echo "stable-diffusion-webui-forge/venv/ を削除しますか？ [y/n]"
+	echo.
+	echo "If you have problems with the updated behavior, please delete venv by updating again."
+	echo "Delete stable-diffusion-webui-forge/venv/ ? [y/n]"
 	set /p YES_OR_NO=
 	if /i "!YES_OR_NO!" == "y" (
 		echo rmdir /S /Q stable-diffusion-webui-forge\venv\

@@ -9,7 +9,6 @@ if not exist %~dp0stable-diffusion-webui-forge\venv\ ( pause & exit /b 1 )
 
 pushd %~dp0stable-diffusion-webui-forge
 
-@REM if "%FORGE_CONFIG_PATH%"=="" ( set FORGE_CONFIG_PATH=config.json )
 call %~dp0setup\install\Forge-UpdateConfig.bat config.json
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
@@ -27,7 +26,7 @@ set GIT=
 where /Q git
 if %ERRORLEVEL% neq 0 ( set GIT=%~dp0setup\git\env\PortableGit\bin\git.exe )
 
-set COMMANDLINE_ARGS=--api --enable-insecure-extension-access
+set COMMANDLINE_ARGS=--api --enable-insecure-extension-access %*
 
 echo PYTHON: %PYTHON%
 echo VENV_DIR: %VENV_DIR%
