@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 > NUL
-set DL_HF=%~dp0..\..\..\setup\download\HuggingFace-File.bat
+set DL_HF=%~dp0..\..\..\setup\download\HuggingFace.bat
 pushd %~dp0..\..\..\stable-diffusion-webui-forge\models\ControlNet
 
 @REM https://huggingface.co/TTPlanet/TTPLanet_SDXL_Controlnet_Tile_Realistic

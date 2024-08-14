@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 > NUL
-set DL_HF=%~dp0..\..\..\setup\download\HuggingFace-File.bat
+set DL_HF=%~dp0..\..\..\setup\download\HuggingFace.bat
 set CURL_CMD=C:\Windows\System32\curl.exe -kL
 pushd %~dp0..\..\..\stable-diffusion-webui-forge\models\Stable-diffusion
 
