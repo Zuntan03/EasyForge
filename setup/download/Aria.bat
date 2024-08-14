@@ -3,16 +3,15 @@ chcp 65001 > NUL
 set CURL_CMD=C:\Windows\System32\curl.exe -kL
 set PS_CMD=PowerShell -Version 5.1 -NoProfile -ExecutionPolicy Bypass
 
-set DOWNLOAD_DIR=%1
-set DOWNLOAD_FILE=%2
-set DOWNLOAD_URL=%3
+set DOWNLOAD_DIR=%~1
+set DOWNLOAD_FILE=%~2
+set DOWNLOAD_URL=%~3
 
 if exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" (
 	if not exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%.aria2" ( exit /b 0 )
 )
 
 if not exist %DOWNLOAD_DIR%\ ( mkdir %DOWNLOAD_DIR% )
-echo %~dp0ARIA_USE_CURL
 
 if exist %~dp0ARIA_USE_CURL (
 	setlocal enabledelayedexpansion
