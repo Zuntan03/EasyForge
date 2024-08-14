@@ -8,6 +8,7 @@ set DOWNLOAD_FILE=%~2
 set DOWNLOAD_URL=%~3
 
 if exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" (
+	if exist %~dp0ARIA_USE_CURL ( exit /b 0 )
 	if not exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%.aria2" ( exit /b 0 )
 )
 
