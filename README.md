@@ -36,6 +36,8 @@ Flux を試してみたい方向けのインストール方法です。
 
 - `download/Flux-Minimum.bat` で `flux1-schnell-bnb-nf4` のみをダウンロードするようにしました。
 	- `flux1-dev-bnb-nf4` も必要な場合は、`download/Flux-Recommended.bat` を実行してください。
+- `flux1-dev-bnb-nf4` を `flux1-dev-bnb-nf4-v2` に更新しました。
+	- `download/Stable-diffusion/Flux/flux1-dev-bnb-nf4-v2.bat` または `download/Flux-Recommended.bat` でダウンロードできます。
 
 ### 2024/08/13
 
