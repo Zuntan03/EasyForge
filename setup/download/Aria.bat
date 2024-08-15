@@ -22,7 +22,7 @@ if exist "%~dp0ARIA_USE_CURL" (
 	endlocal & exit /b 0
 )
 
-if not exist "%~dp0Aria-MaxConnection.txt" ( echo 4 > "%~dp0Aria-MaxConnection.txt" )
+if not exist "%~dp0Aria-MaxConnection.txt" ( echo 4 >"%~dp0Aria-MaxConnection.txt")
 set /p ARIA_MAX_CONNECTION=<"%~dp0Aria-MaxConnection.txt"
 
 set ARIA_VER=1.37.0

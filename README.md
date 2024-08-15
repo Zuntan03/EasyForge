@@ -31,7 +31,13 @@ Flux を試してみたい方向けのインストール方法です。
 - **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して、`Apply` で保存できます。
 	- `Settings` 左上の絞り込み欄に `.j` と入力すると、簡単にアクセスできます。
 
-## 最近の更新
+## 最近の主な更新
+
+### 2024/08/15
+
+- Flux を NSFW に対応させた`FluxUnchained` を `download/Flux-Recommended.bat` でダウンロードできるようにしました。
+	- **ダウンロードの前に Forge で Civitai Helper の [Civitai API キー登録](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key) が必要です。**
+	- `Civitai Helper` の `Scan Models for Civitai` で、モデルにアイコン画像を設定できます。
 
 ### 2024/08/14
 
