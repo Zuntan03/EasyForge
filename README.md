@@ -1,7 +1,7 @@
 ﻿# EasyForge
 
 EasyForge は簡単・安全に [新生 Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge) と [Flux](https://blackforestlabs.ai/) を試せる環境です。  
-[EasySdxlWebUi](https://github.com/Zuntan03/EasySdxlWebUi) や A1111 などの既存の画像生成環境のモデルや LoRA を、簡単に共有できます。
+[EasySdxlWebUi](https://github.com/Zuntan03/EasySdxlWebUi) や A1111 などの既存の画像生成環境のモデルや LoRA を、簡単に参照できます。
 
 EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。  
 これにより Forge をそのままシンプルに利用できます。
@@ -9,7 +9,7 @@ EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。
 ## Flux お試しインストール
 
 Flux を試してみたい方向けのインストール方法です。  
-「日本語化」「問題解決」「既存のモデルや LoRA の共有」などは『[EasyForge のインストール](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) 』。
+「トラブルシューティング」「日本語化」「既存の画像生成環境のモデルや LoRA の参照」などは『[EasyForge のインストール](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) 』。
 
 1. [EasyForgeInstaller.bat](https://github.com/Zuntan03/EasyForge/raw/main/setup/install/EasyForgeInstaller.bat?ver=1) を右クリックから保存して、インストール先のフォルダで実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
@@ -21,22 +21,27 @@ Flux を試してみたい方向けのインストール方法です。
 	- Forge の起動時に自動で `Sampling steps` を `4` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
 1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
 1. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
-	- `Polling refresh` で自動更新もできます。
 
-### はじめの Tips
+### Tips
 
+- **Civitai からのダウンロードや Civitai Helper の利用には、Civitai の API キー登録が必要になります。**
+	- **`Settings`-`Civitai Helper` の `API key for authenticating with Civitai.` に Civitai の API キーを貼り付けて `Apply settings` します。**
+	- API キーの取得方法は [こちら](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key)、API キーを取得できるアカウントページは[こちら](https://civitai.com/user/account)（下から 2番目の `API Keys`）。
 - `Update.bat` で **EasyForge を更新** できます。  
 	- アップデート中にエラーが起きたら、もう一度 `Update.bat` を実行してみてください。
 - **UI の日本語化**は `Settings`-`User Interface`-`Localization` を `ja_JP` にして、`Apply settings` から `Reload UI` です。
 - **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して、`Apply` で保存できます。
-	- `Settings` 左上の絞り込み欄に `.j` と入力すると、簡単にアクセスできます。
+	- `Settings` 左上の絞り込み欄に `'v` と入力すると、簡単にアクセスできます。
 
 ## 最近の主な更新
 
 ### 2024/08/15
 
+- 『[EasyForge のインストールと更新](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0)』を書き直しました。
 - Flux を NSFW に対応させた`FluxUnchained` を `download/Flux-Recommended.bat` でダウンロードできるようにしました。
-	- **ダウンロードの前に Forge で Civitai Helper の [Civitai API キー登録](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key) が必要です。**
+	- **Civitai からのダウンロードや Civitai Helper の利用には、Civitai の API キーの登録が必要になります。**
+		- **`Settings`-`Civitai Helper` の `API key for authenticating with Civitai.` に Civitai の API キーを貼り付けて `Apply settings` します。**
+		- API キーの取得方法は [こちら](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key)、API キーを取得できるアカウントページは[こちら](https://civitai.com/user/account)（下から 2番目の `API Keys`）。
 	- `Civitai Helper` の `Scan Models for Civitai` で、モデルにアイコン画像を設定できます。
 
 ### 2024/08/14
@@ -69,7 +74,8 @@ Flux を試してみたい方向けのインストール方法です。
 ## ドキュメント
 
 ### はじめに
-- [EasyForge のインストール](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+
+- [EasyForge のインストールと更新](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0)
 
 ## ライセンス
 
