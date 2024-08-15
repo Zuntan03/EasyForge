@@ -39,11 +39,14 @@ Flux を試してみたい方向けのインストール方法です。
 
 ### 2024/08/15
 
+- GGUF フォーマットの Flux Dev を試すための `download/Flux-Gguf.bat` を追加しました。
+	- VAE に `ae`, `clip_l`, `t5xxl_fp8_e4m3fn` の 3種を指定して、Checkpoint に `Flux\flux1-dev-Q(4|5|8)_0.gguf` を指定してください。
+	- `t5xxl_fp8_e4m3fn` を `t5xxl_fp16` にすることもできます。
 - ドキュメントの『[EasyForge のインストールと更新](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0)』を書き直しました。
 - Flux を NSFW に対応させた`FluxUnchained` を `download/Flux-Recommended.bat` でダウンロードできるようにしました。
 	- **Civitai からのダウンロードや Civitai Helper の利用には、Civitai の API キーの登録が必要になります。**
 		- **`Settings`-`Civitai Helper` の `API key for authenticating with Civitai.` に Civitai の API キーを貼り付けて `Apply settings` します。**
-		- API キーの取得方法は [こちら](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key)、API キーを取得できるアカウントページは[こちら](https://civitai.com/user/account)（下から 2番目の `API Keys`）。
+		- API キーの取得方法は [こちら](https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/wiki/Civitai-API-Key)、API キーを取得できるアカウントページは[こちら](https://civitai.com/user/account)（下から 2番目の `API Keys`）。  
 	- `Civitai Helper` の `Scan Models for Civitai` で、モデルにアイコン画像を設定できます。
 
 ### 2024/08/14
