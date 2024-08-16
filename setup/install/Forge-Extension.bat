@@ -70,13 +70,12 @@ call %GITHUB% zixaphir Stable-Diffusion-Webui-Civitai-Helper master
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/zixaphir/Stable-Diffusion-Webui-Civitai-Helper/pull/124
-echo git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
-git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-
-echo git -C Stable-Diffusion-Webui-Civitai-Helper switch Gradio4
-git -C Stable-Diffusion-Webui-Civitai-Helper switch Gradio4
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+@REM echo git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
+@REM git -C Stable-Diffusion-Webui-Civitai-Helper fetch origin pull/124/head:Gradio4
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+@REM echo git -C Stable-Diffusion-Webui-Civitai-Helper switch Gradio4
+@REM git -C Stable-Diffusion-Webui-Civitai-Helper switch Gradio4
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/L4Ph/stable-diffusion-webui-localization-ja_JP
 call %GITHUB% L4Ph stable-diffusion-webui-localization-ja_JP main

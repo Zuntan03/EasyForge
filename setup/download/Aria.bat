@@ -38,8 +38,8 @@ if not exist %ARIA_EXE% (
 	%CURL_CMD% -o %~dp0env\aria2.zip https://github.com/aria2/aria2/releases/download/release-%ARIA_VER%/%ARIA_NAME%.zip
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
 
-	echo 	%PS_CMD% "try { Expand-Archive -Path %~dp0env\aria2.zip  -DestinationPath %~dp0env\ -Force } catch { exit 1 }"
-	%PS_CMD% "try { Expand-Archive -Path %~dp0env\aria2.zip  -DestinationPath %~dp0env\ -Force } catch { exit 1 }"
+	echo %PS_CMD% "try { Expand-Archive -Path %~dp0env\aria2.zip -DestinationPath %~dp0env\ -Force } catch { exit 1 }"
+	%PS_CMD% "try { Expand-Archive -Path %~dp0env\aria2.zip -DestinationPath %~dp0env\ -Force } catch { exit 1 }"
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1)
 
 	echo del /Q %~dp0env\aria2.zip
