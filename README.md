@@ -6,6 +6,12 @@ EasyForge は簡単・安全に [新生 Forge](https://github.com/lllyasviel/sta
 EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。  
 これにより Forge をそのままシンプルに利用できます。
 
+## 新生 Forge の踏みがちな不具合
+
+- [X/Y/Z plot でモデルが切り替わらない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+X%2FY%2FZ+Plot)。
+- LoRA の利用時に `torch.cuda.OutOfMemoryError: Allocation on device` が発生する場合は、生成が遅くなりますが `Never OOM Integrated` の `Enabled for UNet (always maximize offload)` を有効にしてください。
+- [`Generate Forever` を `Cancel Forever` できない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+Generate+forever)。
+
 ## Flux お試しインストール
 
 Flux を試してみたい方向けのインストール方法です。  
