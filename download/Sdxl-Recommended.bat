@@ -3,6 +3,6 @@ chcp 65001 > NUL
 
 call %~dp0Sdxl-Minimum.bat
 
-for /r "adetailer" %%i in (*.bat) do ( call "%%i" )
+call %~dp0adetailer.bat
 
-for /r "wildcards" %%i in (*.bat) do ( call "%%i" )
+call %~dp0wildcards.bat
