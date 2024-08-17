@@ -45,6 +45,11 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+### 2024/08/18
+
+- `download/*-Recommended.bat` で Civitai からワイルドカードを複数ダウンロードします。
+	- **[Civitai からのダウンロードには、Civitai の API キーの登録が必要になります。](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0#%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84-lora-%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)**
+
 ### 2024/08/17
 
 - `download/*-Recommended.bat` で Civitai から ADetailer の検出モデルを 10種ダウンロードします。

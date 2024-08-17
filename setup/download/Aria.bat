@@ -19,6 +19,7 @@ if exist "%~dp0ARIA_USE_CURL" (
 	echo %CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 	%CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
+	timeout /t 1 /nobreak >nul
 	endlocal & exit /b 0
 )
 
@@ -51,3 +52,4 @@ if not exist %ARIA_EXE% (
 echo %ARIA_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 %ARIA_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+timeout /t 1 /nobreak >nul

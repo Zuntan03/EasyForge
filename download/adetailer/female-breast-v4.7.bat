@@ -14,10 +14,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path female-breast-v4.7.zip -DestinationPath . -Force } catch { exit 1 }"
 %PS_CMD% "try { Expand-Archive -Path female-breast-v4.7.zip -DestinationPath . -Force } catch { exit 1 }"
-if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 echo del /Q female-breast-v4.7.zip
 del /Q female-breast-v4.7.zip
-if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 popd rem %~dp0..\..\stable-diffusion-webui-forge\models\adetailer
