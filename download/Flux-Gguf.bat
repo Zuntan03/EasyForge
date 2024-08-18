@@ -7,6 +7,7 @@ call %~dp0Stable-diffusion\Flux\flux1-dev-Q8_0.bat
 call %~dp0Stable-diffusion\Flux\flux1-schnell-Q4_0.bat
 call %~dp0Stable-diffusion\Flux\flux1-schnell-Q5_0.bat
 call %~dp0Stable-diffusion\Flux\flux1-schnell-Q8_0.bat
+call %~dp0Stable-diffusion\Flux\FusionDS_v0_Q8.bat
 
 call %~dp0VAE\Flux\ae.bat
 call %~dp0VAE\Flux\clip_l.bat

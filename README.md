@@ -6,12 +6,14 @@ EasyForge は簡単・安全に [新生 Forge](https://github.com/lllyasviel/sta
 EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。  
 これにより Forge をそのままシンプルに利用できます。
 
-## よくある不具合の問い合わせ
+## よくあるご質問
 
+- [Civitai](https://civitai.com/) からのファイルダウンロードに失敗する。
+	- **[Civitai からのダウンロードには、Civitai の API キーの登録が必要になります。](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0#%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84-lora-%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)**
+- **モデルを変えると `AssertionError: You do not have CLIP state dict!` が出る。**
+	- **`VAE` に `t5xxl` のどちらかと `ae` と `clip_l` の 3種を設定します。**
 - [X/Y/Z plot でモデルが切り替わらない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+X%2FY%2FZ+Plot)。
-- LoRA の利用時に `torch.cuda.OutOfMemoryError: Allocation on device` が発生する場合は、生成が遅くなりますが `Never OOM Integrated` の `Enabled for UNet (always maximize offload)` を有効にしてください。
-	- OoM の発生しやすさは LoRA によって異なります。
-	- **新生 Forge の LoRA やメモリ管理が頻繁に改良されていますので、更新で直る可能性があります。**
+	- Hires-fix のモデル変更も同様らしい？
 - [`Generate Forever` を `Cancel Forever` できない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+Generate+forever)。
 
 ## Flux お試しインストール
@@ -48,6 +50,12 @@ Flux を試してみたい方向けのインストール方法です。
 	- `Settings` 左上の絞り込み欄に `'v` と入力すると、簡単にアクセスできます。
 
 ## 最近の主な更新
+
+### 2024/08/19
+
+- Flux の Dev と Schnell をマージして表現力を高めつつ 8step で生成できる『[Flux Fusion DS](https://civitai.com/models/630820)』のダウンロードに対応しました。
+	- FP16 並みに高品質の GGUF Q8_0 (3060: 29sec)と、高速な NF4(3060: 23sec) を `download\Flux-Recommended.bat` でダウンロードします。
+	- **`VAE` に `t5xxl` のどちらかと `ae` と `clip_l` の 3種を設定して利用します。**
 
 ### 2024/08/18
 
