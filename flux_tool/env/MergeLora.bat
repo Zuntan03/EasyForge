@@ -11,6 +11,13 @@ if not "%FLUX_MODEL%" == "" (
 	set "FLUX_MODEL_OPTION=--flux_model ""%FLUX_MODEL%"""
 )
 
+echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+echo %MERGE_MODEL_LORA_WAIT%
+%MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+
+exit /b 0
+
 set "MERGE_LORA_LOG=%~dp0MergeLoraLog.txt"
 echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
 echo %MERGE_MODEL_LORA_WAIT%

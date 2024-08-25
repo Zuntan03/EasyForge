@@ -26,5 +26,5 @@ set "SAVE_TO=%FLUX_MODEL_DIR%%FLUX_MODEL_NAME%+%FLUX_LORA_NAME%x%FLUX_LORA_WEIGH
 echo SAVE_TO: %SAVE_TO%
 
 echo.
-call "%~dp0env\MergeLora.bat"
+call "%~dp0env\MergeLora.bat" %*
 if %ERRORLEVEL% neq 0 ( exit /b 1 )

@@ -11,7 +11,7 @@ EasySdxlWebUi とは異なり、A1111 環境との同期はしていません。
 - [Civitai](https://civitai.com/) からのファイルダウンロードに失敗する。
 	- **[Civitai からのダウンロードには、Civitai の API キーの登録が必要になります。](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0#%E3%83%A2%E3%83%87%E3%83%AB%E3%82%84-lora-%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)**
 - **モデルを変えると `AssertionError: You do not have CLIP state dict!` が出る。**
-	- **`VAE` に `t5xxl` のどちらかと `ae` と `clip_l` の 3種を設定します。**
+	- **`VAE` に `t5xxl` と `ae` と `clip_l` のみっつを設定します。**
 - [`Generate Forever` を `Cancel Forever` できない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+Generate+forever)。
 - ~~[X/Y/Z plot でモデルが切り替わらない](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues?q=is%3Aissue+is%3Aopen+X%2FY%2FZ+Plot)。~~
 	- [修正されました](https://github.com/lllyasviel/stable-diffusion-webui-forge/issues/952)。
@@ -31,7 +31,7 @@ Flux を試してみたい方向けのインストール方法です。
 1. インストールが終わったら、`download/Flux-Minimum.bat` で Flux のモデルをダウンロードします。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
-1. 画面上部の `Checkpoint` で `Flux\flux1-schnell-bnb-nf4.safetensors` を選択します。
+1. 画面上部の `Checkpoint` で `FluxS-Base\flux1-schnell-bnb-nf4-v2.safetensors` を選択します。
 1. プロンプト入力欄下の `Generation`-`Sampling steps` を `4` にします。
 	- Forge の起動時に自動で `Sampling steps` を `4` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
 1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
@@ -56,9 +56,12 @@ Flux を試してみたい方向けのインストール方法です。
 	- 各 bat を実行して案内に沿ってモデルや LoRA をドラッグ＆ドロップします。
 	- `ConvertGguf.bat`: モデル（fp16, 22GB~ 推奨）を GGUF Q8_0 に変換します。
 		- Q8_0 以外も変換したい場合は、1度実行してから `flux_tool\env\ConvertGgufFormat.txt` を `Q8_0 Q4_0` のように編集します。
-	- `ExtractLora.bat`: 引かれる側と引く側のふたつの モデルの差分から LoRA を抽出します。
+	- `ExtractLora.bat`: 引かれる側と引く側のふたつのモデルの差分から LoRA を抽出します。
 		- `ExtractLora-Flux(D|S)-fp(16|8).bat` は各ベースモデルで引きます。
 	- `ModelMergeLora.bat`: モデルに Lora をマージします。メインメモリが 64GB 必要です。
+		- `flux_merge_lora.py` に `--save_precision bf16 --concat` を指定しています。  
+		`flux_tool\env\MergeLoraOption.txt` を編集してオプションを変更できます。  
+		`ModelMergeLora.bat` の引数でオプションを追加できます。
 	- LoRA の抽出とマージは [sd-scripts](https://github.com/kohya-ss/sd-scripts/tree/sd3) の `flux_extract_lora.py` と `flux_merge_lora.py` を使用しています。
 	- GGUF 変換は [ComfyUI-GGUF/tools](https://github.com/city96/ComfyUI-GGUF/tree/main/tools) を使用しています。
 - `download/Flux-Minimum.bat` で VAE にオススメの `t5xxl-Q8_0` を追加します。

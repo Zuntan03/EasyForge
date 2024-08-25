@@ -33,5 +33,5 @@ set "SAVE_TO=%SAVE_DIR%%TUNED_MODEL_NAME%-%ORG_MODEL_NAME%-d%FLUX_LORA_DIM%.safe
 echo SAVE_TO: %SAVE_TO%
 
 echo.
-call "%~dp0env\ExtractLora.bat"
+call "%~dp0env\ExtractLora.bat" %*
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
