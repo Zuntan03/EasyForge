@@ -9,7 +9,7 @@ if exist "advanced\WWII-locations.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-WWII.zip 69537 74201
+call %DL_CV% .\ advanced-WWII.zip 69537 74201
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-WWII.zip -DestinationPath advanced -Force } catch { exit 1 }"

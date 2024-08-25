@@ -5,7 +5,7 @@ import sys
 
 class ForgeConfig:
     def __init__(self, cfg_path):
-        self.updaters = {"0.0.0": self.update_0_0_0, "0.1.0": self.update_0_1_0}
+        self.updaters = {"0.0.0": self.update_0_0_0, "0.1.0": self.update_0_1_0, "0.1.1": self.update_0_1_1}
         # self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
 
         if not os.path.exists(cfg_path):
@@ -63,6 +63,14 @@ class ForgeConfig:
         if "disabled_extensions" in cfg:
             if "sd-civitai-browser-plus" in cfg["disabled_extensions"]:
                 cfg["disabled_extensions"].remove("sd-civitai-browser-plus")
+
+    def update_0_1_1(self, cfg):
+        cfg["easy_forge_config_version"] = "0.1.2"
+        cfg["forge_additional_modules"] = [
+            "models\\VAE\\Flux\\ae.safetensors",
+            "models\\VAE\\Flux\\clip_l.safetensors",
+            "models\\VAE\\Flux\\t5xxl-Q8_0.gguf",
+        ]
 
         # cfg["quick_setting_list"] = ["tac_tagFile"]
         # cfg["extra_networks_tree_view_default_enabled"] = True

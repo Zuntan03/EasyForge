@@ -5,7 +5,7 @@ set CURL_CMD=C:\Windows\System32\curl.exe -kL
 pushd %~dp0..\..\..\stable-diffusion-webui-forge\models\Stable-diffusion
 
 @REM https://huggingface.co/tsukihara/xl_model
-call %DL_HF% Pony ebara_pony_2.1.safetensors tsukihara/xl_model
+call %DL_HF% Pony\ ebara_pony_2.1.safetensors tsukihara/xl_model
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 if not exist Pony\ebara_pony_2.1.jpg (

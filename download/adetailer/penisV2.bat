@@ -9,7 +9,7 @@ if exist "penisV2.pt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . penisV2.zip 132388 149639
+call %DL_CV% .\ penisV2.zip 132388 149639
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path penisV2.zip -DestinationPath . -Force } catch { exit 1 }"

@@ -9,7 +9,7 @@ if exist "advanced\female-artisans.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-female-artisans.zip 91214 97211
+call %DL_CV% .\ advanced-female-artisans.zip 91214 97211
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-female-artisans.zip -DestinationPath advanced -Force } catch { exit 1 }"

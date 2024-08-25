@@ -26,7 +26,11 @@ set GIT=
 where /Q git
 if %ERRORLEVEL% neq 0 ( set GIT=%~dp0setup\git\env\PortableGit\bin\git.exe )
 
-set COMMANDLINE_ARGS=--api --enable-insecure-extension-access %*
+if "%COMMANDLINE_ARGS%"=="" (
+    set "COMMANDLINE_ARGS=--api --enable-insecure-extension-access %*"
+) else (
+    set "COMMANDLINE_ARGS=%COMMANDLINE_ARGS% --api --enable-insecure-extension-access %*"
+)
 
 echo PYTHON: %PYTHON%
 echo VENV_DIR: %VENV_DIR%

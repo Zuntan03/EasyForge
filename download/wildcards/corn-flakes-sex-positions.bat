@@ -9,7 +9,7 @@ if exist "corn-flakes-sex-positions.yaml" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . corn-flakes-sex-positions.zip 475136 668815
+call %DL_CV% .\ corn-flakes-sex-positions.zip 475136 668815
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path corn-flakes-sex-positions.zip -DestinationPath . -Force } catch { exit 1 }"

@@ -9,7 +9,7 @@ if exist "Eyeful_v2-Paired.pt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . Eyeful_v2-Paired.zip 178518 582143
+call %DL_CV% .\ Eyeful_v2-Paired.zip 178518 582143
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path Eyeful_v2-Paired.zip -DestinationPath . -Force } catch { exit 1 }"

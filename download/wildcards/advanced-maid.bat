@@ -9,7 +9,7 @@ if exist "advanced\maid-dresses-locations.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-maid.zip 76968 81762
+call %DL_CV% .\ advanced-maid.zip 76968 81762
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-maid.zip -DestinationPath advanced -Force } catch { exit 1 }"

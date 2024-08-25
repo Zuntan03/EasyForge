@@ -9,7 +9,7 @@ if exist "nipples_yolov8s.pt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . nipples_yolov8s.zip 490259 545161
+call %DL_CV% .\ nipples_yolov8s.zip 490259 545161
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path nipples_yolov8s.zip -DestinationPath . -Force } catch { exit 1 }"

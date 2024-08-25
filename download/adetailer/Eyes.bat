@@ -9,7 +9,7 @@ if exist "Eyes.pt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . Eyes.zip 150925 168820
+call %DL_CV% .\ Eyes.zip 150925 168820
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path Eyes.zip -DestinationPath . -Force } catch { exit 1 }"

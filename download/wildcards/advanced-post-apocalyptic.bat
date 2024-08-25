@@ -9,7 +9,7 @@ if exist "advanced\post-apocalyptic-locations.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-post-apocalyptic.zip 70264 74962
+call %DL_CV% .\ advanced-post-apocalyptic.zip 70264 74962
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-post-apocalyptic.zip -DestinationPath advanced -Force } catch { exit 1 }"

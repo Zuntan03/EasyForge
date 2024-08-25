@@ -9,7 +9,7 @@ if exist "advanced\female-guerilla-fighters.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-female-guerilla-fighters.zip 75246 79987
+call %DL_CV% .\ advanced-female-guerilla-fighters.zip 75246 79987
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-female-guerilla-fighters.zip -DestinationPath advanced -Force } catch { exit 1 }"

@@ -9,7 +9,7 @@ if exist "advanced\science-fiction-locations.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-science-fiction.zip 70905 75600
+call %DL_CV% .\ advanced-science-fiction.zip 70905 75600
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-science-fiction.zip -DestinationPath advanced -Force } catch { exit 1 }"

@@ -9,7 +9,7 @@ if exist "advanced\50s-locations.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . advanced-50s.zip 70930 75621
+call %DL_CV% .\ advanced-50s.zip 70930 75621
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path advanced-50s.zip -DestinationPath advanced -Force } catch { exit 1 }"

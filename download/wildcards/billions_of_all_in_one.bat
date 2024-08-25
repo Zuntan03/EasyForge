@@ -9,7 +9,7 @@ if exist "billions_of_all_in_one - v2.43.yaml" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . billions_of_all_in_one.zip 138970 674371
+call %DL_CV% .\ billions_of_all_in_one.zip 138970 674371
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path billions_of_all_in_one.zip -DestinationPath . -Force } catch { exit 1 }"

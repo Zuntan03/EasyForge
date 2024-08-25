@@ -7,17 +7,17 @@ set DOWNLOAD_DIR=%~1
 set DOWNLOAD_FILE=%~2
 set DOWNLOAD_URL=%~3
 
-if exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" (
+if exist "%DOWNLOAD_DIR%%DOWNLOAD_FILE%" (
 	if exist "%~dp0ARIA_USE_CURL" ( exit /b 0 )
-	if not exist "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%.aria2" ( exit /b 0 )
+	if not exist "%DOWNLOAD_DIR%%DOWNLOAD_FILE%.aria2" ( exit /b 0 )
 )
 
-if not exist %DOWNLOAD_DIR%\ ( mkdir %DOWNLOAD_DIR% )
+if not exist %DOWNLOAD_DIR% ( mkdir %DOWNLOAD_DIR% )
 
 if exist "%~dp0ARIA_USE_CURL" (
 	setlocal enabledelayedexpansion
-	echo %CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
-	%CURL_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
+	echo %CURL_CMD% -o "%DOWNLOAD_DIR%%DOWNLOAD_FILE%" %DOWNLOAD_URL%
+	%CURL_CMD% -o "%DOWNLOAD_DIR%%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
 	timeout /t 1 /nobreak >nul
 	endlocal & exit /b 0
@@ -49,7 +49,10 @@ if not exist %ARIA_EXE% (
 	endlocal
 )
 
-echo %ARIA_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
-%ARIA_CMD% -o "%DOWNLOAD_DIR%\%DOWNLOAD_FILE%" %DOWNLOAD_URL%
+@REM aria2c が DOWNLOAD_DIR 末尾の \" を正しくエスケープできない問題への対処
+if "%DOWNLOAD_DIR:~-1%" == "\" ( set "DOWNLOAD_DIR=%DOWNLOAD_DIR:~0,-1%" )
+
+echo %ARIA_CMD% -d "%DOWNLOAD_DIR%" -o "%DOWNLOAD_FILE%" %DOWNLOAD_URL%
+%ARIA_CMD% -d "%DOWNLOAD_DIR%" -o "%DOWNLOAD_FILE%" %DOWNLOAD_URL%
 if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
 timeout /t 1 /nobreak >nul

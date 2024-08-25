@@ -9,7 +9,7 @@ if exist "extremely_beautiful_clothes.txt" (
 	popd & exit /b 0
 )
 
-call %DL_CV% . extremely_beautiful_clothes.zip 78026 82802
+call %DL_CV% .\ extremely_beautiful_clothes.zip 78026 82802
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 echo  %PS_CMD% "try { Expand-Archive -Path extremely_beautiful_clothes.zip -DestinationPath . -Force } catch { exit 1 }"
