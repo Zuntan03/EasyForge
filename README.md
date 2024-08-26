@@ -22,7 +22,7 @@ Flux を試してみたい方向けのインストール方法です。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
 1. 画面上部の `Checkpoint` で `FluxS-Base\flux1-schnell-bnb-nf4-v2.safetensors` を選択します。
-1. 画面上部の `VAE / Text Encoder` に `ae.safetensors` `clip_l.safetensors` `t5xxl-Q8_0.gguf` のみっつが設定されていることを確認します。
+1. 画面上部の `VAE / Text Encoder` に `ae.safetensors` `clip_l.safetensors` `t5xxl-Q5_K_M.gguf` のみっつが設定されていることを確認します。
 1. プロンプト入力欄下の `Generation`-`Sampling steps` を `4` にします。
 	- Forge 起動時の `Sampling steps` を `4` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
 1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
@@ -41,6 +41,10 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+### 2024/08/26
+
+- デフォルトの `t5xxl` を `Q8_0` から `Q5_K_M` に変更しました。
+
 ### 2024/08/25
 
 - Flux のモデルや LoRA を簡単に足したり引いたり GGUF にしたりするツール群を `flux_tool` に追加しました。
@@ -55,8 +59,8 @@ Flux を試してみたい方向けのインストール方法です。
 		`ModelMergeLora.bat` の引数でオプションを追加できます。
 	- LoRA の抽出とマージは [sd-scripts](https://github.com/kohya-ss/sd-scripts/tree/sd3) の `flux_extract_lora.py` と `flux_merge_lora.py` を使用しています。
 	- GGUF 変換は [ComfyUI-GGUF/tools](https://github.com/city96/ComfyUI-GGUF/tree/main/tools) を使用しています。
-- `download/Flux-Minimum.bat` で VAE にオススメの `t5xxl-Q8_0` を追加します。
-	- VAE に `ae.safetensors`, `clip_l.safetensors`, `t5xxl-Q8_0.gguf` を指定してご利用ください。
+- `download/Flux-Minimum.bat` で VAE にオススメの `t5xxl-Q5_K_M` を追加します。
+	- VAE に `ae.safetensors`, `clip_l.safetensors`, `t5xxl-Q5_K_M.gguf` を指定してご利用ください。
 - download/ 以下のフォルダ構成を変更しました。
 	- 今後は `models/Stable-diffusion/` の `FluxD-*` や `FluxS-*` といったフォルダにモデルを保存します。
 		- 不要になった `models/Stable-diffusion/Flux/` 内のモデルは削除しても問題ありません。
