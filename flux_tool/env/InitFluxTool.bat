@@ -26,7 +26,7 @@ set "LANG_TAG="
 for /f "tokens=*" %%i in ('%PS_CMD% -c "(Get-WinUserLanguageList).LanguageTag"') do set "LANG_TAG=%%i"
 
 set "MERGE_LORA=python "%SD_SCRIPTS%\networks\flux_merge_lora.py""
-if not exist "%~dp0MergeLoraOption.txt" ( echo --save_precision bf16 --concat >"%~dp0MergeLoraOption.txt")
+if not exist "%~dp0MergeLoraOption.txt" ( echo --save_precision bf16 >"%~dp0MergeLoraOption.txt")
 set /p MERGE_LORA_OPTION=<"%~dp0MergeLoraOption.txt"
 
 set "EXTRACT_LORA=python "%SD_SCRIPTS%\networks\flux_extract_lora.py""

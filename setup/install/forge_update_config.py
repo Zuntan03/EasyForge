@@ -10,6 +10,7 @@ class ForgeConfig:
             "0.1.0": self.update_0_1_0,
             "0.1.1": self.update_0_1_1,
             "0.1.2": self.update_0_1_2,
+            "0.1.3": self.update_0_1_3,
         }
         # self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
 
@@ -83,6 +84,14 @@ class ForgeConfig:
             "models\\VAE\\Flux\\ae.safetensors",
             "models\\VAE\\Flux\\clip_l.safetensors",
             "models\\VAE\\Flux\\t5xxl-Q5_K_M.gguf",
+        ]
+
+    def update_0_1_3(self, cfg):
+        cfg["easy_forge_config_version"] = "0.1.4"
+        cfg["forge_additional_modules"] = [
+            "models\\VAE\\Flux\\ae.safetensors",
+            "models\\VAE\\Flux\\clip_l.safetensors",
+            "models\\VAE\\Flux\\t5xxl-Q6_K.gguf",
         ]
 
         # cfg["quick_setting_list"] = ["tac_tagFile"]

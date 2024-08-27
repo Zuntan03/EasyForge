@@ -21,10 +21,11 @@ Flux を試してみたい方向けのインストール方法です。
 1. インストールが終わったら、`download/Flux-Minimum.bat` で Flux のモデルをダウンロードします。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
-1. 画面上部の `Checkpoint` で `FluxS-Base\flux1-schnell-bnb-nf4-v2.safetensors` を選択します。
-1. 画面上部の `VAE / Text Encoder` に `ae.safetensors` `clip_l.safetensors` `t5xxl-Q5_K_M.gguf` のみっつが設定されていることを確認します。
-1. プロンプト入力欄下の `Generation`-`Sampling steps` を `4` にします。
-	- Forge 起動時の `Sampling steps` を `4` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
+1. 画面上部の `Checkpoint` で `FluxD-Base\flux1-dev-hyper8-nf4.safetensors` を選択します。
+1. 画面上部の `VAE / Text Encoder` に `ae.safetensors` `clip_l.safetensors` `t5xxl-Q6_K.gguf` のみっつが設定されていることを確認します。
+	- `t5xxl-Q6_K.gguf` をより大きな `t5xxl_fp16.safetensors` にしても動作速度が極端に遅くならないなら、fp16 のほうがオススメです。
+1. プロンプト入力欄下の `Generation`-`Sampling steps` を `8` にします。
+	- Forge 起動時の `Sampling steps` を `8` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
 1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
 1. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
 
@@ -41,6 +42,20 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+### 2026/08/28
+
+- Flux Dev と Hyper Flux 8step をマージした `flux1-dev-hyper8` を追加しました。
+	- **Schnell やそのマージモデルと異なり、8step ですが Dev 用 LoRA がかなり効きます！**
+	- `download/Flux-Minimum.bat` で `flux1-dev-hyper8-nf4.safetensors` をダウンロードします。
+	- `download/Flux-Recommended.bat` で `flux1-dev-hyper8-Q8_0.safetensors` もダウンロードします。
+	- `download/Stable-diffusion/FluxD-Base/` で `fp16` や `Q6_K` もダウンロードできます。
+	- [モデルファイル置き場](https://huggingface.co/Zuntan/dist)
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/change_log/hyper_merge_lora-4k.webp)
+
+- デフォルトの `t5xxl` を `Q5_K_M` から `Q6_K` に変更しました。
+	- メインメモリ不足でなければ `fp16` がオススメです。
+
 ### 2024/08/26
 
 - デフォルトの `t5xxl` を `Q8_0` から `Q5_K_M` に変更しました。
@@ -54,7 +69,7 @@ Flux を試してみたい方向けのインストール方法です。
 	- `ExtractLora.bat`: 引かれる側と引く側のふたつのモデルの差分から LoRA を抽出します。
 		- `ExtractLora-Flux(D|S)-fp(16|8).bat` は各ベースモデルで引きます。
 	- `ModelMergeLora.bat`: モデルに Lora をマージします。メインメモリが 64GB 必要です。
-		- `flux_merge_lora.py` に `--save_precision bf16 --concat` を指定しています。  
+		- `flux_merge_lora.py` に `--save_precision bf16` を指定しています。  
 		`flux_tool\env\MergeLoraOption.txt` を編集してオプションを変更できます。  
 		`ModelMergeLora.bat` の引数でオプションを追加できます。
 	- LoRA の抽出とマージは [sd-scripts](https://github.com/kohya-ss/sd-scripts/tree/sd3) の `flux_extract_lora.py` と `flux_merge_lora.py` を使用しています。

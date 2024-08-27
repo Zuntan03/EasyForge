@@ -14,9 +14,9 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 if exist %~dp0..\download\Flux-Gguf.bat ( del %~dp0..\download\Flux-Gguf.bat )
 if exist %~dp0..\download\Stable-diffusion\Flux\ ( rmdir /S /Q %~dp0..\download\Stable-diffusion\Flux\ )
 
-@REM config.json での t5xxl-Q5_K_M.gguf デフォルト化に伴う特例 DL
+@REM config.json での t5xxl-Q6_K.gguf デフォルト化に伴う特例 DL
 if exist "%~dp0..\stable-diffusion-webui-forge\models\VAE\Flux\clip_l.safetensors" (
-	if not exist "%~dp0..\stable-diffusion-webui-forge\models\VAE\Flux\t5xxl-Q5_K_M.gguf" (
-		call "%~dp0..\download\VAE\Flux\t5xxl-Q5_K_M.bat"
+	if not exist "%~dp0..\stable-diffusion-webui-forge\models\VAE\Flux\t5xxl-Q6_K.gguf" (
+		call "%~dp0..\download\VAE\Flux\t5xxl-Q6_K.bat"
 	)
 )
