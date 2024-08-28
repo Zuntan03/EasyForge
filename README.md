@@ -51,7 +51,7 @@ Flux を試してみたい方向けのインストール方法です。
 	- `download/Stable-diffusion/FluxD-Base/` で `fp16` や `Q6_K` もダウンロードできます。
 	- [モデルファイル置き場](https://huggingface.co/Zuntan/dist)
 
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/change_log/hyper_merge_lora-4k.webp)
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_lora-4k.webp)
 
 - デフォルトの `t5xxl` を `Q5_K_M` から `Q6_K` に変更しました。
 	- メインメモリ不足でなければ `fp16` がオススメです。
