@@ -51,10 +51,16 @@ Flux を試してみたい方向けのインストール方法です。
 	- `download/Stable-diffusion/FluxD-Base/` で `fp16` や `Q6_K` もダウンロードできます。
 	- [モデルファイル置き場](https://huggingface.co/Zuntan/dist)
 
+LoRA なし作例
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_3.webp)|
+|:-:|:-:|:-:|:-:|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_4.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_5.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_6.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_7.webp)|
+
+LoRA あり作例
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_lora-4k.webp)
 
 - デフォルトの `t5xxl` を `Q5_K_M` から `Q6_K` に変更しました。
-	- メインメモリ不足でなければ `fp16` がオススメです。
+	- **メインメモリに不足がなければ `t5xxl_fp16` がオススメです。**
 
 ### 2024/08/26
 
