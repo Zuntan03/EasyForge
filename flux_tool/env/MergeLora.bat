@@ -11,12 +11,31 @@ if not "%FLUX_MODEL%" == "" (
 	set "FLUX_MODEL_OPTION=--flux_model ""%FLUX_MODEL%"""
 )
 
-echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+@REM echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+@REM echo %MERGE_MODEL_LORA_WAIT%
+@REM %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+@REM if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+
+@REM exit /b 0
+
+set "SAVE_TO_PATH_NAME="
+for %%i in ("%SAVE_TO%") do set "SAVE_TO_PATH_NAME=%%~dpni"
+set "SAVE_TO_EXT="
+for %%i in ("%SAVE_TO%") do set "SAVE_TO_EXT=%%~xi"
+
+set "SAVE_TO_SDS=%SAVE_TO_PATH_NAME%-sds%SAVE_TO_EXT%"
+echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO_SDS%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
 echo %MERGE_MODEL_LORA_WAIT%
-%MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
+%MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO_SDS%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*
 if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
 
-exit /b 0
+set "SAVE_TO_AIT=%SAVE_TO_PATH_NAME%-ait%SAVE_TO_EXT%"
+echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO_AIT%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% --diffusers %*
+echo %MERGE_MODEL_LORA_WAIT%
+%MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO_AIT%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% --diffusers %*
+if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+
+@REM exit /b 0
 
 @REM set "MERGE_LORA_LOG=%~dp0MergeLoraLog.txt"
 @REM echo %MERGE_LORA% %FLUX_MODEL_OPTION% --save_to "%SAVE_TO%" --models "%FLUX_LORA%" --ratios %FLUX_LORA_WEIGHT% %MERGE_LORA_OPTION% %*

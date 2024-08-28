@@ -20,7 +20,7 @@ if not exist "%SAFETENSOR_MODEL%" (
 )
 echo SAFETENSOR_MODEL: %SAFETENSOR_MODEL%
 
-if not exist "%~dp0env\ConvertGgufFormat.txt" ( echo Q8_0 >"%~dp0env\ConvertGgufFormat.txt")
+if not exist "%~dp0env\ConvertGgufFormat.txt" ( echo Q8_0 Q6_K >"%~dp0env\ConvertGgufFormat.txt")
 set /p CONVERT_GGUF_FORMAT=<"%~dp0env\ConvertGgufFormat.txt"
 
 call "%~dp0env\ConvertGguf.bat" "%SAFETENSOR_MODEL%" %CONVERT_GGUF_FORMAT%

@@ -59,6 +59,10 @@ LoRA なし作例
 LoRA あり作例
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/hyper_merge_lora-4k.webp)
 
+- `flux_tool/MergeLora.bat` で sd-scripts 方式 (`*-sds.safetensors`) と ai-toolkit 方式 (`*-ait.safetensors`) の両方を出力するようにしました。
+	- マージした LoRA が効いている方のモデルを採用してください。
+- `flux_tool/ConvertGguf.bat` がデフォルトで `Q8_0` と `Q6_K` を生成するようにしました。
+	- 更新時には `flux_tool/env/ConvertGgufFormat.txt` を削除すると、`Q8_0` と `Q6_K` を生成するようになります。
 - デフォルトの `t5xxl` を `Q5_K_M` から `Q6_K` に変更しました。
 	- **メインメモリに不足がなければ `t5xxl_fp16` がオススメです。**
 - モデルのドロップダウンでフォルダ名を非表示にしました。
