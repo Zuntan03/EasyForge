@@ -11,6 +11,7 @@ class ForgeConfig:
             "0.1.1": self.update_0_1_1,
             "0.1.2": self.update_0_1_2,
             "0.1.3": self.update_0_1_3,
+            "0.1.4": self.update_0_1_4,
         }
         # self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
 
@@ -56,10 +57,6 @@ class ForgeConfig:
         cfg["lora_preferred_name"] = "Filename"
         cfg["ui_extra_networks_tab_reorder"] = "Checkpoints,LoRA,Textual Inversion"
         cfg["emphasis"] = "No norm"
-        # if self.enable_civitai_browser_plus:
-        #     cfg["disabled_extensions"] = []
-        # else:
-        #     cfg["disabled_extensions"] = ["sd-civitai-browser-plus"]
         cfg["dp_wildcard_manager_no_sort"] = True
 
     def update_0_1_0(self, cfg):
@@ -93,6 +90,10 @@ class ForgeConfig:
             "models\\VAE\\Flux\\clip_l.safetensors",
             "models\\VAE\\Flux\\t5xxl-Q6_K.gguf",
         ]
+
+    def update_0_1_4(self, cfg):
+        cfg["easy_forge_config_version"] = "0.1.5"
+        cfg["sd_checkpoint_dropdown_use_short"] = True
 
         # cfg["quick_setting_list"] = ["tac_tagFile"]
         # cfg["extra_networks_tree_view_default_enabled"] = True
