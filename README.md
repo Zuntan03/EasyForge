@@ -21,13 +21,14 @@ Flux を試してみたい方向けのインストール方法です。
 1. インストールが終わったら、`download/Flux-Minimum.bat` で Flux のモデルをダウンロードします。
 1. `Forge.bat` で Forge を起動します。  
 1. **（重要）画面左上の `UI` で `flux` を選択します。**
-1. 画面上部の `Checkpoint` で `FluxD-Base\flux1-dev-hyper8-nf4.safetensors` を選択します。
+1. 画面上部の `Checkpoint` で `flux1-dev-hyper8-Q4_K_S.safetensors` を選択します。
+	- `flux1-dev-hyper8-Q8_0.safetensors` の方が精度が高いですが、マシンスペックをより必要とします。
 1. 画面上部の `VAE / Text Encoder` に `ae.safetensors` `clip_l.safetensors` `t5xxl-Q6_K.gguf` のみっつが設定されていることを確認します。
-	- `t5xxl-Q6_K.gguf` をより大きな `t5xxl_fp16.safetensors` にしても動作速度が極端に遅くならないなら、fp16 のほうがオススメです。
-1. プロンプト入力欄下の `Generation`-`Sampling steps` を `8` にします。
+	- `t5xxl-Q6_K.gguf` を `t5xxl_fp16.safetensors` にしても動作速度が極端に遅くならないなら、fp16 のほうがオススメです。
+2. プロンプト入力欄下の `Generation`-`Sampling steps` を `8` にします。
 	- Forge 起動時の `Sampling steps` を `8` するには、`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して `Apply` します。
-1. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
-1. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
+3. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
+4. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
 
 ### Flux お試し Tips
 
@@ -41,6 +42,22 @@ Flux を試してみたい方向けのインストール方法です。
 - **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して、`Apply` で保存できます。
 
 ## 最近の主な更新
+
+### 2026/09/01
+
+- LoRA 互換を保ちながら Flux Dev 高速版をお好みモデルにマージする『[Flux Dev 簡単クッキング](https://github.com/Zuntan03/EasyForge/wiki/Flux-Dev-%E7%B0%A1%E5%8D%98%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0)』を公開しました。
+  - **成人向けの作例画像は [こちら](https://yyy.wpx.jp/EasyForge/cooking) です。** 
+  - Flux Dev を 8ステップ化して、アニメと NSFW を足してみた『FluxDev8AnimeNsfw』モデルは [こちら](https://huggingface.co/Zuntan/FluxDev8AnimeNsfw) です。
+    - `download/Flux-Recommended.bat` で `Q8_0` をダウンロードします。
+
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_3.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_4.webp)|
+|:-:|:-:|:-:|:-:|:-:|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_3.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_4.webp)|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_3.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_4.webp)|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_a.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_b.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_c.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_d.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/reb_e.webp)|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_a.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_b.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_c.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/deg_d.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/meg_a.webp)|
+||||||
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/nns_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/nns_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/nns_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/nns_3.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/cooking/nns_4.webp)|
 
 ### 2026/08/28
 
@@ -99,6 +116,10 @@ LoRA あり作例
 ### はじめに
 
 - [EasyForge のインストールと更新](https://github.com/Zuntan03/EasyForge/wiki/EasyForge-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E6%9B%B4%E6%96%B0)
+
+### Flux Dev
+
+- [Flux Dev 簡単クッキング](https://github.com/Zuntan03/EasyForge/wiki/Flux-Dev-%E7%B0%A1%E5%8D%98%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0)
 
 ### その他
 

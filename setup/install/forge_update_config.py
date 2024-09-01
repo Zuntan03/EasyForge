@@ -12,6 +12,7 @@ class ForgeConfig:
             "0.1.2": self.update_0_1_2,
             "0.1.3": self.update_0_1_3,
             "0.1.4": self.update_0_1_4,
+            "0.1.5": self.update_0_1_5,
         }
         # self.enable_civitai_browser_plus = cfg_path == "config-CivitaiBrowserPlus.json"
 
@@ -94,6 +95,10 @@ class ForgeConfig:
     def update_0_1_4(self, cfg):
         cfg["easy_forge_config_version"] = "0.1.5"
         cfg["sd_checkpoint_dropdown_use_short"] = True
+
+    def update_0_1_5(self, cfg):
+        cfg["easy_forge_config_version"] = "0.1.6"
+        cfg["forge_unet_storage_dtype"] = "Automatic (fp16 LoRA)"
 
         # cfg["quick_setting_list"] = ["tac_tagFile"]
         # cfg["extra_networks_tree_view_default_enabled"] = True

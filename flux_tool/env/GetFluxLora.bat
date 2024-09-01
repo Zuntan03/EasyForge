@@ -7,8 +7,8 @@ if "%LANG_TAG%" == "ja" (
 )
 
 set "FLUX_LORA="
-set /p FLUX_LORA=%FLUX_LORA_MSG%
-for %%i in (%FLUX_LORA%) do (
+set /p "FLUX_LORA=%FLUX_LORA_MSG%"
+for %%i in ("%FLUX_LORA%") do (
 	set "FLUX_LORA_DIR=%%~dpi"
 	set "FLUX_LORA_NAME=%%~ni"
 	set "FLUX_LORA_EXT=%%~xi"

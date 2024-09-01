@@ -7,8 +7,8 @@ if "%LANG_TAG%" == "ja" (
 )
 
 set "FLUX_MODEL="
-set /p FLUX_MODEL=%FLUX_MODEL_MSG%
-for %%i in (%FLUX_MODEL%) do (
+set /p "FLUX_MODEL=%FLUX_MODEL_MSG%"
+for %%i in ("%FLUX_MODEL%") do (
 	set "FLUX_MODEL_DIR=%%~dpi"
 	set "FLUX_MODEL_NAME=%%~ni"
 	set "FLUX_MODEL_EXT=%%~xi"
