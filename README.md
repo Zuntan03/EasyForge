@@ -30,6 +30,10 @@ Flux を試してみたい方向けのインストール方法です。
 3. お好みのプロンプトを入力して `Generate` で Flux 画像を生成できます。
 4. `InfiniteImageBrowsing.bat` を実行して、`Use Walk mode to browse images`-`txt2img` で生成画像を確認できます。
 
+**Forge の Flux でよくトラブる FAQ 設定です。**  
+**設定内容がわからないうちは、画像の設定が安全です。**  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2408/FAQ.png)
+
 ### Flux お試し Tips
 
 - **Civitai からのダウンロードや Civitai Helper の利用には、Civitai の API キー登録が必要になります。**
@@ -42,6 +46,11 @@ Flux を試してみたい方向けのインストール方法です。
 - **Forge 起動時の UI 状態** の変更は、UI 状態を変更してから`Settings` の一番下にある `Other`-`Defaults` にて `View changes` で変更内容を確認して、`Apply` で保存できます。
 
 ## 最近の主な更新
+
+### 2026/09/03
+
+- 『[Flux Dev 簡単クッキング](https://github.com/Zuntan03/EasyForge/wiki/Flux-Dev-%E7%B0%A1%E5%8D%98%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0)』の例として『[Civitai 週間一位の iNiverse Mix を高速化](https://x.com/Zuntan03/status/1830750085887729748)』
+  - サンプルモデル『[iNiverseFluxV11-8step](https://huggingface.co/Zuntan/iNiverseFluxV11-8step)』
 
 ### 2026/09/01
 
