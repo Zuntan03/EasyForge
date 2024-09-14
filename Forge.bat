@@ -10,7 +10,7 @@ if not exist %~dp0stable-diffusion-webui-forge\venv\ ( pause & exit /b 1 )
 pushd %~dp0stable-diffusion-webui-forge
 
 call %~dp0setup\install\Forge-UpdateConfig.bat config.json
-if %ERRORLEVEL% neq 0 ( exit /b 1 )
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 if not exist ui-config.json (
 	copy %~dp0setup\install\ui-config.json ui-config.json

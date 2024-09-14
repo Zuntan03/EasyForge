@@ -19,13 +19,13 @@ echo python -m pip install -qq --upgrade pip
 python -m pip install -qq --upgrade pip
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-echo pip install -qq torch==2.3.1+cu121 torchvision --index-url https://download.pytorch.org/whl/cu121
-pip install -qq torch==2.3.1+cu121 torchvision --index-url https://download.pytorch.org/whl/cu121
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-
-@REM echo pip install -qq torch==2.4.0+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
-@REM pip install -qq torch==2.4.0+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
+@REM echo pip install -qq torch==2.3.1+cu121 torchvision --index-url https://download.pytorch.org/whl/cu121
+@REM pip install -qq torch==2.3.1+cu121 torchvision --index-url https://download.pytorch.org/whl/cu121
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+echo pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
+pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 popd rem %~dp0..\..\stable-diffusion-webui-forge
 

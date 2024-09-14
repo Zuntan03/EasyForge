@@ -47,6 +47,11 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+- EasyForge に ComfyUI をワンクリックで追加して、日本語 LLM による指示（英訳でなく）で Flux Dev の画像を生成する『[日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)』に対応しました。
+  - モデルや LoRA などのファイルは Forge 用にダウンロードしたものをそのまま利用できます。
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLlm/ComfyLlm.webp)
+
 ### 2026/09/03
 
 - 『[Flux Dev 簡単クッキング](https://github.com/Zuntan03/EasyForge/wiki/Flux-Dev-%E7%B0%A1%E5%8D%98%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0)』の例として『[Civitai 週間一位の iNiverse Mix を高速化](https://x.com/Zuntan03/status/1830750085887729748)』
@@ -130,6 +135,10 @@ LoRA あり作例
 
 - [Flux Dev 簡単クッキング](https://github.com/Zuntan03/EasyForge/wiki/Flux-Dev-%E7%B0%A1%E5%8D%98%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0)
 
+### ComfyUI
+
+- [日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)
+  
 ### その他
 
 - [過去の更新履歴](https://github.com/Zuntan03/EasyForge/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)
