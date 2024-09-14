@@ -1,0 +1,3963 @@
+{
+  "last_node_id": 267,
+  "last_link_id": 531,
+  "nodes": [
+    {
+      "id": 116,
+      "type": "BasicScheduler",
+      "pos": {
+        "0": 2960,
+        "1": 176
+      },
+      "size": {
+        "0": 256,
+        "1": 96
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 358,
+          "slot_index": 0
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 264,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 265,
+          "widget": {
+            "name": "denoise"
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "link": 456,
+          "widget": {
+            "name": "scheduler"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            407
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix BasicScheduler",
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        1
+      ]
+    },
+    {
+      "id": 27,
+      "type": "EmptySD3LatentImage",
+      "pos": {
+        "0": 2336,
+        "1": 256
+      },
+      "size": {
+        "0": 210,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 521,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 524,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            156
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        896,
+        1152,
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 3264,
+        "1": -48
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 419
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            424,
+            495
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 206,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 3440,
+        "1": -240
+      },
+      "size": {
+        "0": 224,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "*",
+          "link": 495,
+          "color_on": "#64B5F6"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        "アップスケール前",
+        "images",
+        ".*"
+      ]
+    },
+    {
+      "id": 150,
+      "type": "GetNode",
+      "pos": {
+        "0": 3568,
+        "1": -144
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            422
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixEnable",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixEnable"
+      ]
+    },
+    {
+      "id": 231,
+      "type": "GetNode",
+      "pos": {
+        "0": 4352,
+        "1": -160
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            464
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_UpscaleEnable",
+      "properties": {},
+      "widgets_values": [
+        "UpscaleEnable"
+      ]
+    },
+    {
+      "id": 208,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 5008,
+        "1": -112
+      },
+      "size": {
+        "0": 224,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "*",
+          "link": 498,
+          "color_on": "#64B5F6"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        "webp 保存",
+        "images",
+        ".*"
+      ]
+    },
+    {
+      "id": 241,
+      "type": "ImagePass",
+      "pos": {
+        "0": 4832,
+        "1": -112
+      },
+      "size": {
+        "0": 144,
+        "1": 32
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 499
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            498
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      }
+    },
+    {
+      "id": 199,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 3552,
+        "1": 128
+      },
+      "size": {
+        "0": 144,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 420
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 421
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            500
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 30,
+      "type": "ModelSamplingFlux",
+      "pos": {
+        "0": 1920,
+        "1": -96
+      },
+      "size": {
+        "0": 210,
+        "1": 128
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 200,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 519,
+          "slot_index": 1,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 523,
+          "slot_index": 2,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            54,
+            55
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        1.15,
+        0.5,
+        896,
+        1152
+      ]
+    },
+    {
+      "id": 25,
+      "type": "RandomNoise",
+      "pos": {
+        "0": 2336,
+        "1": -64
+      },
+      "size": {
+        "0": 210,
+        "1": 34
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "noise_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            37,
+            364
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        545706397772896,
+        "randomize"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "BasicGuider",
+      "pos": {
+        "0": 2336,
+        "1": 16
+      },
+      "size": {
+        "0": 208,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 54,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 42,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            30
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 114,
+      "type": "SamplerCustomAdvanced",
+      "pos": {
+        "0": 3264,
+        "1": 48
+      },
+      "size": {
+        "0": 240,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 364,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 360,
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 417,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 407,
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 375,
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            249,
+            420
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 182,
+      "type": "BasicGuider",
+      "pos": {
+        "0": 2672,
+        "1": -192
+      },
+      "size": {
+        "0": 176,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 359,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 505,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            360
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix BasicGuider",
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 13,
+      "type": "SamplerCustomAdvanced",
+      "pos": {
+        "0": 2672,
+        "1": 48
+      },
+      "size": {
+        "0": 240,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 37,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 30,
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 19,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 20,
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 156,
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            247,
+            419
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null,
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 131,
+      "type": "GetNode",
+      "pos": {
+        "0": 2672,
+        "1": 208
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            264
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixSteps",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixSteps"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "GetNode",
+      "pos": {
+        "0": 2672,
+        "1": 320
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            265
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixDenoise",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixDenoise"
+      ]
+    },
+    {
+      "id": 165,
+      "type": "UnloadModel",
+      "pos": {
+        "0": 2432,
+        "1": 640
+      },
+      "size": {
+        "0": 144,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "link": 482
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 337
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            478
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnloadModel"
+      }
+    },
+    {
+      "id": 233,
+      "type": "Text Concatenate",
+      "pos": {
+        "0": 2176,
+        "1": 640
+      },
+      "size": {
+        "0": 210,
+        "1": 144
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 483,
+          "widget": {
+            "name": "text_a"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 480,
+          "widget": {
+            "name": "text_b"
+          }
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          }
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            482
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "連結",
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        "",
+        "false",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 211,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2416,
+        "1": 832
+      },
+      "size": {
+        "0": 240,
+        "1": 176
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 450,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            512
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "LLM 和訳",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        4096,
+        true,
+        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
+      ]
+    },
+    {
+      "id": 99,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2160,
+        "1": 832
+      },
+      "size": {
+        "0": 240,
+        "1": 176
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 478,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            217,
+            222,
+            225,
+            240,
+            241,
+            450,
+            511
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "LLM プロンプト生成",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        4096,
+        true,
+        "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 1664,
+        "1": -48
+      },
+      "size": {
+        "0": 210,
+        "1": 54
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 201
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 230,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            153,
+            504
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "cute anime girl with massive fluffy fennec ears and a big fluffy tail blonde messy long hair blue eyes wearing a maid outfit with a long black gold leaf pattern dress and a white apron mouth open holding a fancy black forest cake with candles on top in the kitchen of an old dark Victorian mansion lit by candlelight with a bright window to the foggy forest and very expensive stuff everywhere"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "Text Concatenate",
+      "pos": {
+        "0": 1664,
+        "1": 48
+      },
+      "size": {
+        "0": 210,
+        "1": 144
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 207,
+          "widget": {
+            "name": "text_a"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 240,
+          "widget": {
+            "name": "text_b"
+          }
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          }
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            238
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "連結",
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        ". ",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 257,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1328,
+        "1": -16
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            525
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "ステップ数",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        8
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 180,
+      "type": "ImageUpscaleWithModel",
+      "pos": {
+        "0": 4080,
+        "1": 80
+      },
+      "size": {
+        "0": 226.8000030517578,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 528
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 502
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            346
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 260,
+      "type": "GetNode",
+      "pos": {
+        "0": 3840,
+        "1": 128
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            528
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_UpscaleModel",
+      "properties": {},
+      "widgets_values": [
+        "UpscaleModel"
+      ]
+    },
+    {
+      "id": 181,
+      "type": "ImageScaleBy",
+      "pos": {
+        "0": 4320,
+        "1": 192
+      },
+      "size": {
+        "0": 240,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 346
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            467,
+            503
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "4倍アップスケールを半分に縮小",
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "lanczos",
+        0.5
+      ]
+    },
+    {
+      "id": 16,
+      "type": "KSamplerSelect",
+      "pos": {
+        "0": 1920,
+        "1": 192
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            19,
+            417
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 222,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": 1920,
+        "1": 288
+      },
+      "size": {
+        "0": 208,
+        "1": 112
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            455,
+            456
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "scheduler"
+          }
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "simple",
+        "fixed",
+        ""
+      ]
+    },
+    {
+      "id": 117,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 912,
+        "1": -208
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            260
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のスケール",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        1.25
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 126,
+      "type": "SetNode",
+      "pos": {
+        "0": 960,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixScale",
+      "properties": {
+        "previousName": "HiresFixScale"
+      },
+      "widgets_values": [
+        "HiresFixScale"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "SetNode",
+      "pos": {
+        "0": 720,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 263
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixSteps",
+      "properties": {
+        "previousName": "HiresFixSteps"
+      },
+      "widgets_values": [
+        "HiresFixSteps"
+      ]
+    },
+    {
+      "id": 119,
+      "type": "INTConstant",
+      "pos": {
+        "0": 672,
+        "1": -208
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            263
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のステップ数",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        8
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 129,
+      "type": "SetNode",
+      "pos": {
+        "0": 480,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 275
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixDenoise",
+      "properties": {
+        "previousName": "HiresFixDenoise"
+      },
+      "widgets_values": [
+        "HiresFixDenoise"
+      ]
+    },
+    {
+      "id": 152,
+      "type": "SetNode",
+      "pos": {
+        "0": 240,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 517
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixEnable",
+      "properties": {
+        "previousName": "HiresFixEnable"
+      },
+      "widgets_values": [
+        "HiresFixEnable"
+      ]
+    },
+    {
+      "id": 227,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 4592,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 464,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "IMAGE",
+          "link": 501
+        },
+        {
+          "name": "input2",
+          "type": "IMAGE",
+          "link": 503
+        },
+        {
+          "name": "input3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            499
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 259,
+      "type": "SetNode",
+      "pos": {
+        "0": 1616,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "link": 527
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_UpscaleModel",
+      "properties": {
+        "previousName": "UpscaleModel"
+      },
+      "widgets_values": [
+        "UpscaleModel"
+      ]
+    },
+    {
+      "id": 229,
+      "type": "SetNode",
+      "pos": {
+        "0": 1264,
+        "1": -112
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 463
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_UpscaleEnable",
+      "properties": {
+        "previousName": "UpscaleEnable"
+      },
+      "widgets_values": [
+        "UpscaleEnable"
+      ]
+    },
+    {
+      "id": 249,
+      "type": "SetNode",
+      "pos": {
+        "0": 1440,
+        "1": 560
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 518
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_Translation",
+      "properties": {
+        "previousName": "Translation"
+      },
+      "widgets_values": [
+        "Translation"
+      ]
+    },
+    {
+      "id": 245,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 2416,
+        "1": 1056
+      },
+      "size": {
+        "0": 210,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 514,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "STRING",
+          "link": 511
+        },
+        {
+          "name": "input2",
+          "type": "STRING",
+          "link": 512
+        },
+        {
+          "name": "input3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            515
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "STRING"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 248,
+      "type": "GetNode",
+      "pos": {
+        "0": 2160,
+        "1": 1056
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            514
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_Translation",
+      "properties": {},
+      "widgets_values": [
+        "Translation"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "GetNode",
+      "pos": {
+        "0": 2704,
+        "1": 432
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            261
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixScale",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixScale"
+      ]
+    },
+    {
+      "id": 84,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 1184,
+        "1": -64
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "*",
+          "link": 180,
+          "color_on": ""
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "seed",
+        ".*"
+      ]
+    },
+    {
+      "id": 258,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1344,
+        "1": 352
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            526
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "両方:1, 基本のみ:2, LLM のみ:3",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 254,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1344,
+        "1": 464
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            518
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLM 和訳 なし:1, あり:2",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 17,
+      "type": "BasicScheduler",
+      "pos": {
+        "0": 2336,
+        "1": 112
+      },
+      "size": {
+        "0": 210,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 55,
+          "slot_index": 0
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 525,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "link": 455,
+          "widget": {
+            "name": "scheduler"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            20
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "type": "VAELoader",
+      "pos": {
+        "0": 2992,
+        "1": -240
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            12,
+            421
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "Flux\\ae.safetensors"
+      ]
+    },
+    {
+      "id": 237,
+      "type": "StringConstantMultiline",
+      "pos": {
+        "0": 2160,
+        "1": 432
+      },
+      "size": {
+        "0": 496,
+        "1": 160
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            480
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLM 圃場プロンプト",
+      "properties": {
+        "Node name for S&R": "StringConstantMultiline"
+      },
+      "widgets_values": [
+        "\n# English Prompt\n\n",
+        false
+      ]
+    },
+    {
+      "id": 108,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 1664,
+        "1": 240
+      },
+      "size": {
+        "0": 224,
+        "1": 144
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "input1",
+          "type": "STRING",
+          "link": 238
+        },
+        {
+          "name": "input2",
+          "type": "STRING",
+          "link": 239
+        },
+        {
+          "name": "input3",
+          "type": "STRING",
+          "link": 241
+        },
+        {
+          "name": "input4",
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 526,
+          "widget": {
+            "name": "select"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            230,
+            531
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "STRING"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "プロンプト選択",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 201,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 3808,
+        "1": -96
+      },
+      "size": {
+        "0": 210,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 422,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "IMAGE",
+          "link": 424
+        },
+        {
+          "name": "input2",
+          "type": "IMAGE",
+          "link": 500
+        },
+        {
+          "name": "input3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            501,
+            502
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 26,
+      "type": "FluxGuidance",
+      "pos": {
+        "0": 1920,
+        "1": 64
+      },
+      "size": {
+        "0": 211.60000610351562,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            42
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        3.5
+      ]
+    },
+    {
+      "id": 242,
+      "type": "FluxGuidance",
+      "pos": {
+        "0": 2336,
+        "1": -192
+      },
+      "size": [
+        224,
+        64
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 504
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            505
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix FluxGuidance",
+      "properties": {
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        2.5
+      ]
+    },
+    {
+      "id": 184,
+      "type": "ModelSamplingFlux",
+      "pos": {
+        "0": 2336,
+        "1": -352
+      },
+      "size": [
+        224,
+        128
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 357,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 520,
+          "slot_index": 1,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 522,
+          "slot_index": 2,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            358,
+            359
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix ModelSamplingFlux",
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        0.35000000000000003,
+        0.15,
+        896,
+        1152
+      ]
+    },
+    {
+      "id": 265,
+      "type": "Searge_Output_Node",
+      "pos": {
+        "0": 1328,
+        "1": 608
+      },
+      "size": [
+        672,
+        512
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "link": 531
+        }
+      ],
+      "outputs": [],
+      "title": "画像生成の最終的なプロンプト",
+      "properties": {
+        "Node name for S&R": "Searge_Output_Node"
+      },
+      "widgets_values": [
+        "In the vibrant food streets of an otherworldly fantasy realm, a radiant and cheerful heroine sits at a quaint wooden table. Her bright smile illuminates her gentle face adorned with delicate freckles and sun-kissed complexion, showcasing her warm personality amidst the bustling culinary scene. The rich colors of exotic ingredients and steaming dishes from various realms blend harmoniously in this enchanted setting, where fantastical aromas waft through the air, tantalizing senses. This captivating image invites viewers to step into a world of wonder and magic, where heroes like our cheerful heroine find joy and purpose amidst the diverse culinary delights that bring people together across dimensions."
+      ]
+    },
+    {
+      "id": 215,
+      "type": "Searge_Output_Node",
+      "pos": {
+        "0": 640,
+        "1": 1120
+      },
+      "size": [
+        672,
+        528
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "link": 515
+        }
+      ],
+      "outputs": [],
+      "title": "LLM 和訳",
+      "properties": {
+        "Node name for S&R": "Searge_Output_Node"
+      },
+      "widgets_values": [
+        "幻想的な異世界の食文化街で、明るく元気なヒロインが木造のテーブルに腰掛けている。彼女は美しい笑顔と肌がきれいに割れている清楚な容姿を誇り、賑やかな飲食場の中でも温かみある個性を伝えつづける。異世界からの豊富な調味料と熱々の料理で彩られたこの神秘的な環境では、幻想的なにおいが空気中をさわって感覚を刺激する。その魅力的な絵画は視者に、奇跡の中での楽しみと目的を見出すために集まる異なる世界の人々の食文化へ移るための扉を開く。"
+      ]
+    },
+    {
+      "id": 179,
+      "type": "UpscaleModelLoader",
+      "pos": {
+        "0": 1440,
+        "1": -208
+      },
+      "size": {
+        "0": 336,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            527
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "アップスケールのモデル",
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 204,
+      "type": "PreviewImage",
+      "pos": {
+        "0": -640,
+        "1": 224
+      },
+      "size": {
+        "0": 624,
+        "1": 832
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "アップスケール前",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 255,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1328,
+        "1": 96
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            519,
+            520,
+            521
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像の幅",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        896
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 256,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1328,
+        "1": 208
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            522,
+            523,
+            524
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像の高さ",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        1152
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 128,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 432,
+        "1": -208
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            275
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のデノイズ強度",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        0.65
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 43,
+      "type": "ImpactWildcardEncode",
+      "pos": {
+        "0": 640,
+        "1": 112
+      },
+      "size": {
+        "0": 672,
+        "1": 384
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 530
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 332
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            200,
+            357
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            201
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "populated_text",
+          "type": "STRING",
+          "links": [
+            207,
+            228,
+            239
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "title": "基本プロンプト（上の欄に入力、画像生成用のプロンプト、LoRAとワイルドカードが使えます）",
+      "properties": {
+        "Node name for S&R": "ImpactWildcardEncode"
+      },
+      "widgets_values": [
+        "",
+        "",
+        true,
+        "Select the LoRA to add to the text",
+        "Select the Wildcard to add to the text",
+        83355983116658,
+        "randomize"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 155,
+      "type": "UnetLoaderGGUFAdvanced",
+      "pos": {
+        "0": 208,
+        "1": -64
+      },
+      "size": {
+        "0": 410,
+        "1": 130
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            530
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像生成のモデル",
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUFAdvanced"
+      },
+      "widgets_values": [
+        "FluxD-Base\\flux1-dev-Q4_K_S.gguf",
+        "default",
+        "default",
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 39,
+      "type": "DualCLIPLoaderGGUF",
+      "pos": {
+        "0": 640,
+        "1": -64
+      },
+      "size": {
+        "0": 288,
+        "1": 128
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            332,
+            337
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "テキストエンコーダを選択",
+      "properties": {
+        "Node name for S&R": "DualCLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "Flux\\t5xxl-Q6_K.gguf",
+        "Flux\\clip_l.safetensors",
+        "flux"
+      ]
+    },
+    {
+      "id": 209,
+      "type": "SaveAnimatedWEBP",
+      "pos": {
+        "0": 0,
+        "1": 112
+      },
+      "size": {
+        "0": 624,
+        "1": 944
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "webp 保存",
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%",
+        0.25,
+        false,
+        80,
+        "default"
+      ]
+    },
+    {
+      "id": 113,
+      "type": "LatentUpscaleBy",
+      "pos": {
+        "0": 2960,
+        "1": 336
+      },
+      "size": {
+        "0": 256,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 247
+        },
+        {
+          "name": "scale_by",
+          "type": "FLOAT",
+          "link": 261,
+          "widget": {
+            "name": "scale_by"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            375
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentUpscaleBy"
+      },
+      "widgets_values": [
+        "bislerp",
+        1.5
+      ]
+    },
+    {
+      "id": 151,
+      "type": "INTConstant",
+      "pos": {
+        "0": 192,
+        "1": -208
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            517
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix なし:1, あり:2",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 230,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1184,
+        "1": -208
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            463
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "アップスケール なし:1, あり:2",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 45,
+      "type": "Seed (rgthree)",
+      "pos": {
+        "0": 944,
+        "1": -64
+      },
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SEED",
+          "type": "INT",
+          "links": [
+            180
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "dir": 4
+        }
+      ],
+      "title": "全体のシード",
+      "properties": {},
+      "widgets_values": [
+        -1,
+        null,
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 57,
+      "type": "ImpactWildcardProcessor",
+      "pos": {
+        "0": 640,
+        "1": 544
+      },
+      "size": {
+        "0": 672,
+        "1": 528
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            483
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLM プロンプト（上の欄に入力、日本語で指示できます、ワイルドカードが使えます）",
+      "properties": {
+        "Node name for S&R": "ImpactWildcardProcessor"
+      },
+      "widgets_values": [
+        "異世界ファンタジーの食堂街で笑顔のヒロイン",
+        "異世界ファンタジーの食堂街で笑顔のヒロイン",
+        true,
+        750344445616663,
+        "randomize",
+        "Select the Wildcard to add to the text"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    }
+  ],
+  "links": [
+    [
+      12,
+      10,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      19,
+      16,
+      0,
+      13,
+      2,
+      "SAMPLER"
+    ],
+    [
+      20,
+      17,
+      0,
+      13,
+      3,
+      "SIGMAS"
+    ],
+    [
+      30,
+      22,
+      0,
+      13,
+      1,
+      "GUIDER"
+    ],
+    [
+      37,
+      25,
+      0,
+      13,
+      0,
+      "NOISE"
+    ],
+    [
+      42,
+      26,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      54,
+      30,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      55,
+      30,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      153,
+      6,
+      0,
+      26,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      156,
+      27,
+      0,
+      13,
+      4,
+      "LATENT"
+    ],
+    [
+      180,
+      45,
+      0,
+      84,
+      0,
+      "INT"
+    ],
+    [
+      200,
+      43,
+      0,
+      30,
+      0,
+      "MODEL"
+    ],
+    [
+      201,
+      43,
+      1,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      207,
+      43,
+      3,
+      50,
+      0,
+      "STRING"
+    ],
+    [
+      217,
+      99,
+      0,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      222,
+      99,
+      0,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      225,
+      99,
+      0,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      228,
+      43,
+      3,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      230,
+      108,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      238,
+      50,
+      0,
+      108,
+      0,
+      "STRING"
+    ],
+    [
+      239,
+      43,
+      3,
+      108,
+      1,
+      "STRING"
+    ],
+    [
+      240,
+      99,
+      0,
+      50,
+      1,
+      "STRING"
+    ],
+    [
+      241,
+      99,
+      0,
+      108,
+      2,
+      "STRING"
+    ],
+    [
+      247,
+      13,
+      0,
+      113,
+      0,
+      "LATENT"
+    ],
+    [
+      249,
+      114,
+      0,
+      115,
+      0,
+      "LATENT"
+    ],
+    [
+      260,
+      117,
+      0,
+      126,
+      0,
+      "*"
+    ],
+    [
+      261,
+      127,
+      0,
+      113,
+      1,
+      "FLOAT"
+    ],
+    [
+      263,
+      119,
+      0,
+      130,
+      0,
+      "*"
+    ],
+    [
+      264,
+      131,
+      0,
+      116,
+      1,
+      "INT"
+    ],
+    [
+      265,
+      132,
+      0,
+      116,
+      2,
+      "FLOAT"
+    ],
+    [
+      275,
+      128,
+      0,
+      129,
+      0,
+      "FLOAT"
+    ],
+    [
+      286,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      287,
+      45,
+      0,
+      43,
+      2,
+      "INT"
+    ],
+    [
+      288,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      289,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      294,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      295,
+      45,
+      0,
+      43,
+      2,
+      "INT"
+    ],
+    [
+      296,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      297,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      332,
+      39,
+      0,
+      43,
+      1,
+      "CLIP"
+    ],
+    [
+      337,
+      39,
+      0,
+      165,
+      1,
+      "*"
+    ],
+    [
+      346,
+      180,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      357,
+      43,
+      0,
+      184,
+      0,
+      "MODEL"
+    ],
+    [
+      358,
+      184,
+      0,
+      116,
+      0,
+      "MODEL"
+    ],
+    [
+      359,
+      184,
+      0,
+      182,
+      0,
+      "MODEL"
+    ],
+    [
+      360,
+      182,
+      0,
+      114,
+      1,
+      "GUIDER"
+    ],
+    [
+      364,
+      25,
+      0,
+      114,
+      0,
+      "NOISE"
+    ],
+    [
+      375,
+      113,
+      0,
+      114,
+      4,
+      "LATENT"
+    ],
+    [
+      407,
+      116,
+      0,
+      114,
+      3,
+      "SIGMAS"
+    ],
+    [
+      417,
+      16,
+      0,
+      114,
+      2,
+      "SAMPLER"
+    ],
+    [
+      419,
+      13,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      420,
+      114,
+      0,
+      199,
+      0,
+      "LATENT"
+    ],
+    [
+      421,
+      10,
+      0,
+      199,
+      1,
+      "VAE"
+    ],
+    [
+      422,
+      150,
+      0,
+      201,
+      0,
+      "INT"
+    ],
+    [
+      424,
+      8,
+      0,
+      201,
+      1,
+      "IMAGE"
+    ],
+    [
+      450,
+      99,
+      0,
+      211,
+      2,
+      "STRING"
+    ],
+    [
+      455,
+      222,
+      0,
+      17,
+      2,
+      "COMBO"
+    ],
+    [
+      456,
+      222,
+      0,
+      116,
+      3,
+      "COMBO"
+    ],
+    [
+      463,
+      230,
+      0,
+      229,
+      0,
+      "*"
+    ],
+    [
+      464,
+      231,
+      0,
+      227,
+      0,
+      "INT"
+    ],
+    [
+      467,
+      181,
+      0,
+      227,
+      1,
+      "IMAGE"
+    ],
+    [
+      478,
+      165,
+      0,
+      99,
+      2,
+      "STRING"
+    ],
+    [
+      480,
+      237,
+      0,
+      233,
+      1,
+      "STRING"
+    ],
+    [
+      482,
+      233,
+      0,
+      165,
+      0,
+      "*"
+    ],
+    [
+      483,
+      57,
+      0,
+      233,
+      0,
+      "STRING"
+    ],
+    [
+      495,
+      8,
+      0,
+      206,
+      0,
+      "IMAGE"
+    ],
+    [
+      498,
+      241,
+      0,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      499,
+      227,
+      0,
+      241,
+      0,
+      "IMAGE"
+    ],
+    [
+      500,
+      199,
+      0,
+      201,
+      2,
+      "IMAGE"
+    ],
+    [
+      501,
+      201,
+      0,
+      227,
+      1,
+      "IMAGE"
+    ],
+    [
+      502,
+      201,
+      0,
+      180,
+      1,
+      "IMAGE"
+    ],
+    [
+      503,
+      181,
+      0,
+      227,
+      2,
+      "IMAGE"
+    ],
+    [
+      504,
+      6,
+      0,
+      242,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      505,
+      242,
+      0,
+      182,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      511,
+      99,
+      0,
+      245,
+      1,
+      "STRING"
+    ],
+    [
+      512,
+      211,
+      0,
+      245,
+      2,
+      "STRING"
+    ],
+    [
+      514,
+      248,
+      0,
+      245,
+      0,
+      "INT"
+    ],
+    [
+      515,
+      245,
+      0,
+      215,
+      0,
+      "*"
+    ],
+    [
+      517,
+      151,
+      0,
+      152,
+      0,
+      "INT"
+    ],
+    [
+      518,
+      254,
+      0,
+      249,
+      0,
+      "INT"
+    ],
+    [
+      519,
+      255,
+      0,
+      30,
+      1,
+      "INT"
+    ],
+    [
+      520,
+      255,
+      0,
+      184,
+      1,
+      "INT"
+    ],
+    [
+      521,
+      255,
+      0,
+      27,
+      0,
+      "INT"
+    ],
+    [
+      522,
+      256,
+      0,
+      184,
+      2,
+      "INT"
+    ],
+    [
+      523,
+      256,
+      0,
+      30,
+      2,
+      "INT"
+    ],
+    [
+      524,
+      256,
+      0,
+      27,
+      1,
+      "INT"
+    ],
+    [
+      525,
+      257,
+      0,
+      17,
+      1,
+      "INT"
+    ],
+    [
+      526,
+      258,
+      0,
+      108,
+      4,
+      "INT"
+    ],
+    [
+      527,
+      179,
+      0,
+      259,
+      0,
+      "*"
+    ],
+    [
+      528,
+      260,
+      0,
+      180,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      530,
+      155,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      531,
+      108,
+      0,
+      265,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "プロンプト",
+      "bounding": [
+        1328,
+        288,
+        272,
+        272
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "アップスケール",
+      "bounding": [
+        1152,
+        -272,
+        640,
+        160
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "LLM",
+      "bounding": [
+        2144,
+        352,
+        512,
+        720
+      ],
+      "color": "#444",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Hires. fix（拡大よりも書き込み増加がねらい）",
+      "bounding": [
+        176,
+        -272,
+        960,
+        160
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "groupNodes": {}
+  },
+  "version": 0.4
+}
