@@ -7,6 +7,7 @@ set "FORGE_MODEL=%FORGE_BASE%\models"
 pushd %~dp0..\..
 
 if not exist ComfyUI\output\ ( mkdir ComfyUI\output )
+if not exist outputs\txt2img-images\ ( mkdir outputs\txt2img-images )
 
 call "%LINK_DIR%" outputs\txt2img-images\ComfyUI "ComfyUI\output"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
