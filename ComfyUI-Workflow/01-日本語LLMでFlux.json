@@ -16,7 +16,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 44,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -400,7 +400,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 40,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -809,7 +809,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 42,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -852,7 +852,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -992,7 +992,7 @@
         "1": 176
       },
       "flags": {},
-      "order": 45,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1380,8 +1380,8 @@
         "1": 288
       },
       "size": {
-        "0": 208,
-        "1": 112
+        "0": 210,
+        "1": 110
       },
       "flags": {},
       "order": 8,
@@ -1610,7 +1610,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1759,7 +1759,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1974,7 +1974,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -2086,7 +2086,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 43,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -2407,10 +2407,10 @@
         "0": 2336,
         "1": -192
       },
-      "size": [
-        224,
-        64
-      ],
+      "size": {
+        "0": 224,
+        "1": 64
+      },
       "flags": {
         "collapsed": false
       },
@@ -2449,14 +2449,14 @@
         "0": 2336,
         "1": -352
       },
-      "size": [
-        224,
-        128
-      ],
+      "size": {
+        "0": 224,
+        "1": 128
+      },
       "flags": {
         "collapsed": false
       },
-      "order": 41,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -2514,10 +2514,10 @@
         "0": 1328,
         "1": 608
       },
-      "size": [
-        672,
-        512
-      ],
+      "size": {
+        "0": 672,
+        "1": 512
+      },
       "flags": {},
       "order": 50,
       "mode": 0,
@@ -2544,10 +2544,10 @@
         "0": 640,
         "1": 1120
       },
-      "size": [
-        672,
-        528
-      ],
+      "size": {
+        "0": 672,
+        "1": 528
+      },
       "flags": {},
       "order": 54,
       "mode": 0,
@@ -2760,7 +2760,7 @@
         "1": 384
       },
       "flags": {},
-      "order": 35,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -2838,45 +2838,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 155,
-      "type": "UnetLoaderGGUFAdvanced",
-      "pos": {
-        "0": 208,
-        "1": -64
-      },
-      "size": {
-        "0": 410,
-        "1": 130
-      },
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            530
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "画像生成のモデル",
-      "properties": {
-        "Node name for S&R": "UnetLoaderGGUFAdvanced"
-      },
-      "widgets_values": [
-        "FluxD-Base\\flux1-dev-Q4_K_S.gguf",
-        "default",
-        "default",
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 39,
       "type": "DualCLIPLoaderGGUF",
       "pos": {
@@ -2890,7 +2851,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2927,7 +2888,7 @@
         "1": 944
       },
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -3009,7 +2970,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3047,7 +3008,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3083,7 +3044,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 27,
+      "order": 26,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3121,7 +3082,7 @@
         "1": 528
       },
       "flags": {},
-      "order": 28,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -3155,6 +3116,45 @@
         750344445616663,
         "randomize",
         "Select the Wildcard to add to the text"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 155,
+      "type": "UnetLoaderGGUFAdvanced",
+      "pos": {
+        "0": 208,
+        "1": -64
+      },
+      "size": {
+        "0": 410,
+        "1": 130
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            530
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像生成のモデル",
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUFAdvanced"
+      },
+      "widgets_values": [
+        "FluxD-Base\\flux1-dev-hyper8-Q4_K_S.gguf",
+        "default",
+        "default",
+        false
       ],
       "color": "#232",
       "bgcolor": "#353"
