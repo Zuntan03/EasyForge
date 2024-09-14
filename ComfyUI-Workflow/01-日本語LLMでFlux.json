@@ -2904,168 +2904,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 99,
-      "type": "Searge_LLM_Node",
-      "pos": {
-        "0": 2030,
-        "1": 890
-      },
-      "size": [
-        240,
-        180
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 44,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "adv_options_config",
-          "type": "SRGADVOPTIONSCONFIG",
-          "link": null
-        },
-        {
-          "name": "random_seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "random_seed"
-          }
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 478,
-          "widget": {
-            "name": "text"
-          }
-        },
-        {
-          "name": "model",
-          "type": "COMBO",
-          "link": 532,
-          "widget": {
-            "name": "model"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "generated",
-          "type": "STRING",
-          "links": [
-            217,
-            222,
-            225,
-            240,
-            241,
-            450,
-            511
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "original",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        }
-      ],
-      "title": "LLM プロンプト生成",
-      "properties": {
-        "Node name for S&R": "Searge_LLM_Node"
-      },
-      "widgets_values": [
-        "",
-        1234567890,
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        4096,
-        true,
-        "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
-      ]
-    },
-    {
-      "id": 211,
-      "type": "Searge_LLM_Node",
-      "pos": {
-        "0": 2280,
-        "1": 890
-      },
-      "size": [
-        240,
-        180
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 49,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "adv_options_config",
-          "type": "SRGADVOPTIONSCONFIG",
-          "link": null
-        },
-        {
-          "name": "random_seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "random_seed"
-          }
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 450,
-          "widget": {
-            "name": "text"
-          }
-        },
-        {
-          "name": "model",
-          "type": "COMBO",
-          "link": 533,
-          "widget": {
-            "name": "model"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "generated",
-          "type": "STRING",
-          "links": [
-            512
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "original",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        }
-      ],
-      "title": "LLM 和訳",
-      "properties": {
-        "Node name for S&R": "Searge_LLM_Node"
-      },
-      "widgets_values": [
-        "",
-        1234567890,
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        4096,
-        true,
-        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
-      ]
-    },
-    {
       "id": 258,
       "type": "INTConstant",
       "pos": {
@@ -3110,10 +2948,10 @@
         "0": 1590,
         "1": 420
       },
-      "size": [
-        270,
-        110
-      ],
+      "size": {
+        "0": 270,
+        "1": 110
+      },
       "flags": {},
       "order": 28,
       "mode": 0,
@@ -3219,6 +3057,168 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 211,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2280,
+        "1": 890
+      },
+      "size": {
+        "0": 240,
+        "1": 180
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 450,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "link": 533,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            512
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "LLM 和訳",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        1024,
+        true,
+        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
+      ]
+    },
+    {
+      "id": 99,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2030,
+        "1": 890
+      },
+      "size": {
+        "0": 240,
+        "1": 180
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 478,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "link": 532,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            217,
+            222,
+            225,
+            240,
+            241,
+            450,
+            511
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "LLM プロンプト生成",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        512,
+        true,
+        "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
+      ]
     }
   ],
   "links": [
@@ -4028,10 +4028,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1,
+      "scale": 0.5644739300537776,
       "offset": [
-        0,
-        0
+        -310.5464435075284,
+        334.8633076716958
       ]
     },
     "groupNodes": {}
