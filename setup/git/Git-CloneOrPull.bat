@@ -2,7 +2,7 @@
 chcp 65001 > NUL
 
 call %~dp0Git-SetPath.bat
-if %ERRORLEVEL% neq 0 ( exit /b %ERRORLEVEL% )
+if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 set GIT_CLONE_OR_PULL_URL=%~1
 echo %GIT_CLONE_OR_PULL_URL%
@@ -34,4 +34,4 @@ if exist %GIT_CLONE_OR_PULL_DIR%\ (
 
 echo git clone %GIT_CLONE_OR_PULL_URL%
 git clone %GIT_CLONE_OR_PULL_URL%
-if %ERRORLEVEL% neq 0 ( pause & exit /b %ERRORLEVEL% )
+if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )

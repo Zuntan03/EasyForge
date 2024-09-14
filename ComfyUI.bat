@@ -7,6 +7,9 @@ if not exist %~dp0ComfyUI\venv\ (
 )
 if not exist %~dp0ComfyUI\venv\ ( pause & exit /b 1 )
 
+call %~dp0setup\git\Git-SetPath.bat
+if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
+
 pushd %~dp0ComfyUI
 
 call %~dp0setup\install\ComfyUI-UpdateConfig.bat user\default\comfy.settings.json
