@@ -5,6 +5,9 @@ set "FORGE_BASE=%~dp0..\..\stable-diffusion-webui-forge"
 set "FORGE_MODEL=%FORGE_BASE%\models"
 
 pushd %~dp0..\..
+
+if not exist ComfyUI\output\ ( mkdir ComfyUI\output )
+
 call "%LINK_DIR%" outputs\txt2img-images\ComfyUI "ComfyUI\output"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
