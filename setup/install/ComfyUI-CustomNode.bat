@@ -58,6 +58,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call %GITHUB% WASasquatch was-node-suite-comfyui main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+echo pip install --qq numba==0.60.0
+pip install --qq numba==0.60.0
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 popd rem %~dp0..\..\ComfyUI\custom_nodes
 pushd %~dp0..\..\ComfyUI\custom_nodes\ComfyUI-GGUF
 
