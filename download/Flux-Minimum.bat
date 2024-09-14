@@ -3,6 +3,8 @@ chcp 65001 > NUL
 
 call %~dp0all\ESRGAN.bat
 
+call %~dp0Lora\FluxD-Util\Hyper-FLUX.1-dev-8steps-lora.bat
+
 call %~dp0Stable-diffusion\FluxD-Base\flux1-dev-hyper8-Q4_K_S.bat
 call %~dp0Stable-diffusion\FluxD-Base\flux1-dev-hyper8-Q8_0.bat
 

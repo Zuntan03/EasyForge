@@ -6,7 +6,8 @@ call %~dp0Flux-Minimum.bat
 call %~dp0all\adetailer.bat
 call %~dp0all\wildcards.bat
 
-call %~dp0Lora\FluxD-Util\Hyper-FLUX.1-dev-8steps-lora.bat
+call %~dp0Stable-diffusion\FluxD-Anime\fca_style-v33-x10-8step-Q4_K_S.bat
+call %~dp0Stable-diffusion\FluxD-Anime\MythP0rt-x08-8step-Q4_K_S.bat
 
 call %~dp0Stable-diffusion\FluxD-Base\flux1-dev-Q8_0.bat
 
