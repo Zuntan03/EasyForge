@@ -3059,84 +3059,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 211,
-      "type": "Searge_LLM_Node",
-      "pos": {
-        "0": 2280,
-        "1": 890
-      },
-      "size": {
-        "0": 240,
-        "1": 180
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 49,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "adv_options_config",
-          "type": "SRGADVOPTIONSCONFIG",
-          "link": null
-        },
-        {
-          "name": "random_seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "random_seed"
-          }
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 450,
-          "widget": {
-            "name": "text"
-          }
-        },
-        {
-          "name": "model",
-          "type": "COMBO",
-          "link": 533,
-          "widget": {
-            "name": "model"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "generated",
-          "type": "STRING",
-          "links": [
-            512
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "original",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        }
-      ],
-      "title": "LLM 和訳",
-      "properties": {
-        "Node name for S&R": "Searge_LLM_Node"
-      },
-      "widgets_values": [
-        "",
-        1234567890,
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        1024,
-        true,
-        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
-      ]
-    },
-    {
       "id": 99,
       "type": "Searge_LLM_Node",
       "pos": {
@@ -3215,9 +3137,87 @@
         "",
         1234567890,
         "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        512,
+        1024,
         true,
         "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
+      ]
+    },
+    {
+      "id": 211,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2280,
+        "1": 890
+      },
+      "size": {
+        "0": 240,
+        "1": 180
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 450,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "link": 533,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            512
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "LLM 和訳",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        2048,
+        true,
+        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
       ]
     }
   ],
@@ -3977,11 +3977,23 @@
   ],
   "groups": [
     {
-      "title": "Hires. fix（拡大よりも書き込み増加がねらい）",
+      "title": "プロンプト",
       "bounding": [
-        180,
+        1330,
+        290,
+        540,
+        260
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "アップスケール",
+      "bounding": [
+        1160,
         -270,
-        960,
+        640,
         160
       ],
       "color": "#8A8",
@@ -4001,24 +4013,12 @@
       "flags": {}
     },
     {
-      "title": "アップスケール",
+      "title": "Hires. fix（拡大よりも書き込み増加がねらい）",
       "bounding": [
-        1160,
+        180,
         -270,
-        640,
+        960,
         160
-      ],
-      "color": "#8A8",
-      "font_size": 24,
-      "flags": {}
-    },
-    {
-      "title": "プロンプト",
-      "bounding": [
-        1330,
-        290,
-        540,
-        260
       ],
       "color": "#8A8",
       "font_size": 24,
@@ -4028,10 +4028,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537776,
+      "scale": 0.5644739300537773,
       "offset": [
-        -310.5464435075284,
-        334.8633076716958
+        -819.895609962074,
+        251.57243558078662
       ]
     },
     "groupNodes": {}
