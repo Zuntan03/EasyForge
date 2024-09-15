@@ -47,6 +47,8 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+### 2026/09/14
+
 - EasyForge に ComfyUI をワンクリックで追加して、日本語 LLM による指示（英訳でなく）で Flux Dev の画像を生成する『[日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)』に対応しました。
   - モデルや LoRA などのファイルは Forge 用にダウンロードしたものをそのまま利用できます。
 
