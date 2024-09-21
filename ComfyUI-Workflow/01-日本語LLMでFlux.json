@@ -1,6 +1,6 @@
 {
   "last_node_id": 292,
-  "last_link_id": 617,
+  "last_link_id": 624,
   "nodes": [
     {
       "id": 6,
@@ -1588,10 +1588,10 @@
         "0": -10,
         "1": -60
       },
-      "size": [
-        630,
-        130
-      ],
+      "size": {
+        "0": 630,
+        "1": 130
+      },
       "flags": {},
       "order": 34,
       "mode": 0,
@@ -1612,7 +1612,7 @@
         "Node name for S&R": "UnetLoaderGGUFAdvanced"
       },
       "widgets_values": [
-        "FluxD-Anime\\Flat_colour_anime_style_image_showing-v34-x08-8step-Q8_0.gguf",
+        "FluxD-Base\\flux1-dev-hyper8-Q4_K_S.gguf",
         "default",
         "default",
         false
@@ -4715,6 +4715,62 @@
     ],
     [
       617,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      618,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      619,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      620,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      621,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      622,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      623,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      624,
       45,
       0,
       281,
