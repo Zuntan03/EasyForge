@@ -1,11 +1,17 @@
 @echo off
 chcp 65001 > NUL
-set DL_CV=%~dp0..\..\setup\download\CivitaiModel.bat
+set DL_CV=%~dp0..\..\..\setup\download\CivitaiModel.bat
 set PS_CMD=PowerShell -Version 5.1 -NoProfile -ExecutionPolicy Bypass
-pushd %~dp0..\..\stable-diffusion-webui-forge\models\adetailer
+pushd %~dp0..\..\..\stable-diffusion-webui-forge\models\adetailer\bbox
 
 if exist "nipples_yolov8s.pt" (
 	echo https://civitai.com/models/490259?modelVersionId=545161 nipples_yolov8s.pt
+	popd & exit /b 0
+)
+
+if exist "..\nipples_yolov8s.pt" (
+	echo https://civitai.com/models/490259?modelVersionId=545161 nipples_yolov8s.pt
+	move /Y "..\nipples_yolov8s.pt" .
 	popd & exit /b 0
 )
 
@@ -20,4 +26,4 @@ echo del /Q nipples_yolov8s.zip
 del /Q nipples_yolov8s.zip
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
-popd rem %~dp0..\..\stable-diffusion-webui-forge\models\adetailer
+popd rem %~dp0..\..\..\stable-diffusion-webui-forge\models\adetailer\bbox

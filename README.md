@@ -47,6 +47,19 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+### 2026/09/21
+
+- ComfyUI で LamaCleaner を使う『[いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)』を追加しました。
+  - Segment Anything Model でのマスク指定と、右ドラックでのマスク削除が特徴です。
+
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/SAM.png)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/MaskEditor.png)|
+|:-:|:-:|
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/Workflow.png)
+
+- `ComfyUI-Workflow` の `日本語LLMでFlux` に `画像からプロンプト生成` を追加しました。
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLlm/img_prompt.png)
+
 ### 2026/09/14
 
 - EasyForge に ComfyUI をワンクリックで追加して、日本語 LLM による指示（英訳でなく）で Flux Dev の画像を生成する『[日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)』に対応しました。
@@ -140,7 +153,8 @@ LoRA あり作例
 ### ComfyUI
 
 - [日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)
-  
+- [いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)
+
 ### その他
 
 - [過去の更新履歴](https://github.com/Zuntan03/EasyForge/wiki/%E9%81%8E%E5%8E%BB%E3%81%AE%E6%9B%B4%E6%96%B0%E5%B1%A5%E6%AD%B4)

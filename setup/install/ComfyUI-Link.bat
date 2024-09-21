@@ -15,6 +15,12 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call "%LINK_DIR%" ComfyUI-Output "ComfyUI\output"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+if not exist ComfyUI\user\default\ ( mkdir ComfyUI\user\default )
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+call "%LINK_DIR%" "ComfyUI\user\default\workflows" ComfyUI-Workflow
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 popd rem %~dp0..\..
 
 pushd %~dp0..\..\ComfyUI\models
@@ -28,6 +34,9 @@ call "%LINK_DIR%" clip "%FORGE_MODEL%\VAE"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 call "%LINK_DIR%" loras "%FORGE_MODEL%\Lora"
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+call "%LINK_DIR%" ultralytics "%FORGE_MODEL%\adetailer"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 call "%LINK_DIR%" upscale_models "%FORGE_MODEL%\ESRGAN"

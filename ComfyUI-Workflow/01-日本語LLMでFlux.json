@@ -1,136 +1,63 @@
 {
-  "last_node_id": 268,
-  "last_link_id": 533,
+  "last_node_id": 292,
+  "last_link_id": 617,
   "nodes": [
     {
-      "id": 116,
-      "type": "BasicScheduler",
+      "id": 6,
+      "type": "CLIPTextEncode",
       "pos": {
-        "0": 2960,
-        "1": 180
+        "0": 1660,
+        "1": -50
       },
       "size": {
-        "0": 256,
-        "1": 96
+        "0": 210,
+        "1": 54
       },
       "flags": {
         "collapsed": true
       },
-      "order": 46,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
-          "name": "model",
-          "type": "MODEL",
-          "link": 358,
+          "name": "clip",
+          "type": "CLIP",
+          "link": 201
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 591,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            153,
+            504
+          ],
           "slot_index": 0
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 264,
-          "widget": {
-            "name": "steps"
-          }
-        },
-        {
-          "name": "denoise",
-          "type": "FLOAT",
-          "link": 265,
-          "widget": {
-            "name": "denoise"
-          }
-        },
-        {
-          "name": "scheduler",
-          "type": "COMBO",
-          "link": 456,
-          "widget": {
-            "name": "scheduler"
-          }
         }
       ],
-      "outputs": [
-        {
-          "name": "SIGMAS",
-          "type": "SIGMAS",
-          "links": [
-            407
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "HiresFix BasicScheduler",
+      "title": "CLIP Text Encode",
       "properties": {
-        "Node name for S&R": "BasicScheduler"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "simple",
-        8,
-        1
-      ]
-    },
-    {
-      "id": 27,
-      "type": "EmptySD3LatentImage",
-      "pos": {
-        "0": 2330,
-        "1": 260
-      },
-      "size": {
-        "0": 210,
-        "1": 80
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 521,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 524,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            156
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptySD3LatentImage"
-      },
-      "widgets_values": [
-        896,
-        1152,
-        1
+        "cute anime girl with massive fluffy fennec ears and a big fluffy tail blonde messy long hair blue eyes wearing a maid outfit with a long black gold leaf pattern dress and a white apron mouth open holding a fancy black forest cake with candles on top in the kitchen of an old dark Victorian mansion lit by candlelight with a bright window to the foggy forest and very expensive stuff everywhere"
       ]
     },
     {
       "id": 8,
       "type": "VAEDecode",
       "pos": {
-        "0": 3260,
-        "1": -50
+        "0": 3270,
+        "1": -30
       },
       "size": {
         "0": 210,
@@ -139,7 +66,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 60,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -169,51 +96,15 @@
       }
     },
     {
-      "id": 206,
-      "type": "Anything Everywhere?",
+      "id": 10,
+      "type": "VAELoader",
       "pos": {
-        "0": 3440,
-        "1": -240
+        "0": 2960,
+        "1": 460
       },
       "size": {
-        "0": 224,
-        "1": 112
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 62,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "IMAGE",
-          "type": "*",
-          "link": 495,
-          "color_on": "#64B5F6"
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "Anything Everywhere?",
-        "group_restricted": 0,
-        "color_restricted": 0
-      },
-      "widgets_values": [
-        "アップスケール前",
-        "images",
-        ".*"
-      ]
-    },
-    {
-      "id": 150,
-      "type": "GetNode",
-      "pos": {
-        "0": 3570,
-        "1": -140
-      },
-      "size": {
-        "0": 210,
-        "1": 58
+        "0": 260,
+        "1": 60
       },
       "flags": {
         "collapsed": true
@@ -223,440 +114,23 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            422
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_HiresFixEnable",
-      "properties": {},
-      "widgets_values": [
-        "HiresFixEnable"
-      ]
-    },
-    {
-      "id": 231,
-      "type": "GetNode",
-      "pos": {
-        "0": 4350,
-        "1": -160
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            464
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_UpscaleEnable",
-      "properties": {},
-      "widgets_values": [
-        "UpscaleEnable"
-      ]
-    },
-    {
-      "id": 208,
-      "type": "Anything Everywhere?",
-      "pos": {
-        "0": 5010,
-        "1": -110
-      },
-      "size": {
-        "0": 224,
-        "1": 112
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 69,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "IMAGE",
-          "type": "*",
-          "link": 498,
-          "color_on": "#64B5F6"
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "Anything Everywhere?",
-        "group_restricted": 0,
-        "color_restricted": 0
-      },
-      "widgets_values": [
-        "webp 保存",
-        "images",
-        ".*"
-      ]
-    },
-    {
-      "id": 241,
-      "type": "ImagePass",
-      "pos": {
-        "0": 4830,
-        "1": -110
-      },
-      "size": {
-        "0": 144,
-        "1": 32
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 68,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 499
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            498
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImagePass"
-      }
-    },
-    {
-      "id": 199,
-      "type": "VAEDecode",
-      "pos": {
-        "0": 3550,
-        "1": 130
-      },
-      "size": {
-        "0": 144,
-        "1": 48
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 63,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 420
-        },
-        {
-          "name": "vae",
+          "name": "VAE",
           "type": "VAE",
-          "link": 421
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
           "links": [
-            500
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 30,
-      "type": "ModelSamplingFlux",
-      "pos": {
-        "0": 1920,
-        "1": -90
-      },
-      "size": {
-        "0": 210,
-        "1": 128
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 42,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 200,
-          "slot_index": 0
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 519,
-          "slot_index": 1,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 523,
-          "slot_index": 2,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            54,
-            55
+            12,
+            421,
+            536
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
+        "Node name for S&R": "VAELoader"
       },
       "widgets_values": [
-        1.15,
-        0.5,
-        896,
-        1152
+        "Flux\\ae.safetensors"
       ]
-    },
-    {
-      "id": 25,
-      "type": "RandomNoise",
-      "pos": {
-        "0": 2330,
-        "1": -60
-      },
-      "size": {
-        "0": 210,
-        "1": 34
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "noise_seed"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "NOISE",
-          "type": "NOISE",
-          "links": [
-            37,
-            364
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RandomNoise"
-      },
-      "widgets_values": [
-        545706397772896,
-        "randomize"
-      ]
-    },
-    {
-      "id": 22,
-      "type": "BasicGuider",
-      "pos": {
-        "0": 2330,
-        "1": 20
-      },
-      "size": {
-        "0": 208,
-        "1": 48
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 56,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 54,
-          "slot_index": 0
-        },
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 42,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "GUIDER",
-          "type": "GUIDER",
-          "links": [
-            30
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "BasicGuider"
-      }
-    },
-    {
-      "id": 114,
-      "type": "SamplerCustomAdvanced",
-      "pos": {
-        "0": 3260,
-        "1": 50
-      },
-      "size": {
-        "0": 240,
-        "1": 112
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 61,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "noise",
-          "type": "NOISE",
-          "link": 364,
-          "slot_index": 0
-        },
-        {
-          "name": "guider",
-          "type": "GUIDER",
-          "link": 360,
-          "slot_index": 1
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 417,
-          "slot_index": 2
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 407,
-          "slot_index": 3
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 375,
-          "slot_index": 4
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            249,
-            420
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SamplerCustomAdvanced"
-      }
-    },
-    {
-      "id": 182,
-      "type": "BasicGuider",
-      "pos": {
-        "0": 2670,
-        "1": -190
-      },
-      "size": {
-        "0": 176,
-        "1": 48
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 57,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 359,
-          "slot_index": 0
-        },
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 505,
-          "slot_index": 1
-        }
-      ],
-      "outputs": [
-        {
-          "name": "GUIDER",
-          "type": "GUIDER",
-          "links": [
-            360
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "HiresFix BasicGuider",
-      "properties": {
-        "Node name for S&R": "BasicGuider"
-      }
     },
     {
       "id": 13,
@@ -672,7 +146,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 58,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -730,471 +204,6 @@
       }
     },
     {
-      "id": 131,
-      "type": "GetNode",
-      "pos": {
-        "0": 2670,
-        "1": 210
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            264
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_HiresFixSteps",
-      "properties": {},
-      "widgets_values": [
-        "HiresFixSteps"
-      ]
-    },
-    {
-      "id": 132,
-      "type": "GetNode",
-      "pos": {
-        "0": 2670,
-        "1": 320
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            265
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_HiresFixDenoise",
-      "properties": {},
-      "widgets_values": [
-        "HiresFixDenoise"
-      ]
-    },
-    {
-      "id": 165,
-      "type": "UnloadModel",
-      "pos": {
-        "0": 2300,
-        "1": 700
-      },
-      "size": {
-        "0": 144,
-        "1": 48
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 41,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "value",
-          "type": "*",
-          "link": 482
-        },
-        {
-          "name": "model",
-          "type": "*",
-          "link": 337
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": [
-            478
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UnloadModel"
-      }
-    },
-    {
-      "id": 233,
-      "type": "Text Concatenate",
-      "pos": {
-        "0": 2040,
-        "1": 700
-      },
-      "size": {
-        "0": 210,
-        "1": 144
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 38,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text_a",
-          "type": "STRING",
-          "link": 483,
-          "widget": {
-            "name": "text_a"
-          }
-        },
-        {
-          "name": "text_b",
-          "type": "STRING",
-          "link": 480,
-          "widget": {
-            "name": "text_b"
-          }
-        },
-        {
-          "name": "text_c",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "text_c"
-          }
-        },
-        {
-          "name": "text_d",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "text_d"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            482
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "連結",
-      "properties": {
-        "Node name for S&R": "Text Concatenate"
-      },
-      "widgets_values": [
-        "",
-        "false",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": {
-        "0": 1660,
-        "1": -50
-      },
-      "size": {
-        "0": 210,
-        "1": 54
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 50,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 201
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 230,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            153,
-            504
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "cute anime girl with massive fluffy fennec ears and a big fluffy tail blonde messy long hair blue eyes wearing a maid outfit with a long black gold leaf pattern dress and a white apron mouth open holding a fancy black forest cake with candles on top in the kitchen of an old dark Victorian mansion lit by candlelight with a bright window to the foggy forest and very expensive stuff everywhere"
-      ]
-    },
-    {
-      "id": 50,
-      "type": "Text Concatenate",
-      "pos": {
-        "0": 1660,
-        "1": 50
-      },
-      "size": {
-        "0": 210,
-        "1": 144
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 48,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text_a",
-          "type": "STRING",
-          "link": 207,
-          "widget": {
-            "name": "text_a"
-          }
-        },
-        {
-          "name": "text_b",
-          "type": "STRING",
-          "link": 240,
-          "widget": {
-            "name": "text_b"
-          }
-        },
-        {
-          "name": "text_c",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "text_c"
-          }
-        },
-        {
-          "name": "text_d",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "text_d"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            238
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "連結",
-      "properties": {
-        "Node name for S&R": "Text Concatenate"
-      },
-      "widgets_values": [
-        ". ",
-        "true",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    {
-      "id": 257,
-      "type": "INTConstant",
-      "pos": {
-        "0": 1330,
-        "1": -10
-      },
-      "size": {
-        "0": 210,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            525
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "ステップ数",
-      "properties": {
-        "Node name for S&R": "INTConstant"
-      },
-      "widgets_values": [
-        8
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 180,
-      "type": "ImageUpscaleWithModel",
-      "pos": {
-        "0": 4080,
-        "1": 80
-      },
-      "size": {
-        "0": 226.8000030517578,
-        "1": 48
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 65,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 528
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 502
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            346
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageUpscaleWithModel"
-      }
-    },
-    {
-      "id": 260,
-      "type": "GetNode",
-      "pos": {
-        "0": 3840,
-        "1": 130
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            528
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_UpscaleModel",
-      "properties": {},
-      "widgets_values": [
-        "UpscaleModel"
-      ]
-    },
-    {
-      "id": 181,
-      "type": "ImageScaleBy",
-      "pos": {
-        "0": 4320,
-        "1": 190
-      },
-      "size": {
-        "0": 240,
-        "1": 82
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 66,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 346
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            467,
-            503
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "4倍アップスケールを半分に縮小",
-      "properties": {
-        "Node name for S&R": "ImageScaleBy"
-      },
-      "widgets_values": [
-        "lanczos",
-        0.5
-      ]
-    },
-    {
       "id": 16,
       "type": "KSamplerSelect",
       "pos": {
@@ -1208,7 +217,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 7,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1231,486 +240,6 @@
       ]
     },
     {
-      "id": 222,
-      "type": "PrimitiveNode",
-      "pos": {
-        "0": 1920,
-        "1": 290
-      },
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "COMBO",
-          "type": "COMBO",
-          "links": [
-            455,
-            456
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "scheduler"
-          }
-        }
-      ],
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        "simple",
-        "fixed",
-        ""
-      ]
-    },
-    {
-      "id": 117,
-      "type": "FloatConstant",
-      "pos": {
-        "0": 910,
-        "1": -210
-      },
-      "size": {
-        "0": 210,
-        "1": 64
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "FLOAT",
-          "links": [
-            260
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "Hires. fix のスケール",
-      "properties": {
-        "Node name for S&R": "FloatConstant"
-      },
-      "widgets_values": [
-        1.25
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 126,
-      "type": "SetNode",
-      "pos": {
-        "0": 960,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "link": 260
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_HiresFixScale",
-      "properties": {
-        "previousName": "HiresFixScale"
-      },
-      "widgets_values": [
-        "HiresFixScale"
-      ]
-    },
-    {
-      "id": 130,
-      "type": "SetNode",
-      "pos": {
-        "0": 720,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 31,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "link": 263
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_HiresFixSteps",
-      "properties": {
-        "previousName": "HiresFixSteps"
-      },
-      "widgets_values": [
-        "HiresFixSteps"
-      ]
-    },
-    {
-      "id": 119,
-      "type": "INTConstant",
-      "pos": {
-        "0": 670,
-        "1": -210
-      },
-      "size": {
-        "0": 210,
-        "1": 64
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            263
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "Hires. fix のステップ数",
-      "properties": {
-        "Node name for S&R": "INTConstant"
-      },
-      "widgets_values": [
-        8
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 129,
-      "type": "SetNode",
-      "pos": {
-        "0": 480,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 34,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "link": 275
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_HiresFixDenoise",
-      "properties": {
-        "previousName": "HiresFixDenoise"
-      },
-      "widgets_values": [
-        "HiresFixDenoise"
-      ]
-    },
-    {
-      "id": 152,
-      "type": "SetNode",
-      "pos": {
-        "0": 240,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "link": 517
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_HiresFixEnable",
-      "properties": {
-        "previousName": "HiresFixEnable"
-      },
-      "widgets_values": [
-        "HiresFixEnable"
-      ]
-    },
-    {
-      "id": 227,
-      "type": "ImpactSwitch",
-      "pos": {
-        "0": 4590,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 118
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 67,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "select",
-          "type": "INT",
-          "link": 464,
-          "widget": {
-            "name": "select"
-          }
-        },
-        {
-          "name": "input1",
-          "type": "IMAGE",
-          "link": 501
-        },
-        {
-          "name": "input2",
-          "type": "IMAGE",
-          "link": 503
-        },
-        {
-          "name": "input3",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            499
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "IMAGE"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactSwitch"
-      },
-      "widgets_values": [
-        1,
-        false
-      ]
-    },
-    {
-      "id": 259,
-      "type": "SetNode",
-      "pos": {
-        "0": 1620,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 32,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "link": 527
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_UpscaleModel",
-      "properties": {
-        "previousName": "UpscaleModel"
-      },
-      "widgets_values": [
-        "UpscaleModel"
-      ]
-    },
-    {
-      "id": 229,
-      "type": "SetNode",
-      "pos": {
-        "0": 1270,
-        "1": -110
-      },
-      "size": {
-        "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 36,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "link": 463
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_UpscaleEnable",
-      "properties": {
-        "previousName": "UpscaleEnable"
-      },
-      "widgets_values": [
-        "UpscaleEnable"
-      ]
-    },
-    {
-      "id": 127,
-      "type": "GetNode",
-      "pos": {
-        "0": 2700,
-        "1": 430
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 11,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            261
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Get_HiresFixScale",
-      "properties": {},
-      "widgets_values": [
-        "HiresFixScale"
-      ]
-    },
-    {
-      "id": 84,
-      "type": "Anything Everywhere?",
-      "pos": {
-        "0": 1180,
-        "1": -60
-      },
-      "size": {
-        "0": 315,
-        "1": 106
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "*",
-          "link": 180,
-          "color_on": ""
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "Anything Everywhere?",
-        "group_restricted": 0,
-        "color_restricted": 0
-      },
-      "widgets_values": [
-        ".*",
-        "seed",
-        ".*"
-      ]
-    },
-    {
       "id": 17,
       "type": "BasicScheduler",
       "pos": {
@@ -1724,7 +253,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 45,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -1770,15 +299,1191 @@
       ]
     },
     {
-      "id": 10,
-      "type": "VAELoader",
+      "id": 22,
+      "type": "BasicGuider",
       "pos": {
-        "0": 2990,
-        "1": -240
+        "0": 2330,
+        "1": 20
+      },
+      "size": {
+        "0": 208,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 54,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 42,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            30
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 25,
+      "type": "RandomNoise",
+      "pos": {
+        "0": 2330,
+        "1": -70
+      },
+      "size": {
+        "0": 210,
+        "1": 34
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "noise_seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            37,
+            364
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        284203153899372,
+        "randomize"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "FluxGuidance",
+      "pos": {
+        "0": 1920,
+        "1": 70
+      },
+      "size": {
+        "0": 211.60000610351562,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            42
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FluxGuidance"
+      },
+      "widgets_values": [
+        3.5
+      ]
+    },
+    {
+      "id": 27,
+      "type": "EmptySD3LatentImage",
+      "pos": {
+        "0": 2330,
+        "1": 260
+      },
+      "size": {
+        "0": 210,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 521,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 524,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            156
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptySD3LatentImage"
+      },
+      "widgets_values": [
+        896,
+        1152,
+        1
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ModelSamplingFlux",
+      "pos": {
+        "0": 1920,
+        "1": -90
+      },
+      "size": {
+        "0": 210,
+        "1": 128
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 200,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 519,
+          "slot_index": 1,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 523,
+          "slot_index": 2,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            54,
+            55
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        1.15,
+        0.5,
+        896,
+        1152
+      ]
+    },
+    {
+      "id": 39,
+      "type": "DualCLIPLoaderGGUF",
+      "pos": {
+        "0": 640,
+        "1": -60
+      },
+      "size": {
+        "0": 300,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            332
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "テキストエンコーダ t5xxl-fp16推奨",
+      "properties": {
+        "Node name for S&R": "DualCLIPLoaderGGUF"
+      },
+      "widgets_values": [
+        "Flux\\t5xxl-Q6_K.gguf",
+        "Flux\\clip_l.safetensors",
+        "flux"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 43,
+      "type": "ImpactWildcardEncode",
+      "pos": {
+        "0": 640,
+        "1": 110
+      },
+      "size": {
+        "0": 672,
+        "1": 384
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 530
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 332
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 555,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            200,
+            357
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": [
+            201
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "populated_text",
+          "type": "STRING",
+          "links": [
+            228,
+            239,
+            566
+          ],
+          "slot_index": 3,
+          "shape": 3
+        }
+      ],
+      "title": "基本プロンプト（上の欄に入力、画像生成用のプロンプト、LoRAとワイルドカードが使えます）",
+      "properties": {
+        "Node name for S&R": "ImpactWildcardEncode"
+      },
+      "widgets_values": [
+        "",
+        "",
+        true,
+        "Select the LoRA to add to the text",
+        "Select the Wildcard to add to the text",
+        16890220055567,
+        "randomize"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 45,
+      "type": "Seed (rgthree)",
+      "pos": {
+        "0": 1030,
+        "1": -70
+      },
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SEED",
+          "type": "INT",
+          "links": [
+            180,
+            552,
+            560,
+            561
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "dir": 4
+        }
+      ],
+      "title": "全体のシード",
+      "properties": {},
+      "widgets_values": [
+        -1,
+        null,
+        null,
+        null
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 50,
+      "type": "Text Concatenate",
+      "pos": {
+        "0": 2510,
+        "1": 540
+      },
+      "size": {
+        "0": 210,
+        "1": 144
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 566,
+          "widget": {
+            "name": "text_a"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 576,
+          "widget": {
+            "name": "text_b"
+          }
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": 590,
+          "widget": {
+            "name": "text_c"
+          }
+        },
+        {
+          "name": "text_d",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_d"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            578,
+            581,
+            583,
+            591
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像生成プロンプト連結",
+      "properties": {
+        "Node name for S&R": "Text Concatenate"
+      },
+      "widgets_values": [
+        " ",
+        "true",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 57,
+      "type": "ImpactWildcardProcessor",
+      "pos": {
+        "0": 640,
+        "1": 550
+      },
+      "size": {
+        "0": 672,
+        "1": 528
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            594
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLMプロンプト（上の欄に入力、日本語で指示できます、ワイルドカードが使えます）",
+      "properties": {
+        "Node name for S&R": "ImpactWildcardProcessor"
+      },
+      "widgets_values": [
+        "異世界ファンタジーの食堂街で笑顔のヒロイン",
+        "異世界ファンタジーの食堂街で笑顔のヒロイン",
+        true,
+        753579379953348,
+        "randomize",
+        "Select the Wildcard to add to the text"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 84,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 1260,
+        "1": -90
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "*",
+          "link": 180,
+          "color_on": ""
+        }
+      ],
+      "outputs": [],
+      "title": "AnySeed",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "seed",
+        ".*"
+      ]
+    },
+    {
+      "id": 99,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 1930,
+        "1": 530
+      },
+      "size": {
+        "0": 240,
+        "1": 170
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 595,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "link": 532,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            217,
+            222,
+            225,
+            575
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "プロンプト生成LLM",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        1536,
+        true,
+        "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
+      ]
+    },
+    {
+      "id": 113,
+      "type": "LatentUpscaleBy",
+      "pos": {
+        "0": 2960,
+        "1": 330
+      },
+      "size": {
+        "0": 256,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 247
+        },
+        {
+          "name": "scale_by",
+          "type": "FLOAT",
+          "link": 261,
+          "widget": {
+            "name": "scale_by"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            375
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentUpscaleBy"
+      },
+      "widgets_values": [
+        "bislerp",
+        1.5
+      ]
+    },
+    {
+      "id": 114,
+      "type": "SamplerCustomAdvanced",
+      "pos": {
+        "0": 3270,
+        "1": 70
+      },
+      "size": {
+        "0": 240,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 364,
+          "slot_index": 0
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 360,
+          "slot_index": 1
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 417,
+          "slot_index": 2
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 407,
+          "slot_index": 3
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 375,
+          "slot_index": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            249,
+            420
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 116,
+      "type": "BasicScheduler",
+      "pos": {
+        "0": 2960,
+        "1": 180
+      },
+      "size": {
+        "0": 256,
+        "1": 96
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 358,
+          "slot_index": 0
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 264,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 265,
+          "widget": {
+            "name": "denoise"
+          }
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "link": 456,
+          "widget": {
+            "name": "scheduler"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            407
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix BasicScheduler",
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        1
+      ]
+    },
+    {
+      "id": 117,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 720,
+        "1": -180
       },
       "size": {
         "0": 210,
         "1": 64
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            260
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のスケール",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        1.25
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 119,
+      "type": "INTConstant",
+      "pos": {
+        "0": 480,
+        "1": -180
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            263
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のステップ数",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        8
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 126,
+      "type": "SetNode",
+      "pos": {
+        "0": 770,
+        "1": -230
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 260
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixScale",
+      "properties": {
+        "previousName": "HiresFixScale"
+      },
+      "widgets_values": [
+        "HiresFixScale"
+      ]
+    },
+    {
+      "id": 127,
+      "type": "GetNode",
+      "pos": {
+        "0": 2670,
+        "1": 440
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            261
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixScale",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixScale"
+      ]
+    },
+    {
+      "id": 128,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 240,
+        "1": -180
+      },
+      "size": {
+        "0": 210,
+        "1": 64
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            275
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "Hires. fix のデノイズ強度",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        0.65
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 129,
+      "type": "SetNode",
+      "pos": {
+        "0": 270,
+        "1": -230
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "link": 275
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixDenoise",
+      "properties": {
+        "previousName": "HiresFixDenoise"
+      },
+      "widgets_values": [
+        "HiresFixDenoise"
+      ]
+    },
+    {
+      "id": 130,
+      "type": "SetNode",
+      "pos": {
+        "0": 530,
+        "1": -230
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 263
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_HiresFixSteps",
+      "properties": {
+        "previousName": "HiresFixSteps"
+      },
+      "widgets_values": [
+        "HiresFixSteps"
+      ]
+    },
+    {
+      "id": 131,
+      "type": "GetNode",
+      "pos": {
+        "0": 2670,
+        "1": 210
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            264
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixSteps",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixSteps"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "GetNode",
+      "pos": {
+        "0": 2670,
+        "1": 320
+      },
+      "size": {
+        "0": 240,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            265
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_HiresFixDenoise",
+      "properties": {},
+      "widgets_values": [
+        "HiresFixDenoise"
+      ]
+    },
+    {
+      "id": 150,
+      "type": "GetNode",
+      "pos": {
+        "0": 3570,
+        "1": 80
+      },
+      "size": {
+        "0": 210,
+        "1": 60
       },
       "flags": {
         "collapsed": true
@@ -1788,151 +1493,268 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "VAE",
-          "type": "VAE",
+          "name": "INT",
+          "type": "INT",
           "links": [
-            12,
-            421
+            542
           ],
-          "slot_index": 0,
-          "shape": 3
+          "slot_index": 0
         }
       ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
+      "title": "Get_HiresFixEnable",
+      "properties": {},
       "widgets_values": [
-        "Flux\\ae.safetensors"
+        "HiresFixEnable"
       ]
     },
     {
-      "id": 237,
-      "type": "StringConstantMultiline",
+      "id": 151,
+      "type": "INTConstant",
       "pos": {
-        "0": 2030,
-        "1": 490
+        "0": 0,
+        "1": -180
       },
       "size": {
-        "0": 496,
-        "1": 160
+        "0": 210,
+        "1": 64
       },
-      "flags": {
-        "collapsed": true
-      },
+      "flags": {},
       "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
+          "name": "value",
+          "type": "INT",
           "links": [
-            480
+            517
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "LLM 圃場プロンプト",
+      "title": "Hires. fix 1:なし 2:あり",
       "properties": {
-        "Node name for S&R": "StringConstantMultiline"
+        "Node name for S&R": "INTConstant"
       },
       "widgets_values": [
-        "\n# English Prompt\n\n",
-        false
-      ]
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
-      "id": 108,
-      "type": "ImpactSwitch",
+      "id": 152,
+      "type": "SetNode",
       "pos": {
-        "0": 1660,
-        "1": 240
+        "0": 40,
+        "1": -230
       },
       "size": {
-        "0": 224,
-        "1": 144
+        "0": 210,
+        "1": 58
       },
       "flags": {
         "collapsed": true
       },
-      "order": 47,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
-          "name": "input1",
-          "type": "STRING",
-          "link": 238
-        },
-        {
-          "name": "input2",
-          "type": "STRING",
-          "link": 239
-        },
-        {
-          "name": "input3",
-          "type": "STRING",
-          "link": 241
-        },
-        {
-          "name": "input4",
-          "type": "STRING",
-          "link": null
-        },
-        {
-          "name": "select",
+          "name": "INT",
           "type": "INT",
-          "link": 526,
-          "widget": {
-            "name": "select"
-          }
+          "link": 517
         }
       ],
       "outputs": [
         {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            230,
-            531
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "STRING"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
+          "name": "*",
+          "type": "*",
+          "links": null
         }
       ],
-      "title": "プロンプト選択",
+      "title": "Set_HiresFixEnable",
       "properties": {
-        "Node name for S&R": "ImpactSwitch"
+        "previousName": "HiresFixEnable"
       },
       "widgets_values": [
-        1,
-        false
+        "HiresFixEnable"
       ]
     },
     {
-      "id": 201,
-      "type": "ImpactSwitch",
+      "id": 155,
+      "type": "UnetLoaderGGUFAdvanced",
       "pos": {
-        "0": 3810,
-        "1": -90
+        "0": -10,
+        "1": -60
+      },
+      "size": [
+        630,
+        130
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            530
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像生成のモデル Q8_0推奨",
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUFAdvanced"
+      },
+      "widgets_values": [
+        "FluxD-Anime\\Flat_colour_anime_style_image_showing-v34-x08-8step-Q8_0.gguf",
+        "default",
+        "default",
+        false
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 179,
+      "type": "UpscaleModelLoader",
+      "pos": {
+        "0": 1290,
+        "1": -190
       },
       "size": {
-        "0": 210,
-        "1": 118
+        "0": 336,
+        "1": 64
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            527
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "アップスケールのモデル",
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-UltraSharp.pth"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 180,
+      "type": "ImageUpscaleWithModel",
+      "pos": {
+        "0": 3840,
+        "1": 170
+      },
+      "size": {
+        "0": 226.8000030517578,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 528
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 502
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            540
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
+    },
+    {
+      "id": 181,
+      "type": "ImageScaleBy",
+      "pos": {
+        "0": 3840,
+        "1": 380
+      },
+      "size": {
+        "0": 240,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 541
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            467,
+            503
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "4倍アップスケールを半分に縮小",
+      "properties": {
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "lanczos",
+        0.5
+      ]
+    },
+    {
+      "id": 182,
+      "type": "BasicGuider",
+      "pos": {
+        "0": 2670,
+        "1": -190
+      },
+      "size": {
+        "0": 176,
+        "1": 48
       },
       "flags": {
         "collapsed": true
@@ -1941,9 +1763,162 @@
       "mode": 0,
       "inputs": [
         {
+          "name": "model",
+          "type": "MODEL",
+          "link": 359,
+          "slot_index": 0
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 505,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            360
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix BasicGuider",
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 184,
+      "type": "ModelSamplingFlux",
+      "pos": {
+        "0": 2330,
+        "1": -350
+      },
+      "size": {
+        "0": 224,
+        "1": 128
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 357,
+          "slot_index": 0
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 520,
+          "slot_index": 1,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 522,
+          "slot_index": 2,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            358,
+            359
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "HiresFix ModelSamplingFlux",
+      "properties": {
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        0.35000000000000003,
+        0.15,
+        896,
+        1152
+      ]
+    },
+    {
+      "id": 199,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 3280,
+        "1": 250
+      },
+      "size": {
+        "0": 144,
+        "1": 48
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 420
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 421
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            500
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 201,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 3560,
+        "1": 220
+      },
+      "size": {
+        "0": 210,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
           "name": "select",
           "type": "INT",
-          "link": 422,
+          "link": 542,
           "widget": {
             "name": "select"
           }
@@ -1998,45 +1973,539 @@
       ]
     },
     {
-      "id": 26,
-      "type": "FluxGuidance",
+      "id": 204,
+      "type": "PreviewImage",
       "pos": {
-        "0": 1920,
-        "1": 70
+        "0": -660,
+        "1": 230
       },
       "size": {
-        "0": 211.60000610351562,
+        "0": 640,
+        "1": 850
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "アップスケール前",
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 206,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 3570,
+        "1": -100
+      },
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "*",
+          "link": 495,
+          "color_on": "#64B5F6"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        "アップスケール前",
+        "images",
+        ".*"
+      ]
+    },
+    {
+      "id": 208,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 3840,
+        "1": 960
+      },
+      "size": {
+        "0": 224,
+        "1": 112
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 78,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "IMAGE",
+          "type": "*",
+          "link": 545,
+          "color_on": "#64B5F6"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        "画像の保存",
+        "images",
+        ".*"
+      ]
+    },
+    {
+      "id": 209,
+      "type": "SaveAnimatedWEBP",
+      "pos": {
+        "0": -10,
+        "1": 120
+      },
+      "size": {
+        "0": 640,
+        "1": 960
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "画像の保存",
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%",
+        0.2,
+        false,
+        90,
+        "default"
+      ]
+    },
+    {
+      "id": 211,
+      "type": "Searge_LLM_Node",
+      "pos": {
+        "0": 2500,
+        "1": 780
+      },
+      "size": {
+        "0": 240,
+        "1": 170
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "adv_options_config",
+          "type": "SRGADVOPTIONSCONFIG",
+          "link": null
+        },
+        {
+          "name": "random_seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "random_seed"
+          }
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 583,
+          "widget": {
+            "name": "text"
+          }
+        },
+        {
+          "name": "model",
+          "type": "COMBO",
+          "link": 533,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "generated",
+          "type": "STRING",
+          "links": [
+            512,
+            584
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "original",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "和訳LLM",
+      "properties": {
+        "Node name for S&R": "Searge_LLM_Node"
+      },
+      "widgets_values": [
+        "",
+        1234567890,
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        4096,
+        true,
+        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
+      ]
+    },
+    {
+      "id": 215,
+      "type": "Searge_Output_Node",
+      "pos": {
+        "0": 640,
+        "1": 1130
+      },
+      "size": {
+        "0": 670,
+        "1": 520
+      },
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "link": 585
+        }
+      ],
+      "outputs": [],
+      "title": "画像生成プロンプトの和訳",
+      "properties": {
+        "Node name for S&R": "Searge_Output_Node"
+      },
+      "widgets_values": [
+        "幻想的な世界の料理街の中で、花と髪が交じった美少女は幸福を放ち、その周囲には気品ある菌栽のスーリングカウンターや蒸し上がる飲食店群。彼女は細かな茶碗から甘い呪文を口にするよう笑っていて、彼方に風景がきらめくそのまっとうな夜空と共に、まるで無尽蔵の幻想を見せつけているように見える。 (Note: For a more direct translation without added description)\n 変換された正しい日本語訳：\n  幻想的な世界の中にある料理街では、花が髪からぶら下げられている美女は幸せを感じています。彼女は、高いキノコのスーリングカウンターや蒸し上がる飲食店群に囲まれて、大きな笑顔で、小さな茶碗から甘いものを口にするように見えます。"
+      ]
+    },
+    {
+      "id": 222,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": 1920,
+        "1": 290
+      },
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            455,
+            456
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "scheduler"
+          }
+        }
+      ],
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "simple",
+        "fixed",
+        ""
+      ]
+    },
+    {
+      "id": 227,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 3840,
+        "1": 560
+      },
+      "size": {
+        "0": 210,
+        "1": 118
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 464,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "IMAGE",
+          "link": 501
+        },
+        {
+          "name": "input2",
+          "type": "IMAGE",
+          "link": 503
+        },
+        {
+          "name": "input3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            546
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 229,
+      "type": "SetNode",
+      "pos": {
+        "0": 1100,
+        "1": -240
+      },
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "link": 463
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "Set_UpscaleEnable",
+      "properties": {
+        "previousName": "UpscaleEnable"
+      },
+      "widgets_values": [
+        "UpscaleEnable"
+      ]
+    },
+    {
+      "id": 230,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1030,
+        "1": -190
+      },
+      "size": {
+        "0": 240,
         "1": 64
       },
       "flags": {
         "collapsed": false
       },
-      "order": 53,
+      "order": 18,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            463
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "アップスケール 1:なし 2:あり",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 231,
+      "type": "GetNode",
+      "pos": {
+        "0": 3560,
+        "1": 560
+      },
+      "size": {
+        "0": 220,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            464
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Get_UpscaleEnable",
+      "properties": {},
+      "widgets_values": [
+        "UpscaleEnable"
+      ]
+    },
+    {
+      "id": 237,
+      "type": "StringConstantMultiline",
+      "pos": {
+        "0": 1640,
+        "1": 350
+      },
+      "size": {
+        "0": 240,
+        "1": 130
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            596
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLM補助プロンプト",
+      "properties": {
+        "Node name for S&R": "StringConstantMultiline"
+      },
+      "widgets_values": [
+        "\n# English Prompt\n\n",
+        false
+      ]
+    },
+    {
+      "id": 241,
+      "type": "ImagePass",
+      "pos": {
+        "0": 3840,
+        "1": 860
+      },
+      "size": {
+        "0": 144,
+        "1": 32
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 77,
       "mode": 0,
       "inputs": [
         {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 153
+          "name": "image",
+          "type": "IMAGE",
+          "link": 547
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            42
+            545
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "FluxGuidance"
-      },
-      "widgets_values": [
-        3.5
-      ]
+        "Node name for S&R": "ImagePass"
+      }
     },
     {
       "id": 242,
@@ -2052,7 +2521,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 54,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -2081,210 +2550,59 @@
       ]
     },
     {
-      "id": 184,
-      "type": "ModelSamplingFlux",
-      "pos": {
-        "0": 2330,
-        "1": -350
-      },
-      "size": {
-        "0": 224,
-        "1": 128
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 43,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 357,
-          "slot_index": 0
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 520,
-          "slot_index": 1,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 522,
-          "slot_index": 2,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            358,
-            359
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "HiresFix ModelSamplingFlux",
-      "properties": {
-        "Node name for S&R": "ModelSamplingFlux"
-      },
-      "widgets_values": [
-        0.35000000000000003,
-        0.15,
-        896,
-        1152
-      ]
-    },
-    {
-      "id": 265,
-      "type": "Searge_Output_Node",
+      "id": 254,
+      "type": "INTConstant",
       "pos": {
         "0": 1330,
-        "1": 610
+        "1": 440
       },
       "size": {
-        "0": 672,
-        "1": 512
-      },
-      "flags": {},
-      "order": 51,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "*",
-          "link": 531
-        }
-      ],
-      "outputs": [],
-      "title": "画像生成の最終的なプロンプト",
-      "properties": {
-        "Node name for S&R": "Searge_Output_Node"
-      },
-      "widgets_values": [
-        "In the vibrant food streets of an otherworldly fantasy realm, a radiant and cheerful heroine sits at a quaint wooden table. Her bright smile illuminates her gentle face adorned with delicate freckles and sun-kissed complexion, showcasing her warm personality amidst the bustling culinary scene. The rich colors of exotic ingredients and steaming dishes from various realms blend harmoniously in this enchanted setting, where fantastical aromas waft through the air, tantalizing senses. This captivating image invites viewers to step into a world of wonder and magic, where heroes like our cheerful heroine find joy and purpose amidst the diverse culinary delights that bring people together across dimensions."
-      ]
-    },
-    {
-      "id": 215,
-      "type": "Searge_Output_Node",
-      "pos": {
-        "0": 640,
-        "1": 1120
-      },
-      "size": {
-        "0": 672,
-        "1": 528
-      },
-      "flags": {},
-      "order": 55,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "*",
-          "link": 515
-        }
-      ],
-      "outputs": [],
-      "title": "LLM 和訳",
-      "properties": {
-        "Node name for S&R": "Searge_Output_Node"
-      },
-      "widgets_values": [
-        "幻想的な異世界の食文化街で、明るく元気なヒロインが木造のテーブルに腰掛けている。彼女は美しい笑顔と肌がきれいに割れている清楚な容姿を誇り、賑やかな飲食場の中でも温かみある個性を伝えつづける。異世界からの豊富な調味料と熱々の料理で彩られたこの神秘的な環境では、幻想的なにおいが空気中をさわって感覚を刺激する。その魅力的な絵画は視者に、奇跡の中での楽しみと目的を見出すために集まる異なる世界の人々の食文化へ移るための扉を開く。"
-      ]
-    },
-    {
-      "id": 179,
-      "type": "UpscaleModelLoader",
-      "pos": {
-        "0": 1450,
-        "1": -210
-      },
-      "size": {
-        "0": 336,
-        "1": 64
+        "0": 270,
+        "1": 60
       },
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
+          "name": "value",
+          "type": "INT",
           "links": [
-            527
+            577,
+            582
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "アップスケールのモデル",
+      "title": "プロンプトの和訳 1:なし 2:あり",
       "properties": {
-        "Node name for S&R": "UpscaleModelLoader"
+        "Node name for S&R": "INTConstant"
       },
       "widgets_values": [
-        "4x-UltraSharp.pth"
+        2
       ],
       "color": "#232",
       "bgcolor": "#353"
-    },
-    {
-      "id": 204,
-      "type": "PreviewImage",
-      "pos": {
-        "0": -640,
-        "1": 230
-      },
-      "size": {
-        "0": 624,
-        "1": 832
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [],
-      "title": "アップスケール前",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      }
     },
     {
       "id": 255,
       "type": "INTConstant",
       "pos": {
         "0": 1330,
-        "1": 100
+        "1": 170
       },
       "size": {
-        "0": 210,
-        "1": 64
+        "0": 270,
+        "1": 60
       },
       "flags": {
         "collapsed": false
       },
-      "order": 16,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2315,16 +2633,16 @@
       "type": "INTConstant",
       "pos": {
         "0": 1330,
-        "1": 210
+        "1": 280
       },
       "size": {
-        "0": 210,
-        "1": 64
+        "0": 270,
+        "1": 60
       },
       "flags": {
         "collapsed": false
       },
-      "order": 17,
+      "order": 23,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2351,423 +2669,91 @@
       "bgcolor": "#353"
     },
     {
-      "id": 128,
-      "type": "FloatConstant",
+      "id": 257,
+      "type": "INTConstant",
       "pos": {
-        "0": 430,
-        "1": -210
+        "0": 1330,
+        "1": 60
       },
       "size": {
-        "0": 210,
-        "1": 64
+        "0": 270,
+        "1": 60
       },
-      "flags": {},
-      "order": 18,
+      "flags": {
+        "collapsed": false
+      },
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
         {
           "name": "value",
-          "type": "FLOAT",
+          "type": "INT",
           "links": [
-            275
+            525
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "Hires. fix のデノイズ強度",
+      "title": "ステップ数",
       "properties": {
-        "Node name for S&R": "FloatConstant"
+        "Node name for S&R": "INTConstant"
       },
       "widgets_values": [
-        0.65
+        8
       ],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
-      "id": 39,
-      "type": "DualCLIPLoaderGGUF",
+      "id": 259,
+      "type": "SetNode",
       "pos": {
-        "0": 640,
-        "1": -60
+        "0": 1460,
+        "1": -240
       },
       "size": {
-        "0": 288,
-        "1": 128
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 19,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            332,
-            337
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "テキストエンコーダを選択",
-      "properties": {
-        "Node name for S&R": "DualCLIPLoaderGGUF"
-      },
-      "widgets_values": [
-        "Flux\\t5xxl-Q6_K.gguf",
-        "Flux\\clip_l.safetensors",
-        "flux"
-      ]
-    },
-    {
-      "id": 209,
-      "type": "SaveAnimatedWEBP",
-      "pos": {
-        "0": 0,
-        "1": 110
-      },
-      "size": {
-        "0": 624,
-        "1": 944
-      },
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [],
-      "title": "webp 保存",
-      "properties": {},
-      "widgets_values": [
-        "%date:yyyyMMdd%/%date:MMdd_hhmm%",
-        0.25,
-        false,
-        80,
-        "default"
-      ]
-    },
-    {
-      "id": 113,
-      "type": "LatentUpscaleBy",
-      "pos": {
-        "0": 2960,
-        "1": 340
-      },
-      "size": {
-        "0": 256,
-        "1": 80
+        "0": 210,
+        "1": 58
       },
       "flags": {
         "collapsed": true
       },
-      "order": 59,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 247
-        },
-        {
-          "name": "scale_by",
-          "type": "FLOAT",
-          "link": 261,
-          "widget": {
-            "name": "scale_by"
-          }
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "link": 527
         }
       ],
       "outputs": [
         {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            375
-          ],
-          "slot_index": 0,
-          "shape": 3
+          "name": "*",
+          "type": "*",
+          "links": null
         }
       ],
+      "title": "Set_UpscaleModel",
       "properties": {
-        "Node name for S&R": "LatentUpscaleBy"
+        "previousName": "UpscaleModel"
       },
       "widgets_values": [
-        "bislerp",
-        1.5
+        "UpscaleModel"
       ]
     },
     {
-      "id": 151,
-      "type": "INTConstant",
-      "pos": {
-        "0": 190,
-        "1": -210
-      },
-      "size": {
-        "0": 210,
-        "1": 64
-      },
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            517
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "Hires. fix なし:1, あり:2",
-      "properties": {
-        "Node name for S&R": "INTConstant"
-      },
-      "widgets_values": [
-        2
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 230,
-      "type": "INTConstant",
-      "pos": {
-        "0": 1190,
-        "1": -210
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 22,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            463
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "アップスケール なし:1, あり:2",
-      "properties": {
-        "Node name for S&R": "INTConstant"
-      },
-      "widgets_values": [
-        2
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 45,
-      "type": "Seed (rgthree)",
-      "pos": {
-        "0": 940,
-        "1": -60
-      },
-      "size": {
-        "0": 210,
-        "1": 130
-      },
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "SEED",
-          "type": "INT",
-          "links": [
-            180
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "dir": 4
-        }
-      ],
-      "title": "全体のシード",
-      "properties": {},
-      "widgets_values": [
-        -1,
-        null,
-        null,
-        null
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 57,
-      "type": "ImpactWildcardProcessor",
-      "pos": {
-        "0": 640,
-        "1": 550
-      },
-      "size": {
-        "0": 672,
-        "1": 528
-      },
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "seed"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            483
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "LLM プロンプト（上の欄に入力、日本語で指示できます、ワイルドカードが使えます）",
-      "properties": {
-        "Node name for S&R": "ImpactWildcardProcessor"
-      },
-      "widgets_values": [
-        "異世界ファンタジーの食堂街で笑顔のヒロイン",
-        "異世界ファンタジーの食堂街で笑顔のヒロイン",
-        true,
-        750344445616663,
-        "randomize",
-        "Select the Wildcard to add to the text"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 43,
-      "type": "ImpactWildcardEncode",
-      "pos": {
-        "0": 640,
-        "1": 110
-      },
-      "size": {
-        "0": 672,
-        "1": 384
-      },
-      "flags": {},
-      "order": 39,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 530
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 332
-        },
-        {
-          "name": "seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "seed"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "links": [
-            200,
-            357
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "links": [
-            201
-          ],
-          "slot_index": 1,
-          "shape": 3
-        },
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "links": [],
-          "slot_index": 2,
-          "shape": 3
-        },
-        {
-          "name": "populated_text",
-          "type": "STRING",
-          "links": [
-            207,
-            228,
-            239
-          ],
-          "slot_index": 3,
-          "shape": 3
-        }
-      ],
-      "title": "基本プロンプト（上の欄に入力、画像生成用のプロンプト、LoRAとワイルドカードが使えます）",
-      "properties": {
-        "Node name for S&R": "ImpactWildcardEncode"
-      },
-      "widgets_values": [
-        "",
-        "",
-        true,
-        "Select the LoRA to add to the text",
-        "Select the Wildcard to add to the text",
-        83355983116658,
-        "randomize"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 248,
+      "id": 260,
       "type": "GetNode",
       "pos": {
-        "0": 2030,
-        "1": 1120
+        "0": 3560,
+        "1": 400
       },
       "size": {
-        "0": 210,
-        "1": 64
+        "0": 220,
+        "1": 60
       },
       "flags": {
         "collapsed": true
@@ -2777,41 +2763,610 @@
       "inputs": [],
       "outputs": [
         {
-          "name": "INT",
-          "type": "INT",
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
           "links": [
-            514
+            528,
+            539
           ],
           "slot_index": 0
         }
       ],
-      "title": "Get_Translation",
+      "title": "Get_UpscaleModel",
       "properties": {},
       "widgets_values": [
-        "Translation"
+        "UpscaleModel"
       ]
     },
     {
-      "id": 245,
-      "type": "ImpactSwitch",
+      "id": 265,
+      "type": "Searge_Output_Node",
       "pos": {
-        "0": 2280,
-        "1": 1120
+        "0": -10,
+        "1": 1130
+      },
+      "size": {
+        "0": 640,
+        "1": 520
+      },
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "link": 578
+        }
+      ],
+      "outputs": [],
+      "title": "画像生成プロンプト",
+      "properties": {
+        "Node name for S&R": "Searge_Output_Node"
+      },
+      "widgets_values": [
+        "In a vibrant, otherworldly fantasy setting's culinary quarter, our heroine radiates joy amidst the whimsical stalls and steaming eateries of an enchanted realm. A smiling maiden with wildflowers woven into her hair, she sips from a delicate cup as if relishing a sweet elixir at a bustling outdoor cafe surrounded by towering mushrooms that double as serving counters."
+      ]
+    },
+    {
+      "id": 268,
+      "type": "PrimitiveNode",
+      "pos": {
+        "0": 1330,
+        "1": 660
+      },
+      "size": {
+        "0": 270,
+        "1": 110
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "COMBO",
+          "type": "COMBO",
+          "links": [
+            532,
+            533
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "model"
+          }
+        }
+      ],
+      "title": "LLMモデル NSFW なら Vecteus",
+      "properties": {
+        "Run widget replace on values": false
+      },
+      "widgets_values": [
+        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
+        "fixed",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 269,
+      "type": "Note",
+      "pos": {
+        "0": -890,
+        "1": 110
+      },
+      "size": {
+        "0": 870,
+        "1": 70
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "使い方",
+      "properties": {},
+      "widgets_values": [
+        "https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux\n"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 270,
+      "type": "UnloadModel",
+      "pos": {
+        "0": 3840,
+        "1": 740
       },
       "size": {
         "0": 210,
-        "1": 118
+        "1": 46
       },
       "flags": {
         "collapsed": true
       },
-      "order": 52,
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "link": 546
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 536
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            547
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnloadModel"
+      }
+    },
+    {
+      "id": 271,
+      "type": "UnloadModel",
+      "pos": {
+        "0": 3840,
+        "1": 280
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "link": 540
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 539
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            541
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnloadModel"
+      }
+    },
+    {
+      "id": 273,
+      "type": "UnloadAllModels",
+      "pos": {
+        "0": 1670,
+        "1": 90
+      },
+      "size": {
+        "0": 210,
+        "1": 26
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "link": 552
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            562
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnloadAllModels"
+      }
+    },
+    {
+      "id": 275,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1330,
+        "1": -50
+      },
+      "size": {
+        "0": 270,
+        "1": 60
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            557
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "モデルをアンロード 1:しない 2:する",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 279,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 1670,
+        "1": 170
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
           "name": "select",
           "type": "INT",
-          "link": 514,
+          "link": 557,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "INT",
+          "link": 561
+        },
+        {
+          "name": "input2",
+          "type": "INT",
+          "link": 562
+        },
+        {
+          "name": "input3",
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            555
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "INT"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "アンロード Switch",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 280,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": {
+        "0": 1790,
+        "1": 890
+      },
+      "size": {
+        "0": 340,
+        "1": 110
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "type": "PEFTLORA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            563
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "widgets_values": [
+        "gokaygokay/Florence-2-SD3-Captioner",
+        "fp16",
+        "sdpa"
+      ]
+    },
+    {
+      "id": 281,
+      "type": "Florence2Run",
+      "pos": {
+        "0": 1790,
+        "1": 1070
+      },
+      "size": {
+        "0": 340,
+        "1": 420
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 564
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 563
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            589
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1536,
+        3,
+        true,
+        "",
+        448028278951534,
+        "randomize"
+      ]
+    },
+    {
+      "id": 282,
+      "type": "LoadImage",
+      "pos": {
+        "0": 1330,
+        "1": 960
+      },
+      "size": {
+        "0": 340,
+        "1": 530
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            564
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "プロンプト生成用の画像 Drag&Drop可",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0916_2036_00001_.webp",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 283,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1330,
+        "1": 550
+      },
+      "size": {
+        "0": 270,
+        "1": 60
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            570
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "LLMプロンプト生成 1:なし 2:あり",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 284,
+      "type": "INTConstant",
+      "pos": {
+        "0": 1330,
+        "1": 850
+      },
+      "size": {
+        "0": 340,
+        "1": 60
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "INT",
+          "links": [
+            586
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像からプロンプト生成 1:なし 2:あり",
+      "properties": {
+        "Node name for S&R": "INTConstant"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 286,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 2220,
+        "1": 540
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 570,
           "widget": {
             "name": "select"
           }
@@ -2819,12 +3374,12 @@
         {
           "name": "input1",
           "type": "STRING",
-          "link": 511
+          "link": 574
         },
         {
           "name": "input2",
           "type": "STRING",
-          "link": 512
+          "link": 575
         },
         {
           "name": "input3",
@@ -2837,7 +3392,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            515
+            576
           ],
           "slot_index": 0,
           "shape": 3,
@@ -2856,6 +3411,7 @@
           "shape": 3
         }
       ],
+      "title": "LLMプロンプト Switch",
       "properties": {
         "Node name for S&R": "ImpactSwitch"
       },
@@ -2865,293 +3421,126 @@
       ]
     },
     {
-      "id": 155,
-      "type": "UnetLoaderGGUFAdvanced",
+      "id": 287,
+      "type": "StringConstant",
       "pos": {
-        "0": 210,
-        "1": -60
+        "0": 1940,
+        "1": 760
       },
       "size": {
-        "0": 410,
+        "0": 230,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            574,
+            588
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "空文字列",
+      "properties": {
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 290,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 2510,
+        "1": 1050
+      },
+      "size": {
+        "0": 230,
         "1": 130
       },
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            530
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "画像生成のモデル",
-      "properties": {
-        "Node name for S&R": "UnetLoaderGGUFAdvanced"
-      },
-      "widgets_values": [
-        "FluxD-Base\\flux1-dev-hyper8-Q4_K_S.gguf",
-        "default",
-        "default",
-        false
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 258,
-      "type": "INTConstant",
-      "pos": {
-        "0": 1340,
-        "1": 360
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
       "flags": {
-        "collapsed": false
+        "collapsed": true
       },
-      "order": 27,
+      "order": 57,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 582,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "STRING",
+          "link": 581
+        },
+        {
+          "name": "input2",
+          "type": "STRING",
+          "link": 584
+        },
+        {
+          "name": "input3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "value",
-          "type": "INT",
+          "name": "STRING",
+          "type": "STRING",
           "links": [
-            526
+            585
           ],
           "slot_index": 0,
+          "shape": 3,
+          "label": "STRING"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
           "shape": 3
         }
       ],
-      "title": "両方:1, 基本のみ:2, LLM のみ:3",
+      "title": "LLM和訳 Switch",
       "properties": {
-        "Node name for S&R": "INTConstant"
+        "Node name for S&R": "ImpactSwitch"
       },
       "widgets_values": [
-        1
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        1,
+        false
+      ]
     },
     {
-      "id": 268,
-      "type": "PrimitiveNode",
+      "id": 291,
+      "type": "ImpactSwitch",
       "pos": {
-        "0": 1590,
-        "1": 420
-      },
-      "size": {
-        "0": 270,
-        "1": 110
-      },
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "COMBO",
-          "type": "COMBO",
-          "links": [
-            532,
-            533
-          ],
-          "slot_index": 0,
-          "widget": {
-            "name": "model"
-          }
-        }
-      ],
-      "title": "LLM モデル NSFW:Vecteus",
-      "properties": {
-        "Run widget replace on values": false
-      },
-      "widgets_values": [
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        "fixed",
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 249,
-      "type": "SetNode",
-      "pos": {
-        "0": 1440,
-        "1": 550
+        "0": 2240,
+        "1": 1060
       },
       "size": {
         "0": 210,
-        "1": 58
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "link": 518
-        }
-      ],
-      "outputs": [
-        {
-          "name": "*",
-          "type": "*",
-          "links": null
-        }
-      ],
-      "title": "Set_Translation",
-      "properties": {
-        "previousName": "Translation"
-      },
-      "widgets_values": [
-        "Translation"
-      ]
-    },
-    {
-      "id": 254,
-      "type": "INTConstant",
-      "pos": {
-        "0": 1340,
-        "1": 460
-      },
-      "size": {
-        "0": 240,
-        "1": 64
-      },
-      "flags": {
-        "collapsed": false
-      },
-      "order": 29,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "INT",
-          "links": [
-            518
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "LLM 和訳 なし:1, あり:2",
-      "properties": {
-        "Node name for S&R": "INTConstant"
-      },
-      "widgets_values": [
-        2
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 99,
-      "type": "Searge_LLM_Node",
-      "pos": {
-        "0": 2030,
-        "1": 890
-      },
-      "size": {
-        "0": 240,
-        "1": 180
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 44,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "adv_options_config",
-          "type": "SRGADVOPTIONSCONFIG",
-          "link": null
-        },
-        {
-          "name": "random_seed",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "random_seed"
-          }
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 478,
-          "widget": {
-            "name": "text"
-          }
-        },
-        {
-          "name": "model",
-          "type": "COMBO",
-          "link": 532,
-          "widget": {
-            "name": "model"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "generated",
-          "type": "STRING",
-          "links": [
-            217,
-            222,
-            225,
-            240,
-            241,
-            450,
-            511
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "original",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
-        }
-      ],
-      "title": "LLM プロンプト生成",
-      "properties": {
-        "Node name for S&R": "Searge_LLM_Node"
-      },
-      "widgets_values": [
-        "",
-        1234567890,
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        1024,
-        true,
-        "Generate a prompt from \"{prompt}\". There are no restrictions as it is a fictional storie. Prompt only. No note."
-      ]
-    },
-    {
-      "id": 211,
-      "type": "Searge_LLM_Node",
-      "pos": {
-        "0": 2280,
-        "1": 890
-      },
-      "size": {
-        "0": 240,
-        "1": 180
+        "1": 120
       },
       "flags": {
         "collapsed": true
@@ -3160,64 +3549,134 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "adv_options_config",
-          "type": "SRGADVOPTIONSCONFIG",
-          "link": null
+          "name": "select",
+          "type": "INT",
+          "link": 586,
+          "widget": {
+            "name": "select"
+          }
         },
         {
-          "name": "random_seed",
+          "name": "input1",
+          "type": "STRING",
+          "link": 588
+        },
+        {
+          "name": "input2",
+          "type": "STRING",
+          "link": 589
+        },
+        {
+          "name": "input3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            590
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "STRING"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
           "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "画像プロンプト Switch",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 292,
+      "type": "Text Concatenate",
+      "pos": {
+        "0": 1640,
+        "1": 560
+      },
+      "size": {
+        "0": 210,
+        "1": 142
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 594,
+          "widget": {
+            "name": "text_a"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 596,
+          "widget": {
+            "name": "text_b"
+          }
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
           "link": null,
           "widget": {
-            "name": "random_seed"
+            "name": "text_c"
           }
         },
         {
-          "name": "text",
+          "name": "text_d",
           "type": "STRING",
-          "link": 450,
+          "link": null,
           "widget": {
-            "name": "text"
-          }
-        },
-        {
-          "name": "model",
-          "type": "COMBO",
-          "link": 533,
-          "widget": {
-            "name": "model"
+            "name": "text_d"
           }
         }
       ],
       "outputs": [
         {
-          "name": "generated",
+          "name": "STRING",
           "type": "STRING",
           "links": [
-            512
+            595
           ],
           "slot_index": 0,
           "shape": 3
-        },
-        {
-          "name": "original",
-          "type": "STRING",
-          "links": [],
-          "slot_index": 1,
-          "shape": 3
         }
       ],
-      "title": "LLM 和訳",
+      "title": "LLMプロンプト連結",
       "properties": {
-        "Node name for S&R": "Searge_LLM_Node"
+        "Node name for S&R": "Text Concatenate"
       },
       "widgets_values": [
+        " ",
+        "true",
         "",
-        1234567890,
-        "Llama-3.1-8B-EZO-1.1-it-Q4_K_M.gguf",
-        2048,
-        true,
-        "Translate the \"{prompt}\" into Japanese. Translation only. No note."
+        "",
+        "",
+        ""
       ]
     }
   ],
@@ -3327,14 +3786,6 @@
       "CLIP"
     ],
     [
-      207,
-      43,
-      3,
-      50,
-      0,
-      "STRING"
-    ],
-    [
       217,
       99,
       0,
@@ -3367,43 +3818,11 @@
       "STRING"
     ],
     [
-      230,
-      108,
-      0,
-      6,
-      1,
-      "STRING"
-    ],
-    [
-      238,
-      50,
-      0,
-      108,
-      0,
-      "STRING"
-    ],
-    [
       239,
       43,
       3,
       108,
-      1,
-      "STRING"
-    ],
-    [
-      240,
-      99,
       0,
-      50,
-      1,
-      "STRING"
-    ],
-    [
-      241,
-      99,
-      0,
-      108,
-      2,
       "STRING"
     ],
     [
@@ -3543,22 +3962,6 @@
       "CLIP"
     ],
     [
-      337,
-      39,
-      0,
-      165,
-      1,
-      "*"
-    ],
-    [
-      346,
-      180,
-      0,
-      181,
-      0,
-      "IMAGE"
-    ],
-    [
       357,
       43,
       0,
@@ -3647,28 +4050,12 @@
       "VAE"
     ],
     [
-      422,
-      150,
-      0,
-      201,
-      0,
-      "INT"
-    ],
-    [
       424,
       8,
       0,
       201,
       1,
       "IMAGE"
-    ],
-    [
-      450,
-      99,
-      0,
-      211,
-      2,
-      "STRING"
     ],
     [
       455,
@@ -3711,58 +4098,10 @@
       "IMAGE"
     ],
     [
-      478,
-      165,
-      0,
-      99,
-      2,
-      "STRING"
-    ],
-    [
-      480,
-      237,
-      0,
-      233,
-      1,
-      "STRING"
-    ],
-    [
-      482,
-      233,
-      0,
-      165,
-      0,
-      "*"
-    ],
-    [
-      483,
-      57,
-      0,
-      233,
-      0,
-      "STRING"
-    ],
-    [
       495,
       8,
       0,
       206,
-      0,
-      "IMAGE"
-    ],
-    [
-      498,
-      241,
-      0,
-      208,
-      0,
-      "IMAGE"
-    ],
-    [
-      499,
-      227,
-      0,
-      241,
       0,
       "IMAGE"
     ],
@@ -3815,50 +4154,18 @@
       "CONDITIONING"
     ],
     [
-      511,
-      99,
+      512,
+      211,
       0,
       245,
       1,
       "STRING"
     ],
     [
-      512,
-      211,
-      0,
-      245,
-      2,
-      "STRING"
-    ],
-    [
-      514,
-      248,
-      0,
-      245,
-      0,
-      "INT"
-    ],
-    [
-      515,
-      245,
-      0,
-      215,
-      0,
-      "*"
-    ],
-    [
       517,
       151,
       0,
       152,
-      0,
-      "INT"
-    ],
-    [
-      518,
-      254,
-      0,
-      249,
       0,
       "INT"
     ],
@@ -3919,14 +4226,6 @@
       "INT"
     ],
     [
-      526,
-      258,
-      0,
-      108,
-      4,
-      "INT"
-    ],
-    [
       527,
       179,
       0,
@@ -3951,14 +4250,6 @@
       "MODEL"
     ],
     [
-      531,
-      108,
-      0,
-      265,
-      0,
-      "*"
-    ],
-    [
       532,
       268,
       0,
@@ -3973,65 +4264,472 @@
       211,
       3,
       "COMBO"
+    ],
+    [
+      536,
+      10,
+      0,
+      270,
+      1,
+      "*"
+    ],
+    [
+      539,
+      260,
+      0,
+      271,
+      1,
+      "*"
+    ],
+    [
+      540,
+      180,
+      0,
+      271,
+      0,
+      "*"
+    ],
+    [
+      541,
+      271,
+      0,
+      181,
+      0,
+      "IMAGE"
+    ],
+    [
+      542,
+      150,
+      0,
+      201,
+      0,
+      "INT"
+    ],
+    [
+      545,
+      241,
+      0,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      546,
+      227,
+      0,
+      270,
+      0,
+      "*"
+    ],
+    [
+      547,
+      270,
+      0,
+      241,
+      0,
+      "IMAGE"
+    ],
+    [
+      552,
+      45,
+      0,
+      273,
+      0,
+      "*"
+    ],
+    [
+      555,
+      279,
+      0,
+      43,
+      2,
+      "INT"
+    ],
+    [
+      557,
+      275,
+      0,
+      279,
+      0,
+      "INT"
+    ],
+    [
+      560,
+      45,
+      0,
+      279,
+      1,
+      "INT"
+    ],
+    [
+      561,
+      45,
+      0,
+      279,
+      1,
+      "INT"
+    ],
+    [
+      562,
+      273,
+      0,
+      279,
+      2,
+      "INT"
+    ],
+    [
+      563,
+      280,
+      0,
+      281,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      564,
+      282,
+      0,
+      281,
+      0,
+      "IMAGE"
+    ],
+    [
+      566,
+      43,
+      3,
+      50,
+      0,
+      "STRING"
+    ],
+    [
+      570,
+      283,
+      0,
+      286,
+      0,
+      "INT"
+    ],
+    [
+      574,
+      287,
+      0,
+      286,
+      1,
+      "STRING"
+    ],
+    [
+      575,
+      99,
+      0,
+      286,
+      2,
+      "STRING"
+    ],
+    [
+      576,
+      286,
+      0,
+      50,
+      1,
+      "STRING"
+    ],
+    [
+      577,
+      254,
+      0,
+      290,
+      0,
+      "INT"
+    ],
+    [
+      578,
+      50,
+      0,
+      265,
+      0,
+      "*"
+    ],
+    [
+      581,
+      50,
+      0,
+      290,
+      1,
+      "STRING"
+    ],
+    [
+      582,
+      254,
+      0,
+      290,
+      0,
+      "INT"
+    ],
+    [
+      583,
+      50,
+      0,
+      211,
+      2,
+      "STRING"
+    ],
+    [
+      584,
+      211,
+      0,
+      290,
+      2,
+      "STRING"
+    ],
+    [
+      585,
+      290,
+      0,
+      215,
+      0,
+      "*"
+    ],
+    [
+      586,
+      284,
+      0,
+      291,
+      0,
+      "INT"
+    ],
+    [
+      588,
+      287,
+      0,
+      291,
+      1,
+      "STRING"
+    ],
+    [
+      589,
+      281,
+      2,
+      291,
+      2,
+      "STRING"
+    ],
+    [
+      590,
+      291,
+      0,
+      50,
+      2,
+      "STRING"
+    ],
+    [
+      591,
+      50,
+      0,
+      6,
+      1,
+      "STRING"
+    ],
+    [
+      594,
+      57,
+      0,
+      292,
+      0,
+      "STRING"
+    ],
+    [
+      595,
+      292,
+      0,
+      99,
+      2,
+      "STRING"
+    ],
+    [
+      596,
+      237,
+      0,
+      292,
+      1,
+      "STRING"
+    ],
+    [
+      597,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      598,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      599,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      600,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      601,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      602,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      603,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      604,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      605,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      606,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      607,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      608,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      609,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      610,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      611,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      612,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      613,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      614,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      615,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      616,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      617,
+      45,
+      0,
+      281,
+      2,
+      "INT"
     ]
   ],
-  "groups": [
-    {
-      "title": "プロンプト",
-      "bounding": [
-        1330,
-        290,
-        540,
-        260
-      ],
-      "color": "#8A8",
-      "font_size": 24,
-      "flags": {}
-    },
-    {
-      "title": "アップスケール",
-      "bounding": [
-        1160,
-        -270,
-        640,
-        160
-      ],
-      "color": "#8A8",
-      "font_size": 24,
-      "flags": {}
-    },
-    {
-      "title": "LLM",
-      "bounding": [
-        2010,
-        410,
-        512,
-        720
-      ],
-      "color": "#444",
-      "font_size": 24,
-      "flags": {}
-    },
-    {
-      "title": "Hires. fix（拡大よりも書き込み増加がねらい）",
-      "bounding": [
-        180,
-        -270,
-        960,
-        160
-      ],
-      "color": "#8A8",
-      "font_size": 24,
-      "flags": {}
-    }
-  ],
+  "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.5644739300537773,
+      "scale": 1,
       "offset": [
-        -819.895609962074,
-        251.57243558078662
+        0,
+        0
       ]
     },
     "groupNodes": {}

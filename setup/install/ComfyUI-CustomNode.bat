@@ -23,6 +23,13 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_UPDATE pythongosssss ComfyUI-Custom-Scripts main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/kijai/ComfyUI-Florence2
+call :GITHUB_UPDATE kijai ComfyUI-Florence2 main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+if not exist ..\models\LLM\ ( mkdir ..\models\LLM )
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/city96/ComfyUI-GGUF
 call :GITHUB_UPDATE city96 ComfyUI-GGUF main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -35,9 +42,26 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_UPDATE kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/Layer-norm/comfyui-lama-remover
+call :GITHUB_UPDATE Layer-norm comfyui-lama-remover master
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/ltdrdata/ComfyUI-Manager
 call :GITHUB_UPDATE ltdrdata ComfyUI-Manager main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM GGUF model_name
+@REM @REM https://github.com/receyuki/comfyui-prompt-reader-node
+@REM call :GITHUB_UPDATE receyuki comfyui-prompt-reader-node main
+@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM echo git -C comfyui-prompt-reader-node submodule update --init --recursive
+@REM git -C comfyui-prompt-reader-node submodule update --init --recursive
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+@REM echo git -C comfyui-prompt-reader-node pull --recurse-submodules
+@REM git -C comfyui-prompt-reader-node pull --recurse-submodules
+@REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/SeanScripts/ComfyUI-Unload-Model
 call :GITHUB_UPDATE SeanScripts ComfyUI-Unload-Model main
