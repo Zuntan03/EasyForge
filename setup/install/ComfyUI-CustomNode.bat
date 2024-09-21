@@ -38,10 +38,12 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_UPDATE ltdrdata ComfyUI-Impact-Pack Main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+echo pip install -qq ultralytics
 pip install -qq ultralytics
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack/blob/Main/troubleshooting/TROUBLESHOOTING.md#an-issue-has-occurred-about-cv2
+echo python -s -m ComfyUI-Impact-Pack\install.py
 python -s -m ComfyUI-Impact-Pack\install.py
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
