@@ -20,7 +20,3 @@ if exist "%~dp0..\stable-diffusion-webui-forge\models\VAE\Flux\clip_l.safetensor
 		call "%~dp0..\download\VAE\Flux\t5xxl-Q6_K.bat"
 	)
 )
-
-if exist "%~dp0..\ComfyUI\" (
-	call "%~dp0..\ComfyUI-Update.bat"
-)
