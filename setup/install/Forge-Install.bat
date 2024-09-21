@@ -27,6 +27,9 @@ echo pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download
 pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+
+if not exist "models\Lora" ( mkdir "models\Lora" )
+
 popd rem %~dp0..\..\stable-diffusion-webui-forge
 
 @REM Delete old files
