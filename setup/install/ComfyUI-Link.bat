@@ -33,6 +33,8 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call "%LINK_DIR%" clip "%FORGE_MODEL%\VAE"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+if not exist "%FORGE_MODEL%\Lora" ( mkdir "%FORGE_MODEL%\Lora" )
+
 call "%LINK_DIR%" loras "%FORGE_MODEL%\Lora"
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
