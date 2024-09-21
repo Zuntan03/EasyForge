@@ -27,6 +27,13 @@ echo pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download
 pip install -qq torch==2.4.1+cu124 torchvision --index-url https://download.pytorch.org/whl/cu124
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+echo pip install -qq https://github.com/oobabooga/llama-cpp-python-cuBLAS-wheels/releases/download/cpu/llama_cpp_python-0.2.89+cpuavx2-cp310-cp310-win_amd64.whl
+pip install -qq https://github.com/oobabooga/llama-cpp-python-cuBLAS-wheels/releases/download/cpu/llama_cpp_python-0.2.89+cpuavx2-cp310-cp310-win_amd64.whl
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+echo pip install -qq https://github.com/oobabooga/llama-cpp-python-cuBLAS-wheels/releases/download/textgen-webui/llama_cpp_python_cuda-0.2.89+cu121-cp310-cp310-win_amd64.whl
+pip install -qq https://github.com/oobabooga/llama-cpp-python-cuBLAS-wheels/releases/download/textgen-webui/llama_cpp_python_cuda-0.2.89+cu121-cp310-cp310-win_amd64.whl
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 if not exist "models\Lora" ( mkdir "models\Lora" )
 

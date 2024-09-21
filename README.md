@@ -52,13 +52,13 @@ Flux を試してみたい方向けのインストール方法です。
 - ComfyUI で LamaCleaner を使う『[いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)』を追加しました。
   - Segment Anything Model でのマスク指定と、右ドラックでのマスク削除が特徴です。
 
-|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/SAM.png)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/MaskEditor.png)|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/SAM.png)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/MaskEditor.webp)|
 |:-:|:-:|
 
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLama/Workflow.png)
 
 - `ComfyUI-Workflow` の `日本語LLMでFlux` に `画像からプロンプト生成` を追加しました。
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLlm/img_prompt.png)
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyLlm/img_prompt.webp)
 
 ### 2026/09/14
 
