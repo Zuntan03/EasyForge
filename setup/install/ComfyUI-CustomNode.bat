@@ -38,14 +38,15 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_UPDATE ltdrdata ComfyUI-Impact-Pack Main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/ltdrdata/ComfyUI-Impact-Pack/commit/b5abf19a1b0726cde69fcbb7f7b592c8ad8e067e
+echo python -s ComfyUI-Impact-Pack\install.py
+python -s ComfyUI-Impact-Pack\install.py
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack/issues/689
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack/blob/Main/troubleshooting/TROUBLESHOOTING.md
 echo pip install -qq ultralytics
 pip install -qq ultralytics
-if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
-
-echo python -s ComfyUI-Impact-Pack\install.py
-python -s ComfyUI-Impact-Pack\install.py
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-KJNodes

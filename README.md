@@ -47,6 +47,20 @@ Flux を試してみたい方向けのインストール方法です。
 
 ## 最近の主な更新
 
+**ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
+`ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
+
+### 2026/09/22
+
+- ComfyUI に多機能 ADetailer な『[お手軽な手直し＆ディティールアップ](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AA%E6%89%8B%E7%9B%B4%E3%81%97%EF%BC%86%E3%83%87%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97)』を追加しました。
+  - たくさんの機能を簡単に利用できる、Flux の良さを生かした自動化ディティーラです。
+  - 元画像が SDXL や Pony や SD1.5 でも、強力な Flux で手直しできます。
+
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfySegsI2i/Pick.webp)<br>![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfySegsI2i/HandFix.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfySegsI2i/GenPrompt.webp)|
+|:-:|:-:|
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfySegsI2i/SegmMsg.webp)
+
 ### 2026/09/21
 
 - ComfyUI で LamaCleaner を使う『[いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)』を追加しました。
@@ -154,6 +168,7 @@ LoRA あり作例
 
 - [日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)
 - [いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)
+- [お手軽な手直し＆ディティールアップ](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AA%E6%89%8B%E7%9B%B4%E3%81%97%EF%BC%86%E3%83%87%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97)
 
 ### その他
 
