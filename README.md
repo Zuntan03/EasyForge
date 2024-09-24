@@ -50,6 +50,13 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+### 2026/09/24
+
+- 画像の背景を削除するワークフロー `ComfyUI-Workflow/Flux/22-背景の削除.json` を追加しました。
+  - 新しい BiRefNet、InSPyReNet、AnimeSegmentation、Rembg といったアルゴリズムやパラメータの異なる 21枚の背景削除画像を生成しますので、一番いいものを選んでください。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/RemoveBg.webp)
+- `ComfyUI-Workflow` の `*.json` ファイルを `Flux/` サブフォルダに移動しました。
+
 ### 2026/09/22
 
 - ComfyUI に多機能 ADetailer な『[お手軽な手直し＆ディティールアップ](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AA%E6%89%8B%E7%9B%B4%E3%81%97%EF%BC%86%E3%83%87%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97)』を追加しました。

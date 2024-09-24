@@ -8,6 +8,7 @@ class ComfyUiConfig:
         self.updaters = {
             "0.0.0": self.update_0_0_0,
             "0.1.0": self.update_0_1_0,
+            "0.1.1": self.update_0_1_1,
         }
 
         os.makedirs(os.path.dirname(cfg_path), exist_ok=True)
@@ -52,6 +53,12 @@ class ComfyUiConfig:
         cfg["Comfy.UseNewMenu"] = "Top"
         cfg["Comfy.Workflow.SortNodeIdOnSave"] = True
         cfg["pysssss.ImageFeed.Location"] = "hidden"
+
+    def update_0_1_1(self, cfg):
+        cfg["easy_comfy_ui_config_version"] = "0.1.2"
+        cfg["Comfy.NodeBadge.NodeIdBadgeMode"] = "Show all"
+        cfg["Comfy.NodeBadge.NodeSourceBadgeMode"] = "Show all"
+        cfg["Comfy.NodeBadge.NodeLifeCycleBadgeMode"] = "Show all"
 
 
 if __name__ == "__main__":

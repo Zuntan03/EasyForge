@@ -1,6 +1,6 @@
 {
   "last_node_id": 292,
-  "last_link_id": 624,
+  "last_link_id": 638,
   "nodes": [
     {
       "id": 6,
@@ -93,7 +93,8 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecode"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 10,
@@ -201,7 +202,8 @@
       ],
       "properties": {
         "Node name for S&R": "SamplerCustomAdvanced"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 16,
@@ -341,7 +343,8 @@
       ],
       "properties": {
         "Node name for S&R": "BasicGuider"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 25,
@@ -1082,7 +1085,8 @@
       ],
       "properties": {
         "Node name for S&R": "SamplerCustomAdvanced"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 116,
@@ -1593,7 +1597,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 34,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1634,7 +1638,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1699,7 +1703,8 @@
       ],
       "properties": {
         "Node name for S&R": "ImageUpscaleWithModel"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 181,
@@ -1789,7 +1794,8 @@
       "title": "HiresFix BasicGuider",
       "properties": {
         "Node name for S&R": "BasicGuider"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 184,
@@ -1896,7 +1902,8 @@
       ],
       "properties": {
         "Node name for S&R": "VAEDecode"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 201,
@@ -1984,7 +1991,7 @@
         "1": 850
       },
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -1997,7 +2004,8 @@
       "title": "アップスケール前",
       "properties": {
         "Node name for S&R": "PreviewImage"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 206,
@@ -2083,7 +2091,7 @@
         "1": 960
       },
       "flags": {},
-      "order": 16,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -2098,8 +2106,8 @@
       "widgets_values": [
         "%date:yyyyMMdd%/%date:MMdd_hhmm%",
         0.2,
-        false,
-        90,
+        true,
+        80,
         "default"
       ]
     },
@@ -2505,7 +2513,8 @@
       ],
       "properties": {
         "Node name for S&R": "ImagePass"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 242,
@@ -2914,7 +2923,8 @@
       ],
       "properties": {
         "Node name for S&R": "UnloadModel"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 271,
@@ -2957,7 +2967,8 @@
       ],
       "properties": {
         "Node name for S&R": "UnloadModel"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 273,
@@ -2995,7 +3006,8 @@
       ],
       "properties": {
         "Node name for S&R": "UnloadAllModels"
-      }
+      },
+      "widgets_values": []
     },
     {
       "id": 275,
@@ -4771,6 +4783,118 @@
     ],
     [
       624,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      625,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      626,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      627,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      628,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      629,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      630,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      631,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      632,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      633,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      634,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      635,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      636,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      637,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      638,
       45,
       0,
       281,

@@ -10,9 +10,16 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 popd rem %~dp0..\..\ComfyUI
 pushd %~dp0..\..\ComfyUI\custom_nodes
 
+@REM https://github.com/kwaroran/abg-comfyui
+call :GITHUB_UPDATE kwaroran abg-comfyui main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/chrisgoringe/cg-use-everywhere
 call :GITHUB_UPDATE chrisgoringe cg-use-everywhere main
-@REM call :GITHUB_UPDATE chrisgoringe cg-use-everywhere main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM https://github.com/lldacing/ComfyUI_BiRefNet_ll
+call :GITHUB_UPDATE lldacing ComfyUI_BiRefNet_ll main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/SeargeDP/ComfyUI_Searge_LLM
@@ -48,6 +55,10 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 echo pip install -qq ultralytics
 pip install -qq ultralytics
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+@REM https://github.com/john-mnz/ComfyUI-Inspyrenet-Rembg
+call :GITHUB_UPDATE john-mnz ComfyUI-Inspyrenet-Rembg main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-KJNodes
 call :GITHUB_UPDATE kijai ComfyUI-KJNodes main

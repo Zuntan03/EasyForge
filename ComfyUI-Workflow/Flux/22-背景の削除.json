@@ -1,0 +1,3572 @@
+{
+  "last_node_id": 99,
+  "last_link_id": 166,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 640,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 148
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.01,
+        "default"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": {
+        "0": 10,
+        "1": 250
+      },
+      "size": {
+        "0": 430,
+        "1": 650
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            135,
+            136,
+            137,
+            138
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "title": "編集する画像の読み込み",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "kindergarten_room_right.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 11,
+      "type": "SaveImage",
+      "pos": {
+        "0": 640,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x001"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 1020,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 149
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.1,
+        "default"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1030,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 20
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x010"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 1790,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.5,
+        "default"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1800,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x050"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 2170,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 152
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.7000000000000001,
+        "default"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2180,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x070"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 2940,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.99,
+        "default"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2950,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x099"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 680,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            32
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "General",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 680,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 32
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 141
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            33
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 25,
+      "type": "SaveImage",
+      "pos": {
+        "0": 680,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_0_General"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 1050,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            34
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "General-Lite",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 27,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 1050,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 34
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            42
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 28,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1050,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 42
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_1_GeneralLite"
+      ]
+    },
+    {
+      "id": 29,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 1430,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            37
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "Portrait",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 1430,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 37
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 143
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            43
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 31,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1430,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 43
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_2_Portrait"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 1810,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            39
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "DIS",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 33,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 1810,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 39
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            44
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 34,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1810,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 44
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_3_Dis"
+      ]
+    },
+    {
+      "id": 35,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 2180,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            41
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "HRSOD",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 2180,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 41
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            45
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 37,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2180,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_4_Hrsod"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 2560,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            50
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "COD",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 2560,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 50
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 146
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            51
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 40,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2560,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_5_Cod"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "AutoDownloadBiRefNetModel",
+      "pos": {
+        "0": 2940,
+        "1": 1310
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "links": [
+            52
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "AutoDownloadBiRefNetModel"
+      },
+      "widgets_values": [
+        "DIS-TR_TEs",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 42,
+      "type": "RembgByBiRefNet",
+      "pos": {
+        "0": 2940,
+        "1": 1210
+      },
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "BiRefNetMODEL",
+          "link": 52
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 147
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            53
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RembgByBiRefNet"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 43,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2940,
+        "1": 880
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 53
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-BiRefNet_6_DisTrTes"
+      ]
+    },
+    {
+      "id": 44,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 1410,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.3,
+        "default"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1410,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x030"
+      ]
+    },
+    {
+      "id": 46,
+      "type": "InspyrenetRembgAdvanced",
+      "pos": {
+        "0": 2560,
+        "1": 310
+      },
+      "size": {
+        "0": 315,
+        "1": 102
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            58
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InspyrenetRembgAdvanced"
+      },
+      "widgets_values": [
+        0.9,
+        "default"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2570,
+        "1": 480
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 58
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-InSPyReNet_x090"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 1140,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            64
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "u2net",
+        false,
+        true,
+        false,
+        240,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1140,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 70,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 73
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_0_U2net"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "Fast Groups Muter (rgthree)",
+      "pos": {
+        "0": 140,
+        "1": 70
+      },
+      "size": {
+        "0": 290,
+        "1": 130
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null,
+          "slot_index": 0
+        }
+      ],
+      "title": "背景除去処理の切り替え",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 52,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 1140,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 156
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            73
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 53,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 1140,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 64
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            68
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 55,
+      "type": "InvertMask",
+      "pos": {
+        "0": 1140,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            120
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 58,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 1520,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            77
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "u2netp",
+        false,
+        true,
+        false,
+        240,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1520,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 75
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_1_U2netP"
+      ]
+    },
+    {
+      "id": 60,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 1520,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 158
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 61,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 1520,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 77
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            78
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "InvertMask",
+      "pos": {
+        "0": 1520,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 78
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            121
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 64,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 1890,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            85
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "u2net_human_seg",
+        false,
+        true,
+        false,
+        0,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 65,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1890,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 72,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 83
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_2_U2netHumanSeg"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 1890,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 160
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 122
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            83
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 67,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 1890,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            86
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "InvertMask",
+      "pos": {
+        "0": 1890,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 86
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            122
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 70,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 2270,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            93
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "silueta",
+        false,
+        true,
+        false,
+        240,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 71,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2270,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 73,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 91
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_3_Silueta"
+      ]
+    },
+    {
+      "id": 72,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 2270,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 162
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 123
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            91
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 73,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 2270,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            94
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "InvertMask",
+      "pos": {
+        "0": 2270,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            123
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 76,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 2640,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            101
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "isnet-general-use",
+        false,
+        true,
+        false,
+        240,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 77,
+      "type": "SaveImage",
+      "pos": {
+        "0": 2640,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 74,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 99
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_4_IsnetGeneralUse"
+      ]
+    },
+    {
+      "id": 78,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 2640,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 164
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            99
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 79,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 2640,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            102
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "InvertMask",
+      "pos": {
+        "0": 2640,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            124
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 82,
+      "type": "Image Rembg (Remove Background)",
+      "pos": {
+        "0": 3010,
+        "1": -730
+      },
+      "size": {
+        "0": 320,
+        "1": 250
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 165
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            109
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Rembg (Remove Background)"
+      },
+      "widgets_values": [
+        true,
+        "isnet-anime",
+        false,
+        true,
+        false,
+        240,
+        10,
+        10,
+        "none"
+      ]
+    },
+    {
+      "id": 83,
+      "type": "SaveImage",
+      "pos": {
+        "0": 3010,
+        "1": -80
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 75,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 107
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-Rembg_5_IsnetAnime"
+      ]
+    },
+    {
+      "id": 84,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 3010,
+        "1": -190
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 166
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 125
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            107
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 85,
+      "type": "ImageToMask",
+      "pos": {
+        "0": 3010,
+        "1": -420
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            110
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageToMask"
+      },
+      "widgets_values": [
+        "green"
+      ]
+    },
+    {
+      "id": 86,
+      "type": "InvertMask",
+      "pos": {
+        "0": 3010,
+        "1": -300
+      },
+      "size": {
+        "0": 140,
+        "1": 40
+      },
+      "flags": {},
+      "order": 61,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 110
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            125
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "InvertMask"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 90,
+      "type": "Remove Image Background (abg)",
+      "pos": {
+        "0": 700,
+        "1": -370
+      },
+      "size": {
+        "0": 243.60000610351562,
+        "1": 30
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            126
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Remove Image Background (abg)"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 91,
+      "type": "SplitImageWithAlpha",
+      "pos": {
+        "0": 700,
+        "1": -290
+      },
+      "size": {
+        "0": 184.8000030517578,
+        "1": 50
+      },
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            133
+          ],
+          "slot_index": 1,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SplitImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 93,
+      "type": "JoinImageWithAlpha",
+      "pos": {
+        "0": 700,
+        "1": -180
+      },
+      "size": {
+        "0": 180,
+        "1": 50
+      },
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 140
+        },
+        {
+          "name": "alpha",
+          "type": "MASK",
+          "link": 133
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            134
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "JoinImageWithAlpha"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 94,
+      "type": "SaveImage",
+      "pos": {
+        "0": 700,
+        "1": -90
+      },
+      "size": {
+        "0": 320,
+        "1": 270
+      },
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 134
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "%date:yyyyMMdd%/%date:MMdd_hhmm%-AnimeSegmentation"
+      ]
+    },
+    {
+      "id": 95,
+      "type": "ImagePass",
+      "pos": {
+        "0": 980,
+        "1": -730
+      },
+      "size": {
+        "0": 140,
+        "1": 30
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 135
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            161,
+            162,
+            163,
+            164,
+            165,
+            166
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 96,
+      "type": "ImagePass",
+      "pos": {
+        "0": 480,
+        "1": 310
+      },
+      "size": {
+        "0": 140,
+        "1": 30
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 136
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 97,
+      "type": "ImagePass",
+      "pos": {
+        "0": 510,
+        "1": 870
+      },
+      "size": {
+        "0": 140,
+        "1": 30
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 98,
+      "type": "ImagePass",
+      "pos": {
+        "0": 530,
+        "1": -370
+      },
+      "size": {
+        "0": 140,
+        "1": 30
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            139,
+            140
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 99,
+      "type": "Note",
+      "pos": {
+        "0": 10,
+        "1": 950
+      },
+      "size": [
+        530,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "使い方",
+      "properties": {},
+      "widgets_values": [
+        "「編集する画像の読み込み」\nDrag & Drop などで画像を読み込んで「Queue」します。\n初回実行のみモデルのダウンロードに時間がかかります。\n\n「背景除去処理の切り替え」\nどの背景除去処理を利用するかを切り替えられます。\n\n出力画像のアルファ値は 2値化していません。\n2値化が必要な場合は利用側で処理してください。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      18,
+      1,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      20,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      15,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      17,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      21,
+      0,
+      22,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      23,
+      0,
+      24,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      33,
+      24,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      26,
+      0,
+      27,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      37,
+      29,
+      0,
+      30,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      39,
+      32,
+      0,
+      33,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      41,
+      35,
+      0,
+      36,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      42,
+      27,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      30,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      44,
+      33,
+      0,
+      34,
+      0,
+      "IMAGE"
+    ],
+    [
+      45,
+      36,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      50,
+      38,
+      0,
+      39,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      51,
+      39,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      52,
+      41,
+      0,
+      42,
+      0,
+      "BiRefNetMODEL"
+    ],
+    [
+      53,
+      42,
+      0,
+      43,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      44,
+      0,
+      45,
+      0,
+      "IMAGE"
+    ],
+    [
+      58,
+      46,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      64,
+      49,
+      0,
+      53,
+      0,
+      "IMAGE"
+    ],
+    [
+      68,
+      53,
+      0,
+      55,
+      0,
+      "MASK"
+    ],
+    [
+      73,
+      52,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      60,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      77,
+      58,
+      0,
+      61,
+      0,
+      "IMAGE"
+    ],
+    [
+      78,
+      61,
+      0,
+      62,
+      0,
+      "MASK"
+    ],
+    [
+      83,
+      66,
+      0,
+      65,
+      0,
+      "IMAGE"
+    ],
+    [
+      85,
+      64,
+      0,
+      67,
+      0,
+      "IMAGE"
+    ],
+    [
+      86,
+      67,
+      0,
+      68,
+      0,
+      "MASK"
+    ],
+    [
+      91,
+      72,
+      0,
+      71,
+      0,
+      "IMAGE"
+    ],
+    [
+      93,
+      70,
+      0,
+      73,
+      0,
+      "IMAGE"
+    ],
+    [
+      94,
+      73,
+      0,
+      74,
+      0,
+      "MASK"
+    ],
+    [
+      99,
+      78,
+      0,
+      77,
+      0,
+      "IMAGE"
+    ],
+    [
+      101,
+      76,
+      0,
+      79,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      79,
+      0,
+      80,
+      0,
+      "MASK"
+    ],
+    [
+      107,
+      84,
+      0,
+      83,
+      0,
+      "IMAGE"
+    ],
+    [
+      109,
+      82,
+      0,
+      85,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      85,
+      0,
+      86,
+      0,
+      "MASK"
+    ],
+    [
+      120,
+      55,
+      0,
+      52,
+      1,
+      "MASK"
+    ],
+    [
+      121,
+      62,
+      0,
+      60,
+      1,
+      "MASK"
+    ],
+    [
+      122,
+      68,
+      0,
+      66,
+      1,
+      "MASK"
+    ],
+    [
+      123,
+      74,
+      0,
+      72,
+      1,
+      "MASK"
+    ],
+    [
+      124,
+      80,
+      0,
+      78,
+      1,
+      "MASK"
+    ],
+    [
+      125,
+      86,
+      0,
+      84,
+      1,
+      "MASK"
+    ],
+    [
+      126,
+      90,
+      0,
+      91,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      91,
+      1,
+      93,
+      1,
+      "MASK"
+    ],
+    [
+      134,
+      93,
+      0,
+      94,
+      0,
+      "IMAGE"
+    ],
+    [
+      135,
+      2,
+      0,
+      95,
+      0,
+      "IMAGE"
+    ],
+    [
+      136,
+      2,
+      0,
+      96,
+      0,
+      "IMAGE"
+    ],
+    [
+      137,
+      2,
+      0,
+      97,
+      0,
+      "IMAGE"
+    ],
+    [
+      138,
+      2,
+      0,
+      98,
+      0,
+      "IMAGE"
+    ],
+    [
+      139,
+      98,
+      0,
+      90,
+      0,
+      "IMAGE"
+    ],
+    [
+      140,
+      98,
+      0,
+      93,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      97,
+      0,
+      24,
+      1,
+      "IMAGE"
+    ],
+    [
+      142,
+      97,
+      0,
+      27,
+      1,
+      "IMAGE"
+    ],
+    [
+      143,
+      97,
+      0,
+      30,
+      1,
+      "IMAGE"
+    ],
+    [
+      144,
+      97,
+      0,
+      33,
+      1,
+      "IMAGE"
+    ],
+    [
+      145,
+      97,
+      0,
+      36,
+      1,
+      "IMAGE"
+    ],
+    [
+      146,
+      97,
+      0,
+      39,
+      1,
+      "IMAGE"
+    ],
+    [
+      147,
+      97,
+      0,
+      42,
+      1,
+      "IMAGE"
+    ],
+    [
+      148,
+      96,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      149,
+      96,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      150,
+      96,
+      0,
+      44,
+      0,
+      "IMAGE"
+    ],
+    [
+      151,
+      96,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      152,
+      96,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      96,
+      0,
+      46,
+      0,
+      "IMAGE"
+    ],
+    [
+      154,
+      96,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      155,
+      95,
+      0,
+      49,
+      0,
+      "IMAGE"
+    ],
+    [
+      156,
+      95,
+      0,
+      52,
+      0,
+      "IMAGE"
+    ],
+    [
+      157,
+      95,
+      0,
+      58,
+      0,
+      "IMAGE"
+    ],
+    [
+      158,
+      95,
+      0,
+      60,
+      0,
+      "IMAGE"
+    ],
+    [
+      159,
+      95,
+      0,
+      64,
+      0,
+      "IMAGE"
+    ],
+    [
+      160,
+      95,
+      0,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      161,
+      95,
+      0,
+      70,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      95,
+      0,
+      72,
+      0,
+      "IMAGE"
+    ],
+    [
+      163,
+      95,
+      0,
+      76,
+      0,
+      "IMAGE"
+    ],
+    [
+      164,
+      95,
+      0,
+      78,
+      0,
+      "IMAGE"
+    ],
+    [
+      165,
+      95,
+      0,
+      82,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      95,
+      0,
+      84,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "BiRefNet (7)",
+      "bounding": [
+        590,
+        790,
+        2690,
+        630
+      ],
+      "color": "#A88",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "InSPyReNet (7)",
+      "bounding": [
+        590,
+        220,
+        2700,
+        550
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Rembg (6)",
+      "bounding": [
+        1060,
+        -820,
+        2290,
+        1020
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "AnimeSegmentation (1)",
+      "bounding": [
+        590,
+        -460,
+        450,
+        660
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}

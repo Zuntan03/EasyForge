@@ -52,6 +52,11 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM call %GITHUB% hako-mikan sd-webui-negpip main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM Flux で効果がないので保留
+@REM @REM https://github.com/inflatebot/sd-forge-negpip
+@REM call %GITHUB% inflatebot sd-forge-negpip main
+@REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM @REM https://github.com/hako-mikan/sd-webui-regional-prompter
 @REM call %GITHUB% hako-mikan sd-webui-regional-prompter main
 @REM if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
