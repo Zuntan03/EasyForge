@@ -1,6 +1,6 @@
 {
-  "last_node_id": 163,
-  "last_link_id": 391,
+  "last_node_id": 164,
+  "last_link_id": 401,
   "nodes": [
     {
       "id": 1,
@@ -84,14 +84,14 @@
         "0": 960,
         "1": -110
       },
-      "size": [
-        350,
-        80
-      ],
+      "size": {
+        "0": 350,
+        "1": 80
+      },
       "flags": {
         "collapsed": false
       },
-      "order": 29,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -133,7 +133,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -170,14 +170,14 @@
         "0": 720,
         "1": -110
       },
-      "size": [
-        230,
-        60
-      ],
+      "size": {
+        "0": 230,
+        "1": 60
+      },
       "flags": {
         "collapsed": false
       },
-      "order": 33,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -213,7 +213,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -326,7 +326,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -413,7 +413,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 40,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -484,7 +484,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 4,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -939,7 +939,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 5,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1115,7 +1115,7 @@
       "id": 37,
       "type": "Anything Everywhere?",
       "pos": {
-        "0": 3740,
+        "0": 3890,
         "1": -400
       },
       "size": {
@@ -1125,13 +1125,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 83,
+      "order": 84,
       "mode": 0,
       "inputs": [
         {
           "name": "IMAGE",
           "type": "*",
-          "link": 383,
+          "link": 393,
           "color_on": "#64B5F6"
         }
       ],
@@ -1159,7 +1159,7 @@
         "1": 530
       },
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -1189,7 +1189,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 32,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -1316,7 +1316,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 7,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1390,7 +1390,7 @@
         "1": 320
       },
       "flags": {},
-      "order": 38,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1478,7 +1478,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 30,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1516,7 +1516,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 8,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1720,7 +1720,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 9,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2457,7 +2457,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 10,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2596,7 +2596,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 11,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2634,7 +2634,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2779,7 +2779,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -2824,7 +2824,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2901,7 +2901,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 15,
+      "order": 19,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2937,7 +2937,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 16,
+      "order": 20,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3010,7 +3010,7 @@
         "1": 630
       },
       "flags": {},
-      "order": 17,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3048,10 +3048,10 @@
         "0": 1980,
         "1": 1250
       },
-      "size": [
-        210,
-        120
-      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
       "flags": {
         "collapsed": true
       },
@@ -3127,7 +3127,7 @@
         "1": 70
       },
       "flags": {},
-      "order": 18,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3163,7 +3163,7 @@
         "1": 340
       },
       "flags": {},
-      "order": 19,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -3213,7 +3213,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 20,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3249,7 +3249,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 21,
+      "order": 25,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3280,10 +3280,10 @@
         "0": 3290,
         "1": -310
       },
-      "size": [
-        140,
-        30
-      ],
+      "size": {
+        "0": 140,
+        "1": 30
+      },
       "flags": {
         "collapsed": true
       },
@@ -3326,7 +3326,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 31,
+      "order": 26,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3363,7 +3363,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -3554,7 +3554,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 22,
+      "order": 27,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3597,7 +3597,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 28,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3632,7 +3632,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 24,
+      "order": 29,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3668,7 +3668,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 25,
+      "order": 30,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3706,7 +3706,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 35,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -3773,10 +3773,10 @@
         "0": 2590,
         "1": 860
       },
-      "size": [
-        210,
-        120
-      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
       "flags": {
         "collapsed": true
       },
@@ -4077,7 +4077,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 26,
+      "order": 31,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4114,7 +4114,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 27,
+      "order": 32,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4151,7 +4151,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 28,
+      "order": 33,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4182,14 +4182,14 @@
         "0": 2590,
         "1": 750
       },
-      "size": [
-        210,
-        50
-      ],
+      "size": {
+        "0": 210,
+        "1": 50
+      },
       "flags": {
         "collapsed": true
       },
-      "order": 41,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -4296,10 +4296,10 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            383
+            392
           ],
-          "shape": 3,
           "slot_index": 0,
+          "shape": 3,
           "label": "IMAGE"
         },
         {
@@ -4322,6 +4322,44 @@
         1,
         false
       ]
+    },
+    {
+      "id": 164,
+      "type": "ImagePass",
+      "pos": {
+        "0": 3720,
+        "1": -400
+      },
+      "size": [
+        140,
+        30
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 83,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 392
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            393
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      }
     }
   ],
   "links": [
@@ -5830,14 +5868,6 @@
       "IMAGE"
     ],
     [
-      383,
-      163,
-      0,
-      37,
-      0,
-      "IMAGE"
-    ],
-    [
       384,
       163,
       0,
@@ -5895,6 +5925,86 @@
     ],
     [
       391,
+      47,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      392,
+      163,
+      0,
+      164,
+      0,
+      "IMAGE"
+    ],
+    [
+      393,
+      164,
+      0,
+      37,
+      0,
+      "IMAGE"
+    ],
+    [
+      394,
+      164,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      395,
+      36,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      396,
+      47,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      397,
+      47,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      398,
+      47,
+      0,
+      93,
+      0,
+      "INT"
+    ],
+    [
+      399,
+      47,
+      0,
+      131,
+      0,
+      "INT"
+    ],
+    [
+      400,
+      47,
+      0,
+      138,
+      1,
+      "INT"
+    ],
+    [
+      401,
       47,
       0,
       140,
