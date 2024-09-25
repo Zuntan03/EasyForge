@@ -6,7 +6,7 @@
       "id": 1,
       "type": "LoadImage",
       "pos": {
-        "0": 10,
+        "0": 20,
         "1": 430
       },
       "size": {
@@ -44,7 +44,7 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "clipspace-mask-72966.69999992847.png [temp]",
+        "clipspace-mask-2119962.6999999285.png [temp]",
         "image"
       ]
     },
@@ -52,13 +52,13 @@
       "id": 2,
       "type": "ImpactDilateMask",
       "pos": {
-        "0": 70,
-        "1": 280
+        "0": 20,
+        "1": 290
       },
-      "size": {
-        "0": 340,
-        "1": 60
-      },
+      "size": [
+        420,
+        60
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -86,14 +86,16 @@
         "Node name for S&R": "ImpactDilateMask"
       },
       "widgets_values": [
-        8
-      ]
+        5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 3,
       "type": "ImageAndMaskPreview",
       "pos": {
-        "0": 450,
+        "0": 456.6666564941406,
         "1": 400
       },
       "size": {
@@ -138,12 +140,12 @@
       "type": "LamaRemover",
       "pos": {
         "0": 460,
-        "1": 210
+        "1": 220
       },
-      "size": {
-        "0": 390,
-        "1": 130
-      },
+      "size": [
+        410,
+        130
+      ],
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -164,8 +166,7 @@
           "name": "images",
           "type": "IMAGE",
           "links": [
-            7,
-            10
+            7
           ],
           "slot_index": 0,
           "shape": 3
@@ -176,16 +177,18 @@
       },
       "widgets_values": [
         250,
-        8,
+        5,
         false
-      ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 5,
       "type": "SaveAnimatedWEBP",
       "pos": {
-        "0": 1780,
-        "1": 90
+        "0": 893.3333129882812,
+        "1": 370
       },
       "size": {
         "0": 420,
@@ -215,13 +218,13 @@
       "id": 6,
       "type": "Note",
       "pos": {
-        "0": 10,
-        "1": -20
+        "0": 900,
+        "1": 150
       },
-      "size": {
-        "0": 820,
-        "1": 170
-      },
+      "size": [
+        830,
+        170
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -240,12 +243,12 @@
       "type": "PreviewImage",
       "pos": {
         "0": 1330,
-        "1": 480
+        "1": 490
       },
-      "size": {
-        "0": 420,
-        "1": 590
-      },
+      "size": [
+        410,
+        570
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -262,34 +265,6 @@
         "Node name for S&R": "PreviewImage"
       },
       "widgets_values": []
-    },
-    {
-      "id": 8,
-      "type": "SaveImage",
-      "pos": {
-        "0": 890,
-        "1": 470
-      },
-      "size": {
-        "0": 420,
-        "1": 590
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 10
-        }
-      ],
-      "outputs": [],
-      "title": "編集した画像の保存",
-      "properties": {},
-      "widgets_values": [
-        "%date:yyyyMMdd%/%date:MMdd_hhmm%"
-      ]
     }
   ],
   "links": [
@@ -346,14 +321,6 @@
       1,
       0,
       7,
-      0,
-      "IMAGE"
-    ],
-    [
-      10,
-      4,
-      0,
-      8,
       0,
       "IMAGE"
     ]

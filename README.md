@@ -50,6 +50,10 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+### 2026/09/25
+
+- `ComfyUI-Workflow/Flux/` の `01-日本語LLMでFlux.json` と `41-自動検出書き換えで手直しやディティールアップ.json` で `基本プロンプト` が適用されない不具合を修正しました。
+
 ### 2026/09/24
 
 - 画像の背景を削除するワークフロー `ComfyUI-Workflow/Flux/22-背景の削除.json` を追加しました。

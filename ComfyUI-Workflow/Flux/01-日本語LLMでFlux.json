@@ -1,6 +1,6 @@
 {
-  "last_node_id": 292,
-  "last_link_id": 638,
+  "last_node_id": 296,
+  "last_link_id": 672,
   "nodes": [
     {
       "id": 6,
@@ -16,7 +16,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 59,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -60,13 +60,13 @@
         "1": -30
       },
       "size": {
-        "0": 210,
-        "1": 46
+        "0": 240,
+        "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 67,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -147,7 +147,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 65,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -219,7 +219,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 1,
+      "order": 26,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -255,7 +255,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 54,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -314,7 +314,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 63,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -360,7 +360,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "inputs": [
         {
@@ -388,7 +388,7 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        284203153899372,
+        120848371540761,
         "randomize"
       ]
     },
@@ -406,7 +406,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 61,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -447,7 +447,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 44,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -501,7 +501,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 51,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -565,7 +565,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 27,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -573,7 +573,8 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            332
+            332,
+            651
           ],
           "slot_index": 0,
           "shape": 3
@@ -603,7 +604,7 @@
         "1": 384
       },
       "flags": {},
-      "order": 48,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -619,7 +620,7 @@
         {
           "name": "seed",
           "type": "INT",
-          "link": 555,
+          "link": null,
           "widget": {
             "name": "seed"
           }
@@ -658,7 +659,7 @@
           "links": [
             228,
             239,
-            566
+            662
           ],
           "slot_index": 3,
           "shape": 3
@@ -670,11 +671,11 @@
       },
       "widgets_values": [
         "",
-        "",
+        "abc",
         true,
         "Select the LoRA to add to the text",
         "Select the Wildcard to add to the text",
-        16890220055567,
+        1098398168626181,
         "randomize"
       ],
       "color": "#232",
@@ -685,14 +686,14 @@
       "type": "Seed (rgthree)",
       "pos": {
         "0": 1030,
-        "1": -70
+        "1": -80
       },
       "size": {
         "0": 210,
         "1": 130
       },
       "flags": {},
-      "order": 4,
+      "order": 20,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -701,9 +702,7 @@
           "type": "INT",
           "links": [
             180,
-            552,
-            560,
-            561
+            560
           ],
           "slot_index": 0,
           "shape": 3,
@@ -735,13 +734,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
           "name": "text_a",
           "type": "STRING",
-          "link": 566,
+          "link": 663,
           "widget": {
             "name": "text_a"
           }
@@ -778,8 +777,8 @@
           "links": [
             578,
             581,
-            583,
-            591
+            591,
+            660
           ],
           "slot_index": 0,
           "shape": 3
@@ -810,7 +809,7 @@
         "1": 528
       },
       "flags": {},
-      "order": 5,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -841,7 +840,7 @@
         "異世界ファンタジーの食堂街で笑顔のヒロイン",
         "異世界ファンタジーの食堂街で笑顔のヒロイン",
         true,
-        753579379953348,
+        903267080806625,
         "randomize",
         "Select the Wildcard to add to the text"
       ],
@@ -862,7 +861,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 35,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -890,7 +889,7 @@
       "type": "Searge_LLM_Node",
       "pos": {
         "0": 1930,
-        "1": 530
+        "1": 540
       },
       "size": {
         "0": 240,
@@ -899,7 +898,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 47,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
@@ -918,7 +917,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 595,
+          "link": 661,
           "widget": {
             "name": "text"
           }
@@ -980,7 +979,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 66,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -1021,16 +1020,16 @@
       "type": "SamplerCustomAdvanced",
       "pos": {
         "0": 3270,
-        "1": 70
+        "1": 80
       },
       "size": {
         "0": 240,
-        "1": 112
+        "1": 110
       },
       "flags": {
         "collapsed": true
       },
-      "order": 68,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -1102,7 +1101,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 55,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1169,7 +1168,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1205,7 +1204,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 7,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1243,7 +1242,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 37,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
@@ -1281,7 +1280,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1312,7 +1311,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 9,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1350,7 +1349,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1388,7 +1387,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1426,7 +1425,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 10,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1459,7 +1458,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 11,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1483,7 +1482,7 @@
       "type": "GetNode",
       "pos": {
         "0": 3570,
-        "1": 80
+        "1": -170
       },
       "size": {
         "0": 210,
@@ -1492,7 +1491,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1523,7 +1522,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 13,
+      "order": 32,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1561,7 +1560,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 40,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
@@ -1593,11 +1592,11 @@
         "1": -60
       },
       "size": {
-        "0": 630,
+        "0": 620,
         "1": 130
       },
       "flags": {},
-      "order": 14,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1638,7 +1637,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 15,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1666,17 +1665,17 @@
       "id": 180,
       "type": "ImageUpscaleWithModel",
       "pos": {
-        "0": 3840,
-        "1": 170
+        "0": 3850,
+        "1": -80
       },
       "size": {
-        "0": 226.8000030517578,
-        "1": 48
+        "0": 230,
+        "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 72,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -1710,17 +1709,17 @@
       "id": 181,
       "type": "ImageScaleBy",
       "pos": {
-        "0": 3840,
-        "1": 380
+        "0": 3850,
+        "1": 130
       },
       "size": {
-        "0": 240,
+        "0": 230,
         "1": 82
       },
       "flags": {
         "collapsed": true
       },
-      "order": 74,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
@@ -1764,7 +1763,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 64,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -1811,7 +1810,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 52,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
@@ -1866,17 +1865,17 @@
       "id": 199,
       "type": "VAEDecode",
       "pos": {
-        "0": 3280,
+        "0": 3270,
         "1": 250
       },
       "size": {
-        "0": 144,
-        "1": 48
+        "0": 240,
+        "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 70,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -1909,8 +1908,8 @@
       "id": 201,
       "type": "ImpactSwitch",
       "pos": {
-        "0": 3560,
-        "1": 220
+        "0": 3570,
+        "1": -50
       },
       "size": {
         "0": 210,
@@ -1919,7 +1918,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 71,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -1991,7 +1990,7 @@
         "1": 850
       },
       "flags": {},
-      "order": 16,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -2011,8 +2010,8 @@
       "id": 206,
       "type": "Anything Everywhere?",
       "pos": {
-        "0": 3570,
-        "1": -100
+        "0": 3580,
+        "1": -350
       },
       "size": {
         "0": 210,
@@ -2021,7 +2020,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 69,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -2047,8 +2046,8 @@
       "id": 208,
       "type": "Anything Everywhere?",
       "pos": {
-        "0": 3840,
-        "1": 960
+        "0": 3850,
+        "1": 700
       },
       "size": {
         "0": 224,
@@ -2057,7 +2056,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 78,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -2091,7 +2090,7 @@
         "1": 960
       },
       "flags": {},
-      "order": 34,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -2115,13 +2114,13 @@
       "id": 211,
       "type": "Searge_LLM_Node",
       "pos": {
-        "0": 2500,
-        "1": 780
+        "0": 2520,
+        "1": 770
       },
-      "size": {
-        "0": 240,
-        "1": 170
-      },
+      "size": [
+        240,
+        170
+      ],
       "flags": {
         "collapsed": true
       },
@@ -2144,7 +2143,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 583,
+          "link": 660,
           "widget": {
             "name": "text"
           }
@@ -2202,7 +2201,7 @@
         "1": 520
       },
       "flags": {},
-      "order": 60,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -2217,7 +2216,7 @@
         "Node name for S&R": "Searge_Output_Node"
       },
       "widgets_values": [
-        "幻想的な世界の料理街の中で、花と髪が交じった美少女は幸福を放ち、その周囲には気品ある菌栽のスーリングカウンターや蒸し上がる飲食店群。彼女は細かな茶碗から甘い呪文を口にするよう笑っていて、彼方に風景がきらめくそのまっとうな夜空と共に、まるで無尽蔵の幻想を見せつけているように見える。 (Note: For a more direct translation without added description)\n 変換された正しい日本語訳：\n  幻想的な世界の中にある料理街では、花が髪からぶら下げられている美女は幸せを感じています。彼女は、高いキノコのスーリングカウンターや蒸し上がる飲食店群に囲まれて、大きな笑顔で、小さな茶碗から甘いものを口にするように見えます。"
+        "ファンタジックな町の食堂街の中に、輝くヒロインがめざましい快びを味わいながら蒸し立つ市場スタンドや独特なお店を見て回っている。彼女のはりとも笑顔から、心地よさが溢れ出ている。彩りに咲いた食べ物を銀の食器に盛られた壮麗な宴会、空気中でにおわる香りのする秘めかた調合したスパイスや、その奇跡的なイングレディエントは星月下から収穫されたものなど。ヒロインの無邪氣なる笑い声が古代からの建物に反響し、文化と食卓・魔法が共鳴する、この想像上の人々の中でみなしくりかえしながら、心地よさを結ばれているその幻想的な世界。"
       ]
     },
     {
@@ -2232,7 +2231,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 17,
+      "order": 25,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2262,8 +2261,8 @@
       "id": 227,
       "type": "ImpactSwitch",
       "pos": {
-        "0": 3840,
-        "1": 560
+        "0": 3850,
+        "1": 270
       },
       "size": {
         "0": 210,
@@ -2272,7 +2271,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 75,
+      "order": 74,
       "mode": 0,
       "inputs": [
         {
@@ -2304,7 +2303,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            546
+            546,
+            647
           ],
           "slot_index": 0,
           "shape": 3,
@@ -2345,7 +2345,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -2383,7 +2383,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 18,
+      "order": 31,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2411,8 +2411,8 @@
       "id": 231,
       "type": "GetNode",
       "pos": {
-        "0": 3560,
-        "1": 560
+        "0": 3570,
+        "1": 260
       },
       "size": {
         "0": 220,
@@ -2421,7 +2421,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2454,7 +2454,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2481,23 +2481,23 @@
       "id": 241,
       "type": "ImagePass",
       "pos": {
-        "0": 3840,
-        "1": 860
+        "0": 3850,
+        "1": 620
       },
       "size": {
-        "0": 144,
-        "1": 32
+        "0": 210,
+        "1": 30
       },
       "flags": {
         "collapsed": true
       },
-      "order": 77,
+      "order": 78,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 547
+          "link": 645
         }
       ],
       "outputs": [
@@ -2530,7 +2530,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 62,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -2572,7 +2572,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 21,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2611,7 +2611,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 22,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2651,7 +2651,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 23,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2691,7 +2691,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 24,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2729,7 +2729,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 41,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -2757,8 +2757,8 @@
       "id": 260,
       "type": "GetNode",
       "pos": {
-        "0": 3560,
-        "1": 400
+        "0": 3570,
+        "1": 140
       },
       "size": {
         "0": 220,
@@ -2767,7 +2767,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 23,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2799,7 +2799,7 @@
         "1": 520
       },
       "flags": {},
-      "order": 56,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -2814,7 +2814,7 @@
         "Node name for S&R": "Searge_Output_Node"
       },
       "widgets_values": [
-        "In a vibrant, otherworldly fantasy setting's culinary quarter, our heroine radiates joy amidst the whimsical stalls and steaming eateries of an enchanted realm. A smiling maiden with wildflowers woven into her hair, she sips from a delicate cup as if relishing a sweet elixir at a bustling outdoor cafe surrounded by towering mushrooms that double as serving counters."
+        "abc In the vibrant, otherworldly fantasy town's dining district, a beaming heroine basks in joy amidst steaming market stalls and eclectic eateries. A warm smile radiates from her face as she explores exotic culinary delights: colorful feasts served on gleaming silverware, fragrant spices wafting through the air, and mysterious ingredients harvested under starlight. The hero's carefree laughter echoes off ancient architecture, blending with the lively atmosphere of this fantastical setting where food, culture, and magic entwine in harmony."
       ]
     },
     {
@@ -2829,7 +2829,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 26,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2870,7 +2870,7 @@
         "1": 70
       },
       "flags": {},
-      "order": 27,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -2886,17 +2886,17 @@
       "id": 270,
       "type": "UnloadModel",
       "pos": {
-        "0": 3840,
-        "1": 740
+        "0": 3580,
+        "1": 450
       },
       "size": {
-        "0": 210,
-        "1": 46
+        "0": 140,
+        "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 76,
+      "order": 75,
       "mode": 0,
       "inputs": [
         {
@@ -2915,7 +2915,7 @@
           "name": "*",
           "type": "*",
           "links": [
-            547
+            649
           ],
           "slot_index": 0,
           "shape": 3
@@ -2930,17 +2930,17 @@
       "id": 271,
       "type": "UnloadModel",
       "pos": {
-        "0": 3840,
-        "1": 280
+        "0": 3850,
+        "1": 30
       },
       "size": {
-        "0": 210,
-        "1": 46
+        "0": 230,
+        "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 73,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -2974,23 +2974,23 @@
       "id": 273,
       "type": "UnloadAllModels",
       "pos": {
-        "0": 1670,
-        "1": 90
+        "0": 3580,
+        "1": 560
       },
       "size": {
-        "0": 210,
-        "1": 26
+        "0": 140,
+        "1": 30
       },
       "flags": {
         "collapsed": true
       },
-      "order": 36,
+      "order": 76,
       "mode": 0,
       "inputs": [
         {
           "name": "value",
           "type": "*",
-          "link": 552
+          "link": 647
         }
       ],
       "outputs": [
@@ -2998,7 +2998,7 @@
           "name": "*",
           "type": "*",
           "links": [
-            562
+            650
           ],
           "slot_index": 0,
           "shape": 3
@@ -3021,7 +3021,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3029,7 +3029,7 @@
           "name": "value",
           "type": "INT",
           "links": [
-            557
+            639
           ],
           "slot_index": 0,
           "shape": 3
@@ -3046,80 +3046,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 279,
-      "type": "ImpactSwitch",
-      "pos": {
-        "0": 1670,
-        "1": 170
-      },
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 45,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "select",
-          "type": "INT",
-          "link": 557,
-          "widget": {
-            "name": "select"
-          }
-        },
-        {
-          "name": "input1",
-          "type": "INT",
-          "link": 561
-        },
-        {
-          "name": "input2",
-          "type": "INT",
-          "link": 562
-        },
-        {
-          "name": "input3",
-          "type": "INT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            555
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "INT"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "アンロード Switch",
-      "properties": {
-        "Node name for S&R": "ImpactSwitch"
-      },
-      "widgets_values": [
-        1,
-        false
-      ]
-    },
-    {
       "id": 280,
       "type": "DownloadAndLoadFlorence2Model",
       "pos": {
@@ -3133,7 +3059,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 29,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -3167,7 +3093,7 @@
       "type": "Florence2Run",
       "pos": {
         "0": 1790,
-        "1": 1070
+        "1": 1050
       },
       "size": {
         "0": 340,
@@ -3176,13 +3102,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 46,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 564
+          "link": 664
         },
         {
           "name": "florence2_model",
@@ -3239,7 +3165,7 @@
         3,
         true,
         "",
-        448028278951534,
+        342962731559335,
         "randomize"
       ]
     },
@@ -3255,7 +3181,7 @@
         "1": 530
       },
       "flags": {},
-      "order": 30,
+      "order": 28,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3263,7 +3189,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            564
+            664
           ],
           "slot_index": 0,
           "shape": 3
@@ -3298,7 +3224,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 31,
+      "order": 19,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3334,7 +3260,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 32,
+      "order": 29,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3372,7 +3298,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 50,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -3436,8 +3362,8 @@
       "id": 287,
       "type": "StringConstant",
       "pos": {
-        "0": 1940,
-        "1": 760
+        "0": 1930,
+        "1": 770
       },
       "size": {
         "0": 230,
@@ -3446,7 +3372,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 33,
+      "order": 34,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3483,7 +3409,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 57,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -3557,7 +3483,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -3631,7 +3557,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 43,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -3672,7 +3598,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            595
+            661
           ],
           "slot_index": 0,
           "shape": 3
@@ -3690,6 +3616,124 @@
         "",
         ""
       ]
+    },
+    {
+      "id": 293,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 3850,
+        "1": 440
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 639,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "IMAGE",
+          "link": 649
+        },
+        {
+          "name": "input2",
+          "type": "IMAGE",
+          "link": 650
+        },
+        {
+          "name": "input3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            645
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 294,
+      "type": "UnloadModel",
+      "pos": {
+        "0": 2220,
+        "1": 440
+      },
+      "size": [
+        200,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "*",
+          "link": 662
+        },
+        {
+          "name": "model",
+          "type": "*",
+          "link": 651
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            663
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "対中断OoM UnloadModel",
+      "properties": {
+        "Node name for S&R": "UnloadModel"
+      },
+      "widgets_values": []
     }
   ],
   "links": [
@@ -4334,59 +4378,11 @@
       "*"
     ],
     [
-      547,
-      270,
-      0,
-      241,
-      0,
-      "IMAGE"
-    ],
-    [
-      552,
-      45,
-      0,
-      273,
-      0,
-      "*"
-    ],
-    [
-      555,
-      279,
-      0,
-      43,
-      2,
-      "INT"
-    ],
-    [
-      557,
-      275,
-      0,
-      279,
-      0,
-      "INT"
-    ],
-    [
       560,
       45,
       0,
       279,
       1,
-      "INT"
-    ],
-    [
-      561,
-      45,
-      0,
-      279,
-      1,
-      "INT"
-    ],
-    [
-      562,
-      273,
-      0,
-      279,
-      2,
       "INT"
     ],
     [
@@ -4396,22 +4392,6 @@
       281,
       1,
       "FL2MODEL"
-    ],
-    [
-      564,
-      282,
-      0,
-      281,
-      0,
-      "IMAGE"
-    ],
-    [
-      566,
-      43,
-      3,
-      50,
-      0,
-      "STRING"
     ],
     [
       570,
@@ -4478,14 +4458,6 @@
       "INT"
     ],
     [
-      583,
-      50,
-      0,
-      211,
-      2,
-      "STRING"
-    ],
-    [
       584,
       211,
       0,
@@ -4547,14 +4519,6 @@
       0,
       292,
       0,
-      "STRING"
-    ],
-    [
-      595,
-      292,
-      0,
-      99,
-      2,
       "STRING"
     ],
     [
@@ -4895,6 +4859,158 @@
     ],
     [
       638,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      639,
+      275,
+      0,
+      293,
+      0,
+      "INT"
+    ],
+    [
+      645,
+      293,
+      0,
+      241,
+      0,
+      "IMAGE"
+    ],
+    [
+      647,
+      227,
+      0,
+      273,
+      0,
+      "*"
+    ],
+    [
+      649,
+      270,
+      0,
+      293,
+      1,
+      "IMAGE"
+    ],
+    [
+      650,
+      273,
+      0,
+      293,
+      2,
+      "IMAGE"
+    ],
+    [
+      651,
+      39,
+      0,
+      294,
+      1,
+      "*"
+    ],
+    [
+      660,
+      50,
+      0,
+      211,
+      2,
+      "STRING"
+    ],
+    [
+      661,
+      292,
+      0,
+      99,
+      2,
+      "STRING"
+    ],
+    [
+      662,
+      43,
+      3,
+      294,
+      0,
+      "*"
+    ],
+    [
+      663,
+      294,
+      0,
+      50,
+      0,
+      "STRING"
+    ],
+    [
+      664,
+      282,
+      0,
+      281,
+      0,
+      "IMAGE"
+    ],
+    [
+      665,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      666,
+      45,
+      0,
+      43,
+      2,
+      "INT"
+    ],
+    [
+      667,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      668,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      669,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      670,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      671,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      672,
       45,
       0,
       281,
