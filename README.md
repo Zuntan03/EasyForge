@@ -50,6 +50,14 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+
+### 2026/09/27
+
+- ワークフローに `42-範囲指定書き換えで手直しやディティールアップ` を追加し、ドキュメントに『[マスク指定でいろいろ書き換え](https://github.com/Zuntan03/EasyForge/wiki/%E3%83%9E%E3%82%B9%E3%82%AF%E6%8C%87%E5%AE%9A%E3%81%A7%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88)』を追記しました。
+  - 様々な手法でマスクを用意することで、Flux で画像を柔軟に書き換えます。
+
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/ComfyBg/Bg.webp)
+
 ### 2026/09/25
 
 - `ComfyUI-Workflow/Flux/` の `01-日本語LLMでFlux.json` と `41-自動検出書き換えで手直しやディティールアップ.json` で `基本プロンプト` が適用されない不具合を修正しました。
@@ -180,6 +188,7 @@ LoRA あり作例
 - [日本語 LLM で Flux](https://github.com/Zuntan03/EasyForge/wiki/%E6%97%A5%E6%9C%AC%E8%AA%9E-LLM-%E3%81%A7-Flux)
 - [いらないモノを手軽に消す](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%84%E3%82%89%E3%81%AA%E3%81%84%E3%83%A2%E3%83%8E%E3%82%92%E6%89%8B%E8%BB%BD%E3%81%AB%E6%B6%88%E3%81%99)
 - [お手軽な手直し＆ディティールアップ](https://github.com/Zuntan03/EasyForge/wiki/%E3%81%8A%E6%89%8B%E8%BB%BD%E3%81%AA%E6%89%8B%E7%9B%B4%E3%81%97%EF%BC%86%E3%83%87%E3%82%A3%E3%83%86%E3%82%A3%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97)
+- [マスク指定でいろいろ書き換え](https://github.com/Zuntan03/EasyForge/wiki/%E3%83%9E%E3%82%B9%E3%82%AF%E6%8C%87%E5%AE%9A%E3%81%A7%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88)
 
 ### その他
 
