@@ -50,6 +50,21 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+### 2026/09/28
+
+- [うみゆきさんのノイズ i2i でくっきり背景](https://x.com/umiyuki_ai/status/1839593798353228233) を t2i で試してみました。
+  - Denoise とステップ数などのバランスがピーキーですがハマると高密度です。
+  - i2i の方がノイズを柔軟に調整できそうです。
+
+|主な設定|1bit ノイズテクスチャ|
+|:-:|:-:|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/AntiDoF.png)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/noise-896_1152.png)|
+
+ワークフロー付き作例（`01-日本語LLMでFlux` を少しだけ改造したモノ）
+
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_0.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_1.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_2.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_3.webp)|
+|:-:|:-:|:-:|:-:|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_4.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_5.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_6.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2409/shibuya_7.webp)|
 
 ### 2026/09/27
 
