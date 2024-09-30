@@ -7,7 +7,7 @@ call %~dp0adetailer\bbox\foot_yolov8x_v2.bat
 call %~dp0adetailer\bbox\hand_yolov8s.bat
 call %~dp0adetailer\bbox\hand_yolov9c.bat
 
-call %~dp0adetailer\segm\AnzhcBreasts-v1-1024.bat
+call %~dp0adetailer\segm\AnzhcBreasts-v1-1024-seg.bat
 call %~dp0adetailer\segm\AnzhcEyes-seg.bat
 call %~dp0adetailer\segm\AnzhcFace-v2-640-seg.bat
 call %~dp0adetailer\segm\AnzhcFace-v2-768MS-seg.bat
@@ -15,11 +15,14 @@ call %~dp0adetailer\segm\AnzhcFace-v2-1024-seg.bat
 call %~dp0adetailer\segm\AnzhcHead-seg.bat
 call %~dp0adetailer\segm\AnzhcHeadHair-seg.bat
 call %~dp0adetailer\segm\person_yolov8m-seg.bat
-call %~dp0adetailer\segm\PitHandDetailer.bat
+call %~dp0adetailer\segm\PitHandDetailer-v1b-seg.bat
 
 call %~dp0all\ESRGAN.bat
 
 call %~dp0ComfyUI\llm_gguf\Llama-3.1-8B-EZO-1.1-it-Q4_K_M.bat
+
+@REM call %~dp0ControlNet\Flux\alimama-InpaintingAlpha.bat
+call %~dp0ControlNet\Flux\jasperai-Upscaler.bat
 
 call %~dp0Lora\FluxD-Util\Hyper-FLUX.1-dev-8steps-lora.bat
 

@@ -1,6 +1,6 @@
 {
-  "last_node_id": 164,
-  "last_link_id": 409,
+  "last_node_id": 166,
+  "last_link_id": 419,
   "nodes": [
     {
       "id": 1,
@@ -3427,36 +3427,6 @@
       ]
     },
     {
-      "id": 139,
-      "type": "Searge_Output_Node",
-      "pos": {
-        "0": 990,
-        "1": 850
-      },
-      "size": {
-        "0": 530,
-        "1": 720
-      },
-      "flags": {},
-      "order": 69,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "*",
-          "link": 243
-        }
-      ],
-      "outputs": [],
-      "title": "画像生成プロンプトの和訳",
-      "properties": {
-        "Node name for S&R": "Searge_Output_Node"
-      },
-      "widgets_values": [
-        "アニメーションで描かれた女性の長い灰色髪。彼女は白いシャツに赤い襟と、金首飾りを身につけている。首環には黒い円形が付いており、黄銅のチェーンによって囲まれている。左腕が前に伸びて右腕は胸の上で休んでおり、左手は青いグローブをつけています。それでも空中に指先を向いている女性が白く塗られた壁の後ろに立っています。"
-      ]
-    },
-    {
       "id": 140,
       "type": "Searge_LLM_Node",
       "pos": {
@@ -3470,7 +3440,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 60,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -3897,8 +3867,8 @@
           "links": [
             277,
             278,
-            335,
-            371
+            371,
+            410
           ],
           "slot_index": 0,
           "shape": 3
@@ -4037,7 +4007,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            243
+            411
           ],
           "slot_index": 0,
           "shape": 3,
@@ -4221,36 +4191,6 @@
       "widgets_values": []
     },
     {
-      "id": 161,
-      "type": "Searge_Output_Node",
-      "pos": {
-        "0": 470,
-        "1": 850
-      },
-      "size": {
-        "0": 510,
-        "1": 720
-      },
-      "flags": {},
-      "order": 59,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "*",
-          "link": 335
-        }
-      ],
-      "outputs": [],
-      "title": "画像生成プロンプト",
-      "properties": {
-        "Node name for S&R": "Searge_Output_Node"
-      },
-      "widgets_values": [
-        "An animated picture of a girl with long gray hair. The girl is wearing a white shirt with a red collar and a gold necklace around her neck. The necklace has a black circle on it with a gold chain around it. The woman's left arm is stretched out in front of her, with her right arm resting on her chest. She is wearing black gloves on her left hand. Her left hand is raised in the air, with the fingers pointing to the right. The background is a plain white wall."
-      ]
-    },
-    {
       "id": 163,
       "type": "ImpactSwitch",
       "pos": {
@@ -4361,6 +4301,86 @@
         "Node name for S&R": "ImagePass"
       },
       "widgets_values": []
+    },
+    {
+      "id": 165,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 470,
+        "1": 850
+      },
+      "size": {
+        "0": 510,
+        "1": 720
+      },
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 410,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "title": "画像生成プロンプト",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 166,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": 990,
+        "1": 850
+      },
+      "size": [
+        530,
+        720
+      ],
+      "flags": {},
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 411,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "title": "画像生成プロンプトの和訳",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        ""
+      ]
     }
   ],
   "links": [
@@ -5117,14 +5137,6 @@
       "STRING"
     ],
     [
-      243,
-      152,
-      0,
-      139,
-      0,
-      "*"
-    ],
-    [
       244,
       151,
       0,
@@ -5507,14 +5519,6 @@
       140,
       1,
       "INT"
-    ],
-    [
-      335,
-      150,
-      0,
-      161,
-      0,
-      "*"
     ],
     [
       336,
@@ -6070,6 +6074,86 @@
     ],
     [
       409,
+      47,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      410,
+      150,
+      0,
+      165,
+      0,
+      "STRING"
+    ],
+    [
+      411,
+      152,
+      0,
+      166,
+      0,
+      "STRING"
+    ],
+    [
+      412,
+      164,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      413,
+      36,
+      0,
+      40,
+      0,
+      "IMAGE"
+    ],
+    [
+      414,
+      47,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      415,
+      47,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      416,
+      47,
+      0,
+      93,
+      0,
+      "INT"
+    ],
+    [
+      417,
+      47,
+      0,
+      131,
+      0,
+      "INT"
+    ],
+    [
+      418,
+      47,
+      0,
+      138,
+      1,
+      "INT"
+    ],
+    [
+      419,
       47,
       0,
       140,

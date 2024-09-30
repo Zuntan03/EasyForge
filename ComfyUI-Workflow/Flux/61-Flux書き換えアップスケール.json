@@ -1,17 +1,17 @@
 {
-  "last_node_id": 178,
-  "last_link_id": 495,
+  "last_node_id": 202,
+  "last_link_id": 569,
   "nodes": [
     {
       "id": 1,
       "type": "LoadImage",
       "pos": {
-        "0": -170,
-        "1": 60
+        "0": 170,
+        "1": 50
       },
       "size": {
-        "0": 620,
-        "1": 880
+        "0": 520,
+        "1": 750
       },
       "flags": {},
       "order": 0,
@@ -22,8 +22,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            201,
-            363
+            488,
+            514
           ],
           "slot_index": 0,
           "shape": 3
@@ -31,20 +31,17 @@
         {
           "name": "MASK",
           "type": "MASK",
-          "links": [
-            376,
-            439
-          ],
+          "links": [],
           "slot_index": 1,
           "shape": 3
         }
       ],
-      "title": "編集する画像の読み込み",
+      "title": "画像の読み込み",
       "properties": {
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "0926_0049-Rembg_1_U2netP_00001_.png",
+        "ShibuyaPhoto.webp",
         "image"
       ]
     },
@@ -52,12 +49,12 @@
       "id": 2,
       "type": "SaveAnimatedWEBP",
       "pos": {
-        "0": -790,
-        "1": 10
+        "0": -450,
+        "1": 0
       },
       "size": {
         "0": 610,
-        "1": 930
+        "1": 800
       },
       "flags": {},
       "order": 1,
@@ -84,12 +81,12 @@
       "id": 6,
       "type": "Note",
       "pos": {
-        "0": -170,
-        "1": -80
+        "0": 170,
+        "1": -100
       },
       "size": {
-        "0": 830,
-        "1": 80
+        "0": 800,
+        "1": 100
       },
       "flags": {},
       "order": 2,
@@ -99,115 +96,30 @@
       "title": "使い方",
       "properties": {},
       "widgets_values": [
-        "https://github.com/Zuntan03/EasyForge/wiki/%E3%83%9E%E3%82%B9%E3%82%AF%E6%8C%87%E5%AE%9A%E3%81%A7%E3%81%84%E3%82%8D%E3%81%84%E3%82%8D%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88\n"
+        "解説URL\n"
       ],
       "color": "#432",
       "bgcolor": "#653"
     },
     {
-      "id": 14,
-      "type": "ImpactInt",
-      "pos": {
-        "0": 690,
-        "1": -110
-      },
-      "size": {
-        "0": 240,
-        "1": 60
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            368
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "マスク反転前の範囲拡張（縮小）",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        0
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 17,
-      "type": "ImpactSEGSPicker",
-      "pos": {
-        "0": 460,
-        "1": 50
-      },
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {},
-      "order": 47,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "segs",
-          "type": "SEGS",
-          "link": 369
-        },
-        {
-          "name": "fallback_image_opt",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SEGS",
-          "type": "SEGS",
-          "links": [
-            176,
-            177
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "[重要] 書き換え範囲の選択",
-      "properties": {
-        "Node name for S&R": "ImpactSEGSPicker"
-      },
-      "widgets_values": [
-        "1",
-        "image"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 19,
       "type": "SEGSPreview",
       "pos": {
-        "0": 460,
-        "1": 200
+        "0": 710,
+        "1": 160
       },
       "size": {
-        "0": 510,
-        "1": 600
+        "0": 580,
+        "1": 640
       },
       "flags": {},
-      "order": 48,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
           "name": "segs",
           "type": "SEGS",
-          "link": 176
+          "link": 495
         },
         {
           "name": "fallback_image_opt",
@@ -223,7 +135,7 @@
           "shape": 6
         }
       ],
-      "title": "検出プレビュー",
+      "title": "タイルプレビュー",
       "properties": {
         "Node name for S&R": "SEGSPreview"
       },
@@ -236,8 +148,8 @@
       "id": 20,
       "type": "ImpactDecomposeSEGS",
       "pos": {
-        "0": 1750,
-        "1": -490
+        "0": 1760,
+        "1": -500
       },
       "size": {
         "0": 210,
@@ -246,13 +158,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 49,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
           "name": "segs",
           "type": "SEGS",
-          "link": 177
+          "link": 496
         }
       ],
       "outputs": [
@@ -286,7 +198,7 @@
       "type": "ImpactAssembleSEGS",
       "pos": {
         "0": 2810,
-        "1": -400
+        "1": -500
       },
       "size": {
         "0": 160,
@@ -295,7 +207,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 82,
+      "order": 83,
       "mode": 0,
       "inputs": [
         {
@@ -339,7 +251,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 81,
+      "order": 82,
       "mode": 0,
       "inputs": [
         {
@@ -412,8 +324,8 @@
       "id": 25,
       "type": "ImpactFrom_SEG_ELT",
       "pos": {
-        "0": 1990,
-        "1": -490
+        "0": 2000,
+        "1": -500
       },
       "size": {
         "0": 230,
@@ -422,7 +334,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 50,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -459,9 +371,7 @@
         {
           "name": "crop_region",
           "type": "SEG_ELT_crop_region",
-          "links": [
-            39
-          ],
+          "links": [],
           "slot_index": 3,
           "shape": 3
         },
@@ -501,7 +411,7 @@
       "type": "SEGSPaste",
       "pos": {
         "0": 3020,
-        "1": -400
+        "1": -420
       },
       "size": {
         "0": 210,
@@ -510,13 +420,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 83,
+      "order": 84,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 201
+          "link": 515
         },
         {
           "name": "segs",
@@ -542,7 +452,6 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            134,
             408,
             410
           ],
@@ -562,15 +471,15 @@
       "id": 30,
       "type": "ImpactInt",
       "pos": {
-        "0": 990,
-        "1": 180
+        "0": 1980,
+        "1": 270
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -589,158 +498,10 @@
         "Node name for S&R": "ImpactInt"
       },
       "widgets_values": [
-        5
+        12
       ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 35,
-      "type": "ImpactFrom_SEG_ELT_crop_region",
-      "pos": {
-        "0": 3020,
-        "1": -230
-      },
-      "size": {
-        "0": 210,
-        "1": 90
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 52,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "crop_region",
-          "type": "SEG_ELT_crop_region",
-          "link": 39
-        }
-      ],
-      "outputs": [
-        {
-          "name": "left",
-          "type": "INT",
-          "links": [
-            133
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "top",
-          "type": "INT",
-          "links": [
-            41
-          ],
-          "slot_index": 1,
-          "shape": 3
-        },
-        {
-          "name": "right",
-          "type": "INT",
-          "links": [
-            42
-          ],
-          "slot_index": 2,
-          "shape": 3
-        },
-        {
-          "name": "bottom",
-          "type": "INT",
-          "links": [
-            43
-          ],
-          "slot_index": 3,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactFrom_SEG_ELT_crop_region"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 36,
-      "type": "Image Crop Location",
-      "pos": {
-        "0": 3280,
-        "1": -240
-      },
-      "size": {
-        "0": 220,
-        "1": 114
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 84,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 134
-        },
-        {
-          "name": "left",
-          "type": "INT",
-          "link": 133,
-          "widget": {
-            "name": "left"
-          }
-        },
-        {
-          "name": "top",
-          "type": "INT",
-          "link": 41,
-          "widget": {
-            "name": "top"
-          }
-        },
-        {
-          "name": "right",
-          "type": "INT",
-          "link": 42,
-          "widget": {
-            "name": "right"
-          }
-        },
-        {
-          "name": "bottom",
-          "type": "INT",
-          "link": 43,
-          "widget": {
-            "name": "bottom"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            205
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "CROP_DATA",
-          "type": "CROP_DATA",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Image Crop Location"
-      },
-      "widgets_values": [
-        0,
-        0,
-        256,
-        256
-      ]
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
     },
     {
       "id": 37,
@@ -756,7 +517,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 89,
+      "order": 88,
       "mode": 0,
       "inputs": [
         {
@@ -779,48 +540,20 @@
       ]
     },
     {
-      "id": 40,
-      "type": "PreviewImage",
-      "pos": {
-        "0": 990,
-        "1": 270
-      },
-      "size": {
-        "0": 530,
-        "1": 530
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [],
-      "title": "書き換え結果",
-      "properties": {
-        "Node name for S&R": "PreviewImage"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 44,
       "type": "DownloadAndLoadFlorence2Model",
       "pos": {
-        "0": 1980,
-        "1": 1420
+        "0": 1620,
+        "1": 1130
       },
       "size": {
-        "0": 340,
-        "1": 110
+        "0": 510,
+        "1": 1230
       },
       "flags": {
         "collapsed": true
       },
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -854,17 +587,17 @@
       "id": 45,
       "type": "Florence2Run",
       "pos": {
-        "0": 2400,
-        "1": 1320
+        "0": 1980,
+        "1": 870
       },
       "size": {
-        "0": 350,
-        "1": 340
+        "0": 280,
+        "1": 370
       },
       "flags": {
         "collapsed": true
       },
-      "order": 57,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -906,7 +639,8 @@
           "links": [
             168,
             172,
-            235
+            235,
+            480
           ],
           "slot_index": 2,
           "shape": 3
@@ -931,7 +665,7 @@
         3,
         true,
         "",
-        974250355290145,
+        72438632404016,
         "randomize"
       ]
     },
@@ -939,15 +673,15 @@
       "id": 47,
       "type": "Seed (rgthree)",
       "pos": {
-        "0": 1980,
-        "1": 0
+        "0": 1540,
+        "1": -20
       },
       "size": {
         "0": 210,
         "1": 130
       },
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -977,7 +711,7 @@
       "id": 48,
       "type": "Anything Everywhere?",
       "pos": {
-        "0": 1980,
+        "0": 1780,
         "1": -160
       },
       "size": {
@@ -987,7 +721,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 34,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -1005,7 +739,7 @@
       },
       "widgets_values": [
         ".*",
-        "seed",
+        "seed$",
         ".*"
       ]
     },
@@ -1021,7 +755,7 @@
         "1": 320
       },
       "flags": {},
-      "order": 35,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1060,7 +794,8 @@
           "name": "clip",
           "type": "CLIP",
           "links": [
-            62
+            62,
+            508
           ],
           "slot_index": 1,
           "shape": 3
@@ -1091,7 +826,7 @@
         true,
         "Select the LoRA to add to the text",
         "Select the Wildcard to add to the text",
-        462112746844760,
+        358511184717020,
         "randomize"
       ],
       "color": "#232",
@@ -1101,15 +836,15 @@
       "id": 50,
       "type": "UnetLoaderGGUF",
       "pos": {
-        "0": 1460,
+        "0": 1540,
         "1": 160
       },
       "size": {
-        "0": 500,
+        "0": 420,
         "1": 60
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1137,17 +872,17 @@
       "id": 51,
       "type": "DualCLIPLoaderGGUF",
       "pos": {
-        "0": 1650,
+        "0": 1770,
         "1": 0
       },
       "size": {
-        "0": 310,
+        "0": 270,
         "1": 110
       },
       "flags": {
         "collapsed": false
       },
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1190,7 +925,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 64,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -1201,7 +936,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 277,
+          "link": 504,
           "widget": {
             "name": "text"
           }
@@ -1240,7 +975,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 72,
+      "order": 74,
       "mode": 0,
       "inputs": [
         {
@@ -1262,7 +997,8 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            153
+            510,
+            518
           ],
           "slot_index": 0,
           "shape": 3
@@ -1289,7 +1025,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 51,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1303,14 +1039,13 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            74,
-            208
+            74
           ],
           "slot_index": 0,
           "shape": 3
         },
         {
-          "name": "1536 width",
+          "name": "768 width",
           "type": "INT",
           "links": [
             67
@@ -1319,7 +1054,7 @@
           "shape": 3
         },
         {
-          "name": "640 height",
+          "name": "NaN height",
           "type": "INT",
           "links": [
             68
@@ -1345,15 +1080,15 @@
       "id": 62,
       "type": "ImpactInt",
       "pos": {
-        "0": 1220,
-        "1": 180
+        "0": 1310,
+        "1": 80
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1367,15 +1102,15 @@
           "shape": 3
         }
       ],
-      "title": "書き換え長辺 1024-1536",
+      "title": "書き換え長辺 768-1536",
       "properties": {
         "Node name for S&R": "ImpactInt"
       },
       "widgets_values": [
         1024
       ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 65,
@@ -1391,7 +1126,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 54,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1439,7 +1174,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 56,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -1486,7 +1221,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 58,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -1543,7 +1278,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 60,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -1599,7 +1334,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 61,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -1621,7 +1356,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            78
+            78,
+            478
           ],
           "slot_index": 0,
           "shape": 3
@@ -1650,7 +1386,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 80,
+      "order": 81,
       "mode": 0,
       "inputs": [
         {
@@ -1701,7 +1437,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 63,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -1715,13 +1451,14 @@
           "name": "image",
           "type": "IMAGE",
           "links": [
-            105
+            105,
+            507
           ],
           "slot_index": 0,
           "shape": 3
         },
         {
-          "name": "1536 width",
+          "name": "1280 width",
           "type": "INT",
           "links": [
             79,
@@ -1733,7 +1470,7 @@
           "shape": 3
         },
         {
-          "name": "640 height",
+          "name": "NaN height",
           "type": "INT",
           "links": [
             80,
@@ -1769,7 +1506,7 @@
         "1": 122
       },
       "flags": {},
-      "order": 68,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -1828,7 +1565,7 @@
         "1": 122
       },
       "flags": {},
-      "order": 69,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -1887,7 +1624,7 @@
         "1": 122
       },
       "flags": {},
-      "order": 71,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -1946,7 +1683,7 @@
         "1": 122
       },
       "flags": {},
-      "order": 70,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -2007,7 +1744,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 74,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -2082,15 +1819,15 @@
       "id": 79,
       "type": "ImpactInt",
       "pos": {
-        "0": 1980,
-        "1": 400
+        "0": 1310,
+        "1": 410
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2109,7 +1846,7 @@
         "Node name for S&R": "ImpactInt"
       },
       "widgets_values": [
-        2
+        1
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -2128,7 +1865,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 76,
+      "order": 78,
       "mode": 0,
       "inputs": [
         {
@@ -2139,7 +1876,7 @@
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 153
+          "link": 520
         }
       ],
       "outputs": [
@@ -2172,7 +1909,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 77,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -2221,15 +1958,15 @@
       "id": 83,
       "type": "ImpactInt",
       "pos": {
-        "0": 1980,
-        "1": 180
+        "0": 1310,
+        "1": 190
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2257,8 +1994,8 @@
       "id": 90,
       "type": "VAELoader",
       "pos": {
-        "0": 2860,
-        "1": 410
+        "0": 1540,
+        "1": -130
       },
       "size": {
         "0": 210,
@@ -2267,7 +2004,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2275,8 +2012,7 @@
           "name": "VAE",
           "type": "VAE",
           "links": [
-            192,
-            193
+            505
           ],
           "slot_index": 0,
           "shape": 3
@@ -2303,7 +2039,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 67,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -2314,7 +2050,7 @@
         {
           "name": "vae",
           "type": "VAE",
-          "link": 192
+          "link": null
         }
       ],
       "outputs": [
@@ -2347,7 +2083,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 78,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -2412,7 +2148,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -2439,7 +2175,7 @@
         "Node name for S&R": "RandomNoise"
       },
       "widgets_values": [
-        662283974869112,
+        506637992752046,
         "randomize"
       ]
     },
@@ -2457,7 +2193,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 15,
+      "order": 13,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2492,7 +2228,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 79,
+      "order": 80,
       "mode": 0,
       "inputs": [
         {
@@ -2503,7 +2239,7 @@
         {
           "name": "vae",
           "type": "VAE",
-          "link": 193
+          "link": null
         }
       ],
       "outputs": [
@@ -2527,14 +2263,14 @@
       "type": "ImpactFloat",
       "pos": {
         "0": 1980,
-        "1": 510
+        "1": 380
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2559,231 +2295,6 @@
       "bgcolor": "#3f5159"
     },
     {
-      "id": 121,
-      "type": "ImpactInt",
-      "pos": {
-        "0": 1220,
-        "1": 70
-      },
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            351
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "最小マスクサイズ",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        5
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 127,
-      "type": "Anything Everywhere?",
-      "pos": {
-        "0": 3530,
-        "1": -240
-      },
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 86,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "IMAGE",
-          "type": "*",
-          "link": 205,
-          "color_on": "#64B5F6"
-        }
-      ],
-      "outputs": [],
-      "properties": {
-        "Node name for S&R": "Anything Everywhere?",
-        "group_restricted": 0,
-        "color_restricted": 0
-      },
-      "widgets_values": [
-        "書き換え結果",
-        "images",
-        ".*"
-      ]
-    },
-    {
-      "id": 128,
-      "type": "LoadImage",
-      "pos": {
-        "0": 1540,
-        "1": 1020
-      },
-      "size": {
-        "0": 420,
-        "1": 630
-      },
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            210
-          ],
-          "slot_index": 0,
-          "shape": 3
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "プロンプト生成用の別画像 Drag&Drop可",
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "2305_00001_.png",
-        "image"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
-      "id": 129,
-      "type": "ImpactSwitch",
-      "pos": {
-        "0": 1980,
-        "1": 1250
-      },
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 53,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "select",
-          "type": "INT",
-          "link": 206,
-          "widget": {
-            "name": "select"
-          }
-        },
-        {
-          "name": "input1",
-          "type": "IMAGE",
-          "link": 208
-        },
-        {
-          "name": "input2",
-          "type": "IMAGE",
-          "link": 210
-        },
-        {
-          "name": "input3",
-          "type": "IMAGE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            318
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "IMAGE"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "画像読み込み分岐",
-      "properties": {
-        "Node name for S&R": "ImpactSwitch"
-      },
-      "widgets_values": [
-        1,
-        false
-      ]
-    },
-    {
-      "id": 130,
-      "type": "ImpactInt",
-      "pos": {
-        "0": 1980,
-        "1": 1130
-      },
-      "size": {
-        "0": 280,
-        "1": 70
-      },
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            206
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "別画像を 1:使わない 2:使う",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 131,
       "type": "ImpactWildcardProcessor",
       "pos": {
@@ -2795,7 +2306,7 @@
         "1": 340
       },
       "flags": {},
-      "order": 20,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -2826,7 +2337,7 @@
         "",
         "",
         true,
-        1014878370933352,
+        281704943442664,
         "randomize",
         "Select the Wildcard to add to the text"
       ],
@@ -2838,14 +2349,14 @@
       "type": "ImpactInt",
       "pos": {
         "0": 1980,
-        "1": 640
+        "1": 490
       },
       "size": {
         "0": 280,
         "1": 60
       },
       "flags": {},
-      "order": 21,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2873,15 +2384,15 @@
       "id": 134,
       "type": "ImpactInt",
       "pos": {
-        "0": 1650,
-        "1": -110
+        "0": 1980,
+        "1": 160
       },
       "size": {
-        "0": 300,
+        "0": 270,
         "1": 60
       },
       "flags": {},
-      "order": 22,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2909,8 +2420,8 @@
       "id": 135,
       "type": "UnloadAllModels",
       "pos": {
-        "0": 3280,
-        "1": -320
+        "0": 3270,
+        "1": -330
       },
       "size": {
         "0": 220,
@@ -2945,43 +2456,6 @@
       "widgets_values": []
     },
     {
-      "id": 137,
-      "type": "Simple String",
-      "pos": {
-        "0": 2310,
-        "1": 1030
-      },
-      "size": {
-        "0": 240,
-        "1": 60
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 23,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            228,
-            234
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "空文字列",
-      "properties": {
-        "Node name for S&R": "Simple String"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
       "id": 138,
       "type": "Searge_LLM_Node",
       "pos": {
@@ -2995,7 +2469,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 41,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -3033,7 +2507,8 @@
           "name": "generated",
           "type": "STRING",
           "links": [
-            229
+            229,
+            498
           ],
           "slot_index": 0,
           "shape": 3
@@ -3062,8 +2537,8 @@
       "id": 140,
       "type": "Searge_LLM_Node",
       "pos": {
-        "0": 2860,
-        "1": 1030
+        "0": 3060,
+        "1": 1140
       },
       "size": {
         "0": 240,
@@ -3072,7 +2547,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 65,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -3091,7 +2566,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 401,
+          "link": 500,
           "widget": {
             "name": "text"
           }
@@ -3119,7 +2594,8 @@
           "type": "STRING",
           "links": [
             242,
-            279
+            279,
+            502
           ],
           "slot_index": 0,
           "shape": 3
@@ -3149,14 +2625,14 @@
       "type": "PrimitiveNode",
       "pos": {
         "0": 1980,
-        "1": 860
+        "1": 710
       },
       "size": {
         "0": 280,
         "1": 110
       },
       "flags": {},
-      "order": 24,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3190,7 +2666,7 @@
       "type": "StringConstantMultiline",
       "pos": {
         "0": 2310,
-        "1": 330
+        "1": 340
       },
       "size": {
         "0": 240,
@@ -3199,7 +2675,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 25,
+      "order": 19,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3227,14 +2703,14 @@
       "type": "ImpactInt",
       "pos": {
         "0": 1980,
-        "1": 750
+        "1": 600
       },
       "size": {
         "0": 280,
         "1": 60
       },
       "flags": {},
-      "order": 26,
+      "order": 20,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3259,47 +2735,11 @@
       "bgcolor": "#353"
     },
     {
-      "id": 145,
-      "type": "ImpactInt",
-      "pos": {
-        "0": 1980,
-        "1": 1020
-      },
-      "size": {
-        "0": 280,
-        "1": 60
-      },
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            233
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "画像からプロンプト生成 1:なし 2:あり",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        2
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
-    },
-    {
       "id": 147,
       "type": "Text Concatenate",
       "pos": {
         "0": 2310,
-        "1": 520
+        "1": 530
       },
       "size": {
         "0": 240,
@@ -3376,13 +2816,13 @@
         "1": 1140
       },
       "size": {
-        "0": 240,
+        "0": 210,
         "1": 120
       },
       "flags": {
         "collapsed": true
       },
-      "order": 43,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -3396,12 +2836,12 @@
         {
           "name": "input1",
           "type": "STRING",
-          "link": 228
+          "link": 497
         },
         {
           "name": "input2",
           "type": "STRING",
-          "link": 229
+          "link": 498
         },
         {
           "name": "input3",
@@ -3446,8 +2886,8 @@
       "id": 150,
       "type": "Text Concatenate",
       "pos": {
-        "0": 2860,
-        "1": 740
+        "0": 2550,
+        "1": 1140
       },
       "size": {
         "0": 240,
@@ -3456,7 +2896,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 62,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -3478,7 +2918,7 @@
         {
           "name": "text_c",
           "type": "STRING",
-          "link": 244,
+          "link": 480,
           "widget": {
             "name": "text_c"
           }
@@ -3497,10 +2937,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            277,
-            278,
-            401,
-            486
+            499
           ],
           "slot_index": 0,
           "shape": 3
@@ -3520,88 +2957,14 @@
       ]
     },
     {
-      "id": 151,
-      "type": "ImpactSwitch",
-      "pos": {
-        "0": 2590,
-        "1": 1030
-      },
-      "size": {
-        "0": 220,
-        "1": 120
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 59,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "select",
-          "type": "INT",
-          "link": 233,
-          "widget": {
-            "name": "select"
-          }
-        },
-        {
-          "name": "input1",
-          "type": "STRING",
-          "link": 234
-        },
-        {
-          "name": "input2",
-          "type": "STRING",
-          "link": 235
-        },
-        {
-          "name": "input3",
-          "type": "STRING",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            244
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "STRING"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "画像プロンプト Switch",
-      "properties": {
-        "Node name for S&R": "ImpactSwitch"
-      },
-      "widgets_values": [
-        1,
-        false
-      ]
-    },
-    {
       "id": 152,
       "type": "ImpactSwitch",
       "pos": {
-        "0": 2870,
-        "1": 1270
+        "0": 3330,
+        "1": 1140
       },
       "size": {
-        "0": 240,
+        "0": 210,
         "1": 120
       },
       "flags": {
@@ -3621,12 +2984,12 @@
         {
           "name": "input1",
           "type": "STRING",
-          "link": 278
+          "link": 501
         },
         {
           "name": "input2",
           "type": "STRING",
-          "link": 279
+          "link": 502
         },
         {
           "name": "input3",
@@ -3639,7 +3002,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            487
+            529
           ],
           "slot_index": 0,
           "shape": 3,
@@ -3668,54 +3031,18 @@
       ]
     },
     {
-      "id": 155,
-      "type": "FloatConstant",
-      "pos": {
-        "0": 690,
-        "1": 110
-      },
-      "size": {
-        "0": 240,
-        "1": 60
-      },
-      "flags": {},
-      "order": 28,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "value",
-          "type": "FLOAT",
-          "links": [
-            350
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "マスクと書き換えの範囲比率",
-      "properties": {
-        "Node name for S&R": "FloatConstant"
-      },
-      "widgets_values": [
-        3
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 157,
       "type": "FloatConstant",
       "pos": {
-        "0": 1980,
-        "1": 290
+        "0": 1310,
+        "1": 300
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
-      "order": 29,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3734,26 +3061,26 @@
         "Node name for S&R": "FloatConstant"
       },
       "widgets_values": [
-        0.6
+        0.8
       ],
-      "color": "#322",
-      "bgcolor": "#533"
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 158,
       "type": "UnloadModel",
       "pos": {
-        "0": 2590,
-        "1": 760
+        "0": 2270,
+        "1": 240
       },
       "size": {
-        "0": 220,
+        "0": 230,
         "1": 50
       },
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -3789,7 +3116,7 @@
       "type": "UnloadModel",
       "pos": {
         "0": 2310,
-        "1": 710
+        "1": 720
       },
       "size": {
         "0": 240,
@@ -3798,7 +3125,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -3832,8 +3159,8 @@
       "id": 160,
       "type": "UnloadModel",
       "pos": {
-        "0": 2240,
-        "1": 1320
+        "0": 1820,
+        "1": 1030
       },
       "size": {
         "0": 140,
@@ -3842,13 +3169,13 @@
       "flags": {
         "collapsed": true
       },
-      "order": 55,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
           "name": "value",
           "type": "*",
-          "link": 318
+          "link": 478
         },
         {
           "name": "model",
@@ -3873,224 +3200,11 @@
       "widgets_values": []
     },
     {
-      "id": 162,
-      "type": "MaskToSEGS",
-      "pos": {
-        "0": 1220,
-        "1": -250
-      },
-      "size": {
-        "0": 210,
-        "1": 150
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 45,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 460
-        },
-        {
-          "name": "crop_factor",
-          "type": "FLOAT",
-          "link": 350,
-          "widget": {
-            "name": "crop_factor"
-          }
-        },
-        {
-          "name": "drop_size",
-          "type": "INT",
-          "link": 351,
-          "widget": {
-            "name": "drop_size"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SEGS",
-          "type": "SEGS",
-          "links": [
-            361
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MaskToSEGS"
-      },
-      "widgets_values": [
-        true,
-        3,
-        false,
-        10,
-        false
-      ]
-    },
-    {
-      "id": 163,
-      "type": "InvertMask",
-      "pos": {
-        "0": 460,
-        "1": -190
-      },
-      "size": {
-        "0": 140,
-        "1": 30
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 37,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 378
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            367,
-            372,
-            379,
-            440
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "InvertMask"
-      },
-      "widgets_values": []
-    },
-    {
-      "id": 164,
-      "type": "ImpactSwitch",
-      "pos": {
-        "0": 700,
-        "1": -290
-      },
-      "size": {
-        "0": 230,
-        "1": 120
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 40,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "select",
-          "type": "INT",
-          "link": 353,
-          "widget": {
-            "name": "select"
-          }
-        },
-        {
-          "name": "input1",
-          "type": "MASK",
-          "link": 439
-        },
-        {
-          "name": "input2",
-          "type": "MASK",
-          "link": 440
-        },
-        {
-          "name": "input3",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            441
-          ],
-          "slot_index": 0,
-          "shape": 3,
-          "label": "MASK"
-        },
-        {
-          "name": "selected_label",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "selected_index",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "マスク反転Switch",
-      "properties": {
-        "Node name for S&R": "ImpactSwitch"
-      },
-      "widgets_values": [
-        1,
-        false
-      ]
-    },
-    {
-      "id": 167,
-      "type": "ImpactInt",
-      "pos": {
-        "0": 690,
-        "1": 0
-      },
-      "size": {
-        "0": 240,
-        "1": 60
-      },
-      "flags": {},
-      "order": 30,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            353
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "title": "マスク反転 1:しない 2:する",
-      "properties": {
-        "Node name for S&R": "ImpactInt"
-      },
-      "widgets_values": [
-        1
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 169,
       "type": "SetDefaultImageForSEGS",
       "pos": {
-        "0": 1460,
-        "1": -250
+        "0": 1510,
+        "1": -500
       },
       "size": {
         "0": 210,
@@ -4099,18 +3213,18 @@
       "flags": {
         "collapsed": true
       },
-      "order": 46,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
           "name": "segs",
           "type": "SEGS",
-          "link": 361
+          "link": 493
         },
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 363
+          "link": 494
         }
       ],
       "outputs": [
@@ -4118,7 +3232,8 @@
           "name": "SEGS",
           "type": "SEGS",
           "links": [
-            369
+            495,
+            496
           ],
           "slot_index": 0,
           "shape": 3
@@ -4130,55 +3245,6 @@
       },
       "widgets_values": [
         true
-      ]
-    },
-    {
-      "id": 170,
-      "type": "ImpactDilateMask",
-      "pos": {
-        "0": 460,
-        "1": -290
-      },
-      "size": {
-        "0": 210,
-        "1": 54
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": 376
-        },
-        {
-          "name": "dilation",
-          "type": "INT",
-          "link": 368,
-          "widget": {
-            "name": "dilation"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [
-            378
-          ],
-          "slot_index": 0,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactDilateMask"
-      },
-      "widgets_values": [
-        10
       ]
     },
     {
@@ -4195,7 +3261,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 87,
+      "order": 86,
       "mode": 0,
       "inputs": [
         {
@@ -4268,7 +3334,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 88,
+      "order": 87,
       "mode": 0,
       "inputs": [
         {
@@ -4294,18 +3360,99 @@
       "widgets_values": []
     },
     {
-      "id": 173,
-      "type": "ImpactInt",
+      "id": 177,
+      "type": "UpscaleModelLoader",
       "pos": {
         "0": 990,
-        "1": 70
+        "1": -60
       },
       "size": {
-        "0": 210,
+        "0": 300,
         "1": 60
       },
       "flags": {},
-      "order": 31,
+      "order": 22,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            481
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "x4アップスケールモデル",
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_foolhardy_Remacri.pth"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 178,
+      "type": "ImageUpscaleWithModel",
+      "pos": {
+        "0": 670,
+        "1": -330
+      },
+      "size": {
+        "0": 220,
+        "1": 50
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 481
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 514
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            484
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "x4アプスケ",
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 179,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 710,
+        "1": 50
+      },
+      "size": {
+        "0": 260,
+        "1": 60
+      },
+      "flags": {},
+      "order": 23,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -4313,81 +3460,194 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            438
+            482,
+            487
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "マスクの範囲拡張",
+      "title": "x4アップスケール 1:しない 2:する",
       "properties": {
         "Node name for S&R": "ImpactInt"
       },
       "widgets_values": [
-        10
+        2
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 180,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 930,
+        "1": -350
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 487,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "IMAGE",
+          "link": 488
+        },
+        {
+          "name": "input2",
+          "type": "IMAGE",
+          "link": 489
+        },
+        {
+          "name": "input3",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            491
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "IMAGE"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "x4アプスケ Switch",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 182,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 990,
+        "1": 50
+      },
+      "size": {
+        "0": 300,
+        "1": 60
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            483
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "x4アップスケール後リサイズのスケール",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        0.5
       ],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
-      "id": 174,
-      "type": "ImpactDilateMask",
+      "id": 183,
+      "type": "ImageScaleBy",
       "pos": {
-        "0": 990,
-        "1": -250
+        "0": 670,
+        "1": -230
       },
       "size": {
-        "0": 210,
-        "1": 54
+        "0": 220,
+        "1": 80
       },
       "flags": {
         "collapsed": true
       },
-      "order": 42,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
-          "name": "mask",
-          "type": "MASK",
-          "link": 441
+          "name": "image",
+          "type": "IMAGE",
+          "link": 484
         },
         {
-          "name": "dilation",
-          "type": "INT",
-          "link": 438,
+          "name": "scale_by",
+          "type": "FLOAT",
+          "link": 483,
           "widget": {
-            "name": "dilation"
+            "name": "scale_by"
           }
         }
       ],
       "outputs": [
         {
-          "name": "MASK",
-          "type": "MASK",
+          "name": "IMAGE",
+          "type": "IMAGE",
           "links": [
-            459
+            489
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
+      "title": "x4アプスケ後リサイズ",
       "properties": {
-        "Node name for S&R": "ImpactDilateMask"
+        "Node name for S&R": "ImageScaleBy"
       },
       "widgets_values": [
-        10
+        "lanczos",
+        1
       ]
     },
     {
-      "id": 175,
-      "type": "ToBinaryMask",
+      "id": 184,
+      "type": "ImagePass",
       "pos": {
-        "0": 990,
-        "1": -150
+        "0": 930,
+        "1": -180
       },
       "size": {
         "0": 210,
-        "1": 60
+        "1": 30
       },
       "flags": {
         "collapsed": true
@@ -4396,49 +3656,719 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "mask",
-          "type": "MASK",
-          "link": 459
+          "name": "image",
+          "type": "IMAGE",
+          "link": 491
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            492,
+            494,
+            515
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "アプスケ済み元画像",
+      "properties": {
+        "Node name for S&R": "ImagePass"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 185,
+      "type": "ImpactMakeTileSEGS",
+      "pos": {
+        "0": 1190,
+        "1": -500
+      },
+      "size": {
+        "0": 280,
+        "1": 220
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 492
         },
         {
-          "name": "threshold",
+          "name": "filter_in_segs_opt",
+          "type": "SEGS",
+          "link": null
+        },
+        {
+          "name": "filter_out_segs_opt",
+          "type": "SEGS",
+          "link": null
+        },
+        {
+          "name": "bbox_size",
           "type": "INT",
-          "link": 461,
+          "link": 527,
           "widget": {
-            "name": "threshold"
+            "name": "bbox_size"
           }
         }
       ],
       "outputs": [
         {
-          "name": "MASK",
-          "type": "MASK",
+          "name": "SEGS",
+          "type": "SEGS",
           "links": [
-            460
+            493
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "ToBinaryMask"
+        "Node name for S&R": "ImpactMakeTileSEGS"
       },
       "widgets_values": [
-        20
+        960,
+        1.05,
+        24,
+        0,
+        0.07,
+        "Reuse quality"
       ]
     },
     {
-      "id": 176,
-      "type": "ImpactInt",
+      "id": 186,
+      "type": "StringConstant",
       "pos": {
-        "0": 990,
-        "1": -40
+        "0": 2040,
+        "1": 1290
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            497
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "空文字列",
+      "properties": {
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 187,
+      "type": "StringConstant",
+      "pos": {
+        "0": 2810,
+        "1": 1140
+      },
+      "size": {
+        "0": 210,
+        "1": 34
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 69,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string",
+          "type": "STRING",
+          "link": 499,
+          "widget": {
+            "name": "string"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            500,
+            501,
+            504,
+            528
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "画像生成プロンプト",
+      "properties": {
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 188,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 1780,
+        "1": -320
+      },
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "*",
+          "link": 505,
+          "color_on": "#FF6E6E"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "^vae$",
+        ".*"
+      ]
+    },
+    {
+      "id": 189,
+      "type": "ControlNetLoader",
+      "pos": {
+        "0": 2420,
+        "1": 1020
+      },
+      "size": {
+        "0": 390,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONTROL_NET",
+          "type": "CONTROL_NET",
+          "links": [
+            506
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetLoader"
+      },
+      "widgets_values": [
+        "Flux\\jasperai-Upscaler.safetensors"
+      ]
+    },
+    {
+      "id": 190,
+      "type": "ControlNetApplyAdvanced",
+      "pos": {
+        "0": 2860,
+        "1": 640
+      },
+      "size": {
+        "0": 210,
+        "1": 190
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 76,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 510
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 509
+        },
+        {
+          "name": "control_net",
+          "type": "CONTROL_NET",
+          "link": 506
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 507
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "strength",
+          "type": "FLOAT",
+          "link": 512,
+          "widget": {
+            "name": "strength"
+          }
+        },
+        {
+          "name": "end_percent",
+          "type": "FLOAT",
+          "link": 513,
+          "widget": {
+            "name": "end_percent"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            519
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ControlNetApplyAdvanced"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0.5
+      ]
+    },
+    {
+      "id": 191,
+      "type": "CLIPTextEncodeFlux",
+      "pos": {
+        "0": 2590,
+        "1": 760
+      },
+      "size": {
+        "0": 220,
+        "1": 150
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 508
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            509
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeFlux"
+      },
+      "widgets_values": [
+        "",
+        "",
+        3.5
+      ]
+    },
+    {
+      "id": 192,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 1310,
+        "1": 740
       },
       "size": {
         "0": 210,
         "1": 60
       },
       "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            513
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "ControlNet End",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        0.5
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 193,
+      "type": "FloatConstant",
+      "pos": {
+        "0": 1310,
+        "1": 630
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "FLOAT",
+          "links": [
+            512
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "ControlNet Strength",
+      "properties": {
+        "Node name for S&R": "FloatConstant"
+      },
+      "widgets_values": [
+        1
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 194,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 2860,
+        "1": 890
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 77,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 516,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "CONDITIONING",
+          "link": 518
+        },
+        {
+          "name": "input2",
+          "type": "CONDITIONING",
+          "link": 519
+        },
+        {
+          "name": "input3",
+          "type": "CONDITIONING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            520
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "CONDITIONING"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "CN Switch",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 195,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 1310,
+        "1": 520
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            516
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "CN 1:無効 2:有効",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 196,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 1310,
+        "1": -30
+      },
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            523
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "タイルサイズ 1:768 2:1024",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        2
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 198,
+      "type": "ImpactSwitch",
+      "pos": {
+        "0": 930,
+        "1": -520
+      },
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "select",
+          "type": "INT",
+          "link": 523,
+          "widget": {
+            "name": "select"
+          }
+        },
+        {
+          "name": "input1",
+          "type": "INT",
+          "link": 525
+        },
+        {
+          "name": "input2",
+          "type": "INT",
+          "link": 526
+        },
+        {
+          "name": "input3",
+          "type": "INT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            527
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "INT"
+        },
+        {
+          "name": "selected_label",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "selected_index",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "タイルサイズ Switch",
+      "properties": {
+        "Node name for S&R": "ImpactSwitch"
+      },
+      "widgets_values": [
+        1,
+        false
+      ]
+    },
+    {
+      "id": 199,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 670,
+        "1": -550
+      },
+      "size": {
+        "0": 220,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 31,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            525
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "タイルサイス 768",
+      "properties": {
+        "Node name for S&R": "ImpactInt"
+      },
+      "widgets_values": [
+        716
+      ]
+    },
+    {
+      "id": 200,
+      "type": "ImpactInt",
+      "pos": {
+        "0": 670,
+        "1": -440
+      },
+      "size": {
+        "0": 220,
+        "1": 60
+      },
+      "flags": {
+        "collapsed": true
+      },
       "order": 32,
       "mode": 0,
       "inputs": [],
@@ -4447,41 +4377,39 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            461
+            526
           ],
           "slot_index": 0,
           "shape": 3
         }
       ],
-      "title": "マスク2値化のしきい値",
+      "title": "タイルサイズ 1024",
       "properties": {
         "Node name for S&R": "ImpactInt"
       },
       "widgets_values": [
-        127
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        960
+      ]
     },
     {
-      "id": 177,
+      "id": 201,
       "type": "ShowText|pysssss",
       "pos": {
-        "0": 460,
+        "0": 490,
         "1": 850
       },
-      "size": [
-        510,
-        720
-      ],
+      "size": {
+        "0": 510,
+        "1": 1230
+      },
       "flags": {},
-      "order": 66,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
           "name": "text",
           "type": "STRING",
-          "link": 486,
+          "link": 528,
           "widget": {
             "name": "text"
           }
@@ -4492,8 +4420,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": null,
-          "shape": 6,
-          "slot_index": 0
+          "shape": 6
         }
       ],
       "title": "画像生成プロンプト",
@@ -4501,20 +4428,44 @@
         "Node name for S&R": "ShowText|pysssss"
       },
       "widgets_values": [
-        ""
+        "",
+        "An outdoor view of a tall glass building with many windows on the side of it. There is a large black billboard on the right side of the building. The billboard has a picture of a woman on it and the word \"Disney\" in white letters. There are colorful fireworks that are shining in the sky on the billboard. Behind the billboard is a tall building that has a balcony on the front of it that has balconies on it.",
+        "A large black billboard is hanging from the side of a building. There is a large white sign with red letters on it. There are colorful fireworks in the sky above the billboard.",
+        "An eye-level view of a building with a large white sign that reads \"KULT\" in red letters. The sign is positioned on the left side of the image and is positioned slightly tilted to the right. Below the sign is another building that is white and has a red sign that says \"TOHO CHINAS\" on the right side of it. The building in the background is made up of gray square tiles. The sky above the buildings is a hazy white color.",
+        "An eye-level view of a building with a square blue sign on the side of it. The sign has a white outline of a woman with red hair and a white mustache. The building is made up of square light blue tiles. The sky above the building is hazy white and there are no clouds in the sky. To the left of the building, there is a red building with glass windows.",
+        "An eye-level view of a blue and white building with the letters \"DHC\" written in white letters on the side of the building. There is a large green sign with white letters above the letters. The sign has a white outline on it. The building has a large window on the front and a large mural of a woman with long dark hair on her head. The woman is wearing a white tank top and black bottoms on her shoulders. The mural has a red, white, and blue design on the bottom. The sky above the buildings is hazy and white.",
+        "A close-up view of a building's reflection is visible on the side of the building. The building is made up of rectangular glass windows. The reflection is of a man's face and upper torso. The sun is shining directly over the building, creating a stark contrast between the glass windows and the building's exterior. A green sign with white letters is on the left of the image. The sign has a white outline and a red circle with a white line through it.",
+        "An eye-level view of a large glass building in Japan. The building is made up of a series of windows that are tinted a light gray. The windows are arranged in a grid-like pattern on the side of the building. There is a white sign that reads \"SHINTA MARCITY\" in a bold, black font on the bottom left corner of the image. The sign has a pink background with a woman's face on it. The woman's hair is white and her lips are black. There are also white and red signs with black letters on them. To the right of the sign, there is a taller building that has a rectangular window that is tinted with red and white lines. The buildings to the left of the larger building are more rectangular and has a green balcony on the top of the balcony.",
+        "An eye-level view of a large, multi-story building with many windows. The building is made up of a series of glass windows, each reflecting the sky. The windows are tinted blue, creating a striking contrast with the building's exterior. There are several signs on the side of the building, including one that reads \"Cafe\" in a foreign language. The sign on the left is a bright blue, with a white circle in the center. The letters on the sign are in a bold red, while the one on the right is in a darker shade of red. The tree in the foreground is a dark shade of black, with no leaves on it, adding a touch of color to the scene.",
+        "An outdoor close-up shot of a multi-story building in a foreign city. The building is made up of a combination of gray, red, and blue glass. The windows on the building are tinted in a variety of colors, including red, blue, and yellow. The word \"Cafe\" is prominently displayed on the front of the building, along with a smaller sign that is in a different language. The reflection of the buildings is visible on the left side of the image. A black pole with a black lamp post is in the foreground of the photo. The lamp post has a black light on it. A green sign with a white number 9 on it is on the right of the light post.",
+        "An outdoor view of a city skyline. The sky is overcast and the sun is shining brightly. There is a green traffic light at the bottom of the frame. The traffic light is attached to a black metal pole. There are tall buildings to the left of the traffic light. One of the buildings is a light gray and has a red and white sign on it. The other buildings are made of gray and blue glass.",
+        "An eye-level view of a large white building in a city is seen on a cloudy day. The building is adorned with multiple advertisements, including one for \"DMC Chunk\" in blue letters. The sign on the left side of the building features a portrait of a young woman with dark brown hair. The woman's face is angled towards the left, and her eyes are squinted. Her hair is styled in a ponytail, and she is wearing a black hair band. She is looking to the left of the picture. On the right side, there is a large billboard with a man's face on it, with the letters \"DMM\" and \"TV\" in white letters on a green background. The billboard is attached to the side of a building that is covered in white tiles. There is a black metal pole in the foreground, and a black wire is hanging from the bottom of the pole.",
+        "A close-up shot of a large glass building that has the letters \"TSUTAYA\" written in white letters on the side of the building. The letters are positioned in a rectangular rectangular shape. The building has rectangular windows that are mirrored. The windows are reflecting the Sun and the reflection of a man's face can be seen in the windows. The man has a mustache and beard that is trimmed in white. He is wearing a pair of black sunglasses that have a green logo on them. On the left of the man, there is a large black sign that says \"MMM TV\" on it. The sign is attached to a white pole that is hanging from the building's side. The sun is shining on the building behind the man and the sign.",
+        "A large crowd of people are walking down a city street. There is a blue and white bus in front of the people. There are tall buildings behind the people on the street.",
+        "A large crowd of people are walking down a busy street in a city. The people are all dressed in warm clothes, including jackets, scarves, and scarves. Some of the people have their hair pulled back in a ponytail, while others have long black hair. A large tree is standing in the middle of the crowd, its branches reaching up towards the sky. The tree is casting a shadow on the left side of the tree, adding a touch of color to the scene. There is a large white building in the background, with the words \"L'OCCITANE\" written on the front of the building. Part of a blue sky can be seen in between the buildings.",
+        "A crowd of people stand on a busy city street. Most of the people are wearing face masks to protect their noses. The people are standing on a zebra crossing on the street. Tall black poles are standing in the middle of the crowd. Tall buildings can be seen behind the people. One of the buildings has a sign on it that says \"L'OCCITANE\" in white letters. There is a green light on top of the building.",
+        "A large group of people are walking on a busy street in a busy Asian city. The people are all dressed in a variety of masks, including face masks. The face masks are white and plastic. The man in the center of the group is wearing a gray jacket, blue jeans, and black pants. The woman to the left of him has a pink jacket over his shoulders, and a black wig on her head. The street is lined with zebra stripes, and there is a green traffic light hanging from a black pole in the middle of the street. To the right of the crosswalk is a black sign with Asian writing on it. The sign has a green outline and the word \"LUSH\" on it in white letters.",
+        "A crowd of people are standing outside on a city street. They are all wearing face masks on their faces. A large black pole is standing in front of the crowd. A tall white building can be seen behind the people. Part of a tree with no leaves is standing on the side of the building. A black sign is hanging from the building near the tree. A blue and white sign is standing near the building on the right.",
+        "A group of people are standing outside on a sidewalk. A large silver pole is standing in front of the people. Part of a large glass building can be seen behind the pole. There is a large white sign hanging from the side of the building. A white sign is hanging from a blue and white sign. A woman is wearing a white hat and a white skirt. She is wearing black pants and a black jacket.",
+        "Two people are walking on a sidewalk. The sidewalk has white lines painted on it. There is a woman on the left side of the image wearing a black jacket with a hood over it. The woman has her back to the camera and her hair is pulled back in a ponytail. She is wearing black pants with black boots on her feet. The man on the right side is wearing a gray jacket and blue jeans. He has a white beanie on his head.",
+        "A group of people are walking across a crosswalk on a sunny day. The crosswalk is painted with white stripes on it. A woman is walking across the crosswalk wearing a white jacket and black skirt. She has a white bag on her back that has a red design on it that says \"Sunken\" in red letters. She is wearing white socks and black shoes. Her hair is pulled back into a ponytail.",
+        "A woman is walking on a sidewalk. She is wearing a white face mask on her face. The woman is also wearing a tan trench coat, black pants and white sneakers. She has a black purse on her left shoulder and a black bag on her right shoulder. A brown paper bag is hanging from her left arm. A woman is standing in front of the woman with her left hand on her hip. Her black hair is pulled back in a ponytail. Her face is covered by the mask. A man is standing behind her wearing a gray coat and black pants. A white crosswalk can be seen on the sidewalk behind the woman.",
+        "Two women are crossing the street. The woman on the left is wearing a pink jacket and black boots. She is holding a red bag that has a yellow logo on it. She has long dark hair that is pulled back. The women on the right is wearing black pants and a black coat. She also has white heels on her feet. The street has a white line painted on it that is made of concrete. There are people walking across the street in the background.",
+        "A yellow BMW motorcycle is parked on the street. The motorcycle has a black tire on it. There is a person sitting on the motorcycle wearing a black jacket and black pants. There are people standing on the sidewalk behind the motorcycle.",
+        "A person is riding on a motorcycle. The motorcycle is black and yellow. The person is wearing a black jacket and a white helmet. There is a large backpack on the back of the motorcycle."
       ]
     },
     {
-      "id": 178,
+      "id": 202,
       "type": "ShowText|pysssss",
       "pos": {
-        "0": 990,
+        "0": 1010,
         "1": 850
       },
-      "size": [
-        530,
-        720
-      ],
+      "size": {
+        "0": 510,
+        "1": 1230
+      },
       "flags": {},
       "order": 75,
       "mode": 0,
@@ -4522,7 +4473,7 @@
         {
           "name": "text",
           "type": "STRING",
-          "link": 487,
+          "link": 529,
           "widget": {
             "name": "text"
           }
@@ -4533,8 +4484,7 @@
           "name": "STRING",
           "type": "STRING",
           "links": null,
-          "shape": 6,
-          "slot_index": 0
+          "shape": 6
         }
       ],
       "title": "画像生成プロンプトの和訳",
@@ -4542,7 +4492,31 @@
         "Node name for S&R": "ShowText|pysssss"
       },
       "widgets_values": [
-        ""
+        "",
+        "都市の外観、高層ガラスビルが背景となります。建物側面に多くの窓があり、右側には黒い巨大看板が立ち並んでいます。この看板は女性像と白文字「ディズニー」で構成されており、その上部では色彩豊かな花火が天幕を照らしています。看板の背後には、高層ビルが存在し、前面にバランスがあり、階段状になっている大きなベランダを擁している姿が見受けられます。",
+        "建物の側面から吊り下げられた、大きな黒いビルボードに、白地に赤字で大きく書かれた広告が写っています。上空には花火が大盛り上がっており、その色鮮やかな光景です。",
+        "ビルディングの目線と同じ高さから撮影した写真。白い看板に赤文字で「KULT」と書かれており、画像左側に位置し右にやや傾いた状態である。また、この看板下には、「TOHO CHINAS」が記された赤い看板が白い建物の右側にあり、背景には灰色の四角形タイルで構成される建物がある。天気は霞んだ白色の上空にある。",
+        "建物の眼線視点における、側面に四角形の青い看板が設置されている様子です。看板には赤毛女性と白髭を白抜きで描かれています。その背景にあるは建物自体も青い平べったいタイルから構成されており、上空では曇り気味の明るくした白色が広がっていて、雲はありません。左側には赤色の建物があり、その窓口にガラス張りとなっています。",
+        "建物は青と白の姿で、正面に大きな窓、その横に女性が黒い下着だけを肩にかけているデザインを持つ壁画があります。壁画の上部には赤・白・青の模様が施されています。また、大きくて緑の背景色をしたサインボードは、\"DHC\"と書かれた建物側面上にあり、その周囲にも白い線が描いてあることから明らかなように、目立つ位置で配置されていました。空気中には曇りを感じさせた濃くてホワイトの色調が広がっています。",
+        "建物の反射像が建物側面に写り出している。 \n建物は長方形ガラス窓で構成されている。\n男性顔と上半身の映像が鏡のように現れている。\n太陽は正面から直角下向きに当たっているため、ガラス窓と外装との明確な対比となっている。\n左側には白文字が書かれた緑色の看板がある。 \nその見えやすい枠線の中、赤く塗りつぶされた円形の内部に白ラインが引かれている。",
+        "日本の巨大なガラス棟屋の眼高視点。建物はグレーのピントを付けた窓が格子状に並び、左下隅には「SHINTA MARCITY」の赤字で太い文字とピンクの背景の中に白髪黒口の女性顔の看板がある。また、同色系や紅と緑の看板も存在する。右側には、レッド＆ホワイトのラインが入った長方形窓を備えた高さの高い建物があり、左側の建物は長方形で上部にグリーンのバルコニーを持つ。",
+        "ビルディングの眼高から、多くの窓を有する巨大な建物が表現されています。その中身はガラスで構成されていて、それぞれに天井の映りこんでおり、高さと空間感をつくしています。外装とは対照的に青い色調で薄められたタINTが施されている、窓枠には多くの違いがあります。また建物側面には様々なサインを設置されています。そのうちの一つに「カフェ」という文字が書かれており、その言語は外国語となっています。左のサインは明るい青色で白丸の中に、赤い大文字が写ります。一方右側のサインは濃い赤色です。前景には黒く塗られた木があり、その上部に葉がないため、一点だけ生々とした感覚を伝えていて、この場面と差をつけています。",
+        "都市外観、多層ビルの近接撮影。壁面はグレー・赤・青色ガラスで構成され、その中の窓に赤・青・黄色いカラーが塗り合せされている。建物正面には「Cafe」と大きく表示されたサインと、異なる言語による小さな板がある。その左側には反射光線が出ている。前景には黒のポールがあり、その先端に赤い灯台が付いている。一方その右辺には白字で9を示す緑色のシグナルボードが立てられている。",
+        "都市のスカイラインが外から見える風景。背景には曇っている空に、明るく点いている太陽がある。画面下部は緑色の信号機で、その近くの黒い金属杆に取り付けられている。左側に立つ建物の中では１つだけライトグレーの外装であり、その上から赤白の看板が見える。その他の建物は灰色と青色ガラス構造となっている。",
+        "街中の大きな白い建物の眼高視点。雲がちょうど上がった日中に、建物に多くの広告が張り付けられている。そのうち、「DMC Chunk」で青文字によるアナウンスがある。左側には若い女性（黒髪）の肖像があり、その顔は左に向けられており目尻を細めるように瞼を開いている。ポニーテールにブラックのヘッドバンドをかけ、左方を見ている。右側には広告ビルボードが大きく張り付いており、マスクのような男性の顔を描いた背景にある、「DMM」と「TV」白文字で緑地に表示されている。その裏手はホワイトタイル張りの建物であり、その前景には黒い鉄骨柱があり、下からブラックワイヤーが垂れ下げられている。",
+        "TSUTAYAの名前が記された大きなガラス建物。白字で表記される文字は、四角形状に並び、対称性を帯びている。窓部分にはミラー張りで、大きくて長い黒い枠線の中に、太陽とともに男性の顔が映っている。その男性は白い髭・胡子を整えた上着姿で、眼鏡も黒ながら緑色のロゴが付いたものをかいている。男性の左側には、「MMM TV」と明記された巨大な黒地の看板があり、その付け根から建物の外に掛けられている白いポールでもある。これらのオブジェは太陽を背負った状態で、背景となるTSUTAYAビルの正面が光る。",
+        "都市の道路に多くの人々が歩いており、その前には青い車体と白い帯を持つバス。人の後ろには高層ビルが立ち並いている。",
+        "都市の繁華街で、多くの人々が歩いてくる。すべては温暖な服を着用しており、アジャイルやスカーフなど。また、彼らの髪もポニーテールにまとめられている人がおり、そのほとんどが黒い長い髪を持っている。中間にある大木の枝は高く上り、左側には影を落としている。この影は色彩的にシーンの中で一つの調子となっています。また背景では、大きな白い建物があり、表面に「L'OCCITANE」と記されている。その間隙から青空が少し見える。",
+        "街中の混雑した人道の中で、多くの人が口罩を着てジストウシテン区間（白線）に立っている。周囲には黒い杭が立てられており、その中心に大きな建物群が立ち並び、中でも一つのビルダリング上部に「L'OCCITANE」という文字盤の入った看板がある。またそのビルの頂上にも緑色の点灯照明（LED）がついている。",
+        "都市の混雑した繁華街で、多くの人が白色のプラスチック製のフェイスマスクをつけて歩いている。中央には男性が灰色のジャケットと青いジーンズ、黒いパンツを着ており、その左側に黒髪ではなくピンクのコートをかぶった女性が立っている。その周りはゾウ皮模様で舗装された道路であり、中間にある電柱から緑色の交通信号機が吊られている。右向かいの交差点には、濃い青基調の上に白文字で「LUSH」と書かれた黒色の看板があるが、その上部はグリーンで囲まれている。それらの看板にはアジア語系の文字もある。",
+        "都市の路上に立ち並ぶ人々が、全員がマスクを着用している。背後には高台にある白い建物が見える。その横に葉がない木があり、その傍らから黒色のサインが下げられている。一方右側には青と白のロゴサインが立てられており、そこまでは黒の杭で囲まれていた。",
+        "市道の外で、多くの人が立っています。目の前には、大きい銀色のポールが立ち、それに背後は大きなガラスビルが見えます。そのビルの横から、白く書かれた大きい看板があり、その上方から青と白の斜め線を引きながら下の方にも小さな白の看板が吊り下げられています。女性は白い帽子をかぶっていて、お尻に白いスカートをつけて、黒いパンツとブラックジャケットを着ています。",
+        "2人の人物が歩いている人混みの側道。 白線で区切られた路面には、左側に背中を向けた女性と、黒ジャケットとヘッドホン姿で右側の男性が写っています。 女性は黒ズボンの足元にブラックブーツがあり、髪もポニーテールです。 男性の方はグレーのジャケットとブルージーンズを着て、白いベイビー帽をかぶります。",
+        "歩道の中に、白いラインが塗られた横断線を渡っている人々の群れ。女性は、その中で一番目立つ姿を見せる。一方の黒のスカートと合わせた、一つの手bagには赤字「サンクン(Sunken)」という文字が刺繍されている、白いジャケットを身にまとった女性。腰周りにも白いストッキングとブラックなシューズでお洒落している彼女は、おかっぱ頭のポニーテールに結ばれている。",
+        "女性が歩道を進むシーン。彼女は白いマスクをかけ、タンチョットに黒のズボンとホワイトスニーカーを履き、左肩からブラックバッグ、その横側からブラウンペーパーバッグを引いて走っている。その前に立ち、左手で腰をついた女性がおり、マスクによって顔を隠している。彼女は髪をポニーテールに結んでいる。後ろにはグレーのコートと黒ズボンを着た男性が立っており、その背後にホワイトクロスウォークが見えている。",
+        "左側の女性はピンク色のジャケットと黒いブーツを着て、赤いバッグを持っており、その中に黄色いロゴが付いています。髪は長くダークなもので後ろに引っ張り上げています。\n右側の女性は黒いズボンとブラックコートを身につけ、足先にはホワイトヒールスーツしています。\n道路の白線はコンクリートで塗られており、その背景には歩いている人々が散在しています。",
+        "黄色のBMWバイクが通りに駐車している。 バイクには黒いタイヤが付いている。また、人はいかだに座っており、その服装はブラックジャケットとブラックパンツである。サイドウォークでは、彼らの後ろに立っている人が何人もいる。",
+        "バイクは黒と黄色。人も背の長いブラックジャケットを着て、ホワイトヘルメットをかぶっている。車体後部には大きく膨らんだバッグがかかったままな。"
       ]
     }
   ],
@@ -4570,38 +4544,6 @@
       26,
       1,
       "SEGS"
-    ],
-    [
-      39,
-      25,
-      3,
-      35,
-      0,
-      "SEG_ELT_crop_region"
-    ],
-    [
-      41,
-      35,
-      1,
-      36,
-      2,
-      "INT"
-    ],
-    [
-      42,
-      35,
-      2,
-      36,
-      3,
-      "INT"
-    ],
-    [
-      43,
-      35,
-      3,
-      36,
-      4,
-      "INT"
     ],
     [
       51,
@@ -4868,36 +4810,12 @@
       "IMAGE"
     ],
     [
-      133,
-      35,
-      0,
-      36,
-      1,
-      "INT"
-    ],
-    [
-      134,
-      26,
-      0,
-      36,
-      0,
-      "IMAGE"
-    ],
-    [
       143,
       20,
       1,
       25,
       0,
       "SEG_ELT"
-    ],
-    [
-      153,
-      60,
-      0,
-      81,
-      1,
-      "CONDITIONING"
     ],
     [
       154,
@@ -4946,22 +4864,6 @@
       122,
       1,
       "STRING"
-    ],
-    [
-      176,
-      17,
-      0,
-      19,
-      0,
-      "SEGS"
-    ],
-    [
-      177,
-      17,
-      0,
-      20,
-      0,
-      "SEGS"
     ],
     [
       178,
@@ -5028,22 +4930,6 @@
       "INT"
     ],
     [
-      192,
-      90,
-      0,
-      91,
-      1,
-      "VAE"
-    ],
-    [
-      193,
-      90,
-      0,
-      95,
-      1,
-      "VAE"
-    ],
-    [
       194,
       30,
       0,
@@ -5052,52 +4938,12 @@
       "INT"
     ],
     [
-      201,
-      1,
-      0,
-      26,
-      0,
-      "IMAGE"
-    ],
-    [
       202,
       79,
       0,
       77,
       0,
       "INT"
-    ],
-    [
-      205,
-      36,
-      0,
-      127,
-      0,
-      "IMAGE"
-    ],
-    [
-      206,
-      130,
-      0,
-      129,
-      0,
-      "INT"
-    ],
-    [
-      208,
-      61,
-      0,
-      129,
-      1,
-      "IMAGE"
-    ],
-    [
-      210,
-      128,
-      0,
-      129,
-      2,
-      "IMAGE"
     ],
     [
       218,
@@ -5140,19 +4986,11 @@
       "INT"
     ],
     [
-      228,
-      137,
-      0,
-      149,
-      1,
-      "STRING"
-    ],
-    [
       229,
       138,
       0,
       149,
-      2,
+      1,
       "STRING"
     ],
     [
@@ -5164,27 +5002,11 @@
       "STRING"
     ],
     [
-      233,
-      145,
-      0,
-      151,
-      0,
-      "INT"
-    ],
-    [
-      234,
-      137,
-      0,
-      151,
-      1,
-      "STRING"
-    ],
-    [
       235,
       45,
       2,
       151,
-      2,
+      1,
       "STRING"
     ],
     [
@@ -5204,35 +5026,11 @@
       "STRING"
     ],
     [
-      244,
-      151,
-      0,
-      150,
-      2,
-      "STRING"
-    ],
-    [
-      277,
-      150,
-      0,
-      59,
-      1,
-      "STRING"
-    ],
-    [
-      278,
-      150,
-      0,
-      152,
-      1,
-      "STRING"
-    ],
-    [
       279,
       140,
       0,
       152,
-      2,
+      1,
       "STRING"
     ],
     [
@@ -5476,14 +5274,6 @@
       "FL2MODEL"
     ],
     [
-      318,
-      129,
-      0,
-      160,
-      0,
-      "*"
-    ],
-    [
       319,
       160,
       0,
@@ -5716,102 +5506,6 @@
       "INT"
     ],
     [
-      350,
-      155,
-      0,
-      162,
-      1,
-      "FLOAT"
-    ],
-    [
-      351,
-      121,
-      0,
-      162,
-      2,
-      "INT"
-    ],
-    [
-      353,
-      167,
-      0,
-      164,
-      0,
-      "INT"
-    ],
-    [
-      361,
-      162,
-      0,
-      169,
-      0,
-      "SEGS"
-    ],
-    [
-      363,
-      1,
-      0,
-      169,
-      1,
-      "IMAGE"
-    ],
-    [
-      367,
-      163,
-      0,
-      164,
-      1,
-      "MASK"
-    ],
-    [
-      368,
-      14,
-      0,
-      170,
-      1,
-      "INT"
-    ],
-    [
-      369,
-      169,
-      0,
-      17,
-      0,
-      "SEGS"
-    ],
-    [
-      372,
-      163,
-      0,
-      164,
-      1,
-      "MASK"
-    ],
-    [
-      376,
-      1,
-      1,
-      170,
-      0,
-      "MASK"
-    ],
-    [
-      378,
-      170,
-      0,
-      163,
-      0,
-      "MASK"
-    ],
-    [
-      379,
-      163,
-      0,
-      164,
-      1,
-      "MASK"
-    ],
-    [
       380,
       26,
       0,
@@ -5978,14 +5672,6 @@
       140,
       1,
       "INT"
-    ],
-    [
-      401,
-      150,
-      0,
-      140,
-      2,
-      "STRING"
     ],
     [
       402,
@@ -6244,38 +5930,6 @@
       "INT"
     ],
     [
-      438,
-      173,
-      0,
-      174,
-      1,
-      "INT"
-    ],
-    [
-      439,
-      1,
-      1,
-      164,
-      1,
-      "MASK"
-    ],
-    [
-      440,
-      163,
-      0,
-      164,
-      2,
-      "MASK"
-    ],
-    [
-      441,
-      164,
-      0,
-      174,
-      0,
-      "MASK"
-    ],
-    [
       443,
       172,
       0,
@@ -6400,30 +6054,6 @@
       47,
       0,
       140,
-      1,
-      "INT"
-    ],
-    [
-      459,
-      174,
-      0,
-      175,
-      0,
-      "MASK"
-    ],
-    [
-      460,
-      175,
-      0,
-      162,
-      0,
-      "MASK"
-    ],
-    [
-      461,
-      176,
-      0,
-      175,
       1,
       "INT"
     ],
@@ -6557,86 +6187,342 @@
     ],
     [
       478,
-      172,
+      69,
       0,
-      2,
+      160,
       0,
-      "IMAGE"
-    ],
-    [
-      479,
-      36,
-      0,
-      40,
-      0,
-      "IMAGE"
+      "*"
     ],
     [
       480,
-      47,
-      0,
       45,
       2,
-      "INT"
+      150,
+      2,
+      "STRING"
     ],
     [
       481,
-      47,
+      177,
       0,
-      49,
-      2,
-      "INT"
+      178,
+      0,
+      "UPSCALE_MODEL"
     ],
     [
       482,
-      47,
+      179,
       0,
-      93,
+      180,
       0,
       "INT"
     ],
     [
       483,
-      47,
+      182,
       0,
-      131,
-      0,
-      "INT"
+      183,
+      1,
+      "FLOAT"
     ],
     [
       484,
-      47,
+      178,
       0,
-      138,
-      1,
-      "INT"
-    ],
-    [
-      485,
-      47,
+      183,
       0,
-      140,
-      1,
-      "INT"
-    ],
-    [
-      486,
-      150,
-      0,
-      177,
-      0,
-      "STRING"
+      "IMAGE"
     ],
     [
       487,
-      152,
+      179,
       0,
-      178,
+      180,
+      0,
+      "INT"
+    ],
+    [
+      488,
+      1,
+      0,
+      180,
+      1,
+      "IMAGE"
+    ],
+    [
+      489,
+      183,
+      0,
+      180,
+      2,
+      "IMAGE"
+    ],
+    [
+      491,
+      180,
+      0,
+      184,
+      0,
+      "IMAGE"
+    ],
+    [
+      492,
+      184,
+      0,
+      185,
+      0,
+      "IMAGE"
+    ],
+    [
+      493,
+      185,
+      0,
+      169,
+      0,
+      "SEGS"
+    ],
+    [
+      494,
+      184,
+      0,
+      169,
+      1,
+      "IMAGE"
+    ],
+    [
+      495,
+      169,
+      0,
+      19,
+      0,
+      "SEGS"
+    ],
+    [
+      496,
+      169,
+      0,
+      20,
+      0,
+      "SEGS"
+    ],
+    [
+      497,
+      186,
+      0,
+      149,
+      1,
+      "STRING"
+    ],
+    [
+      498,
+      138,
+      0,
+      149,
+      2,
+      "STRING"
+    ],
+    [
+      499,
+      150,
+      0,
+      187,
       0,
       "STRING"
     ],
     [
-      488,
+      500,
+      187,
+      0,
+      140,
+      2,
+      "STRING"
+    ],
+    [
+      501,
+      187,
+      0,
+      152,
+      1,
+      "STRING"
+    ],
+    [
+      502,
+      140,
+      0,
+      152,
+      2,
+      "STRING"
+    ],
+    [
+      504,
+      187,
+      0,
+      59,
+      1,
+      "STRING"
+    ],
+    [
+      505,
+      90,
+      0,
+      188,
+      0,
+      "VAE"
+    ],
+    [
+      506,
+      189,
+      0,
+      190,
+      2,
+      "CONTROL_NET"
+    ],
+    [
+      507,
+      71,
+      0,
+      190,
+      3,
+      "IMAGE"
+    ],
+    [
+      508,
+      49,
+      1,
+      191,
+      0,
+      "CLIP"
+    ],
+    [
+      509,
+      191,
+      0,
+      190,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      510,
+      60,
+      0,
+      190,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      512,
+      193,
+      0,
+      190,
+      5,
+      "FLOAT"
+    ],
+    [
+      513,
+      192,
+      0,
+      190,
+      6,
+      "FLOAT"
+    ],
+    [
+      514,
+      1,
+      0,
+      178,
+      1,
+      "IMAGE"
+    ],
+    [
+      515,
+      184,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      516,
+      195,
+      0,
+      194,
+      0,
+      "INT"
+    ],
+    [
+      518,
+      60,
+      0,
+      194,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      519,
+      190,
+      0,
+      194,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      520,
+      194,
+      0,
+      81,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      523,
+      196,
+      0,
+      198,
+      0,
+      "INT"
+    ],
+    [
+      525,
+      199,
+      0,
+      198,
+      1,
+      "INT"
+    ],
+    [
+      526,
+      200,
+      0,
+      198,
+      2,
+      "INT"
+    ],
+    [
+      527,
+      198,
+      0,
+      185,
+      3,
+      "INT"
+    ],
+    [
+      528,
+      187,
+      0,
+      201,
+      0,
+      "STRING"
+    ],
+    [
+      529,
+      152,
+      0,
+      202,
+      0,
+      "STRING"
+    ],
+    [
+      530,
       172,
       0,
       2,
@@ -6644,15 +6530,7 @@
       "IMAGE"
     ],
     [
-      489,
-      36,
-      0,
-      40,
-      0,
-      "IMAGE"
-    ],
-    [
-      490,
+      531,
       47,
       0,
       45,
@@ -6660,7 +6538,7 @@
       "INT"
     ],
     [
-      491,
+      532,
       47,
       0,
       49,
@@ -6668,7 +6546,15 @@
       "INT"
     ],
     [
-      492,
+      533,
+      90,
+      0,
+      91,
+      1,
+      "VAE"
+    ],
+    [
+      534,
       47,
       0,
       93,
@@ -6676,7 +6562,15 @@
       "INT"
     ],
     [
-      493,
+      535,
+      90,
+      0,
+      95,
+      1,
+      "VAE"
+    ],
+    [
+      536,
       47,
       0,
       131,
@@ -6684,7 +6578,7 @@
       "INT"
     ],
     [
-      494,
+      537,
       47,
       0,
       138,
@@ -6692,12 +6586,260 @@
       "INT"
     ],
     [
-      495,
+      538,
       47,
       0,
       140,
       1,
       "INT"
+    ],
+    [
+      539,
+      90,
+      0,
+      190,
+      4,
+      "VAE"
+    ],
+    [
+      540,
+      172,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      541,
+      47,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      542,
+      47,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      543,
+      90,
+      0,
+      91,
+      1,
+      "VAE"
+    ],
+    [
+      544,
+      47,
+      0,
+      93,
+      0,
+      "INT"
+    ],
+    [
+      545,
+      90,
+      0,
+      95,
+      1,
+      "VAE"
+    ],
+    [
+      546,
+      47,
+      0,
+      131,
+      0,
+      "INT"
+    ],
+    [
+      547,
+      47,
+      0,
+      138,
+      1,
+      "INT"
+    ],
+    [
+      548,
+      47,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      549,
+      90,
+      0,
+      190,
+      4,
+      "VAE"
+    ],
+    [
+      550,
+      172,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      551,
+      47,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      552,
+      47,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      553,
+      90,
+      0,
+      91,
+      1,
+      "VAE"
+    ],
+    [
+      554,
+      47,
+      0,
+      93,
+      0,
+      "INT"
+    ],
+    [
+      555,
+      90,
+      0,
+      95,
+      1,
+      "VAE"
+    ],
+    [
+      556,
+      47,
+      0,
+      131,
+      0,
+      "INT"
+    ],
+    [
+      557,
+      47,
+      0,
+      138,
+      1,
+      "INT"
+    ],
+    [
+      558,
+      47,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      559,
+      90,
+      0,
+      190,
+      4,
+      "VAE"
+    ],
+    [
+      560,
+      172,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      561,
+      47,
+      0,
+      45,
+      2,
+      "INT"
+    ],
+    [
+      562,
+      47,
+      0,
+      49,
+      2,
+      "INT"
+    ],
+    [
+      563,
+      90,
+      0,
+      91,
+      1,
+      "VAE"
+    ],
+    [
+      564,
+      47,
+      0,
+      93,
+      0,
+      "INT"
+    ],
+    [
+      565,
+      90,
+      0,
+      95,
+      1,
+      "VAE"
+    ],
+    [
+      566,
+      47,
+      0,
+      131,
+      0,
+      "INT"
+    ],
+    [
+      567,
+      47,
+      0,
+      138,
+      1,
+      "INT"
+    ],
+    [
+      568,
+      47,
+      0,
+      140,
+      1,
+      "INT"
+    ],
+    [
+      569,
+      90,
+      0,
+      190,
+      4,
+      "VAE"
     ]
   ],
   "groups": [],
