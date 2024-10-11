@@ -50,6 +50,10 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+### 2024/10/11
+
+- ComfyUI の [10/8 の更新](https://github.com/comfyanonymous/ComfyUI/commit/614377abd6c018dec4aeb5700c0e203e2f91f9b0) で ComfyUI-Impact-Pack の ImpactSwitch ノードが正常に読み込めなくなったため、[10/7 版](https://github.com/comfyanonymous/ComfyUI/commit/8dfa0cc55242f9519424cd97fbe2f420798d56da) に巻き戻しました。
+
 ### 2024/09/30
 
 - `61-Flux書き換えアップスケール` ワークフローを追加し、ドキュメントに『[全自動 Flux 書き換えアップスケール](https://github.com/Zuntan03/EasyForge/wiki/%E5%85%A8%E8%87%AA%E5%8B%95-Flux-%E6%9B%B8%E3%81%8D%E6%8F%9B%E3%81%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB)』を追記しました。
