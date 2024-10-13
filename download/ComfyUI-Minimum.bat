@@ -21,9 +21,10 @@ call %~dp0all\ESRGAN.bat
 
 call %~dp0ComfyUI\llm_gguf\Llama-3.1-8B-EZO-1.1-it-Q4_K_M.bat
 
-@REM call %~dp0ControlNet\Flux\alimama-InpaintingAlpha.bat
+@REM call %~dp0ControlNet\Flux\alimama-InpaintingBeta.bat
 call %~dp0ControlNet\Flux\jasperai-Upscaler.bat
 
+@REM call %~dp0Lora\FluxD-Util\FLUX.1-Turbo-Alpha-8steps
 call %~dp0Lora\FluxD-Util\Hyper-FLUX.1-dev-8steps-lora.bat
 
 call %~dp0Stable-diffusion\FluxD-Anime\fca_style-v33-x10-8step-Q4_K_S.bat

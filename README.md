@@ -50,6 +50,19 @@ Flux を試してみたい方向けのインストール方法です。
 **ComfyUI を更新したい場合も、Forge の更新と同様に `Update.bat` で更新してください。**  
 `ComfyUI-Update.bat` は `Update.bat` 後に正常動作します。
 
+### 2024/10/13
+
+- ComfyUI で [NegPip](https://github.com/pamparamm/ComfyUI-ppm) に対応し、Flux でマイナスのプロンプトを使えるようにしました。
+  - ワークフローの `01-日本語LLMでFlux`, `41-自動検出書き換えで手直しやディティールアップ`, `42-範囲指定書き換えで手直しやディティールアップ`, `61-Flux書き換えアップスケール` で対応しています。
+
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip0-Originalx3m.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip1_Photox3m.webp)|
+|:-:|:-:|
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip2_Japanesex3m.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip3_NegAnimex3m.webp)|
+
+ワークフロー付き画像
+|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip0-Original.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip1_Photo.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip2_Japanese.webp)|![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyForge/log2410/NegPip3_NegAnime.webp)|
+|:-:|:-:|:-:|:-:|
+
 ### 2024/10/11
 
 - ComfyUI の [10/8 の更新](https://github.com/comfyanonymous/ComfyUI/commit/614377abd6c018dec4aeb5700c0e203e2f91f9b0) で ComfyUI-Impact-Pack の ImpactSwitch ノードが正常に読み込めなくなったため、[10/7 版](https://github.com/comfyanonymous/ComfyUI/commit/8dfa0cc55242f9519424cd97fbe2f420798d56da) に巻き戻しました。

@@ -1,6 +1,6 @@
 {
-  "last_node_id": 296,
-  "last_link_id": 672,
+  "last_node_id": 297,
+  "last_link_id": 684,
   "nodes": [
     {
       "id": 6,
@@ -16,7 +16,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 57,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -66,7 +66,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 66,
+      "order": 67,
       "mode": 0,
       "inputs": [
         {
@@ -147,7 +147,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 64,
+      "order": 65,
       "mode": 0,
       "inputs": [
         {
@@ -219,7 +219,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 26,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -255,7 +255,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 52,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -314,7 +314,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 62,
+      "order": 63,
       "mode": 0,
       "inputs": [
         {
@@ -360,7 +360,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 1,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -406,7 +406,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 60,
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
@@ -447,7 +447,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 40,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -501,7 +501,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 47,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -556,16 +556,16 @@
       "type": "DualCLIPLoaderGGUF",
       "pos": {
         "0": 640,
-        "1": -60
+        "1": -50
       },
-      "size": {
-        "0": 300,
-        "1": 120
-      },
+      "size": [
+        280,
+        110
+      ],
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 33,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -573,8 +573,8 @@
           "name": "CLIP",
           "type": "CLIP",
           "links": [
-            332,
-            651
+            651,
+            675
           ],
           "slot_index": 0,
           "shape": 3
@@ -604,18 +604,18 @@
         "1": 384
       },
       "flags": {},
-      "order": 42,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 530
+          "link": 674
         },
         {
           "name": "clip",
           "type": "CLIP",
-          "link": 332
+          "link": 676
         },
         {
           "name": "seed",
@@ -685,15 +685,15 @@
       "id": 45,
       "type": "Seed (rgthree)",
       "pos": {
-        "0": 1030,
-        "1": -80
+        "0": 1090,
+        "1": -70
       },
       "size": {
         "0": 210,
         "1": 130
       },
       "flags": {},
-      "order": 20,
+      "order": 34,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -734,7 +734,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 54,
+      "order": 55,
       "mode": 0,
       "inputs": [
         {
@@ -809,7 +809,7 @@
         "1": 528
       },
       "flags": {},
-      "order": 2,
+      "order": 3,
       "mode": 0,
       "inputs": [
         {
@@ -851,7 +851,7 @@
       "id": 84,
       "type": "Anything Everywhere?",
       "pos": {
-        "0": 1260,
+        "0": 1330,
         "1": -90
       },
       "size": {
@@ -861,7 +861,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 41,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -979,7 +979,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 65,
+      "order": 66,
       "mode": 0,
       "inputs": [
         {
@@ -1029,7 +1029,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 67,
+      "order": 68,
       "mode": 0,
       "inputs": [
         {
@@ -1101,7 +1101,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
@@ -1168,7 +1168,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1204,7 +1204,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1280,7 +1280,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1311,7 +1311,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1425,7 +1425,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1458,7 +1458,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1491,7 +1491,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 10,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1522,7 +1522,7 @@
         "1": 64
       },
       "flags": {},
-      "order": 32,
+      "order": 11,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1560,7 +1560,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 44,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -1596,7 +1596,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 24,
+      "order": 32,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1604,7 +1604,7 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            530
+            673
           ],
           "slot_index": 0,
           "shape": 3
@@ -1637,7 +1637,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 9,
+      "order": 12,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1675,7 +1675,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 71,
+      "order": 72,
       "mode": 0,
       "inputs": [
         {
@@ -1719,7 +1719,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 73,
+      "order": 74,
       "mode": 0,
       "inputs": [
         {
@@ -1763,7 +1763,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 63,
+      "order": 64,
       "mode": 0,
       "inputs": [
         {
@@ -1810,7 +1810,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 48,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -1875,7 +1875,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 69,
+      "order": 70,
       "mode": 0,
       "inputs": [
         {
@@ -1918,7 +1918,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 70,
+      "order": 71,
       "mode": 0,
       "inputs": [
         {
@@ -1990,7 +1990,7 @@
         "1": 850
       },
       "flags": {},
-      "order": 10,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -2020,7 +2020,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 68,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -2056,7 +2056,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 79,
+      "order": 80,
       "mode": 0,
       "inputs": [
         {
@@ -2090,7 +2090,7 @@
         "1": 960
       },
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -2117,14 +2117,14 @@
         "0": 2520,
         "1": 770
       },
-      "size": [
-        240,
-        170
-      ],
+      "size": {
+        "0": 240,
+        "1": 170
+      },
       "flags": {
         "collapsed": true
       },
-      "order": 58,
+      "order": 59,
       "mode": 0,
       "inputs": [
         {
@@ -2201,7 +2201,7 @@
         "1": 520
       },
       "flags": {},
-      "order": 59,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -2231,7 +2231,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 25,
+      "order": 15,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2271,7 +2271,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 74,
+      "order": 75,
       "mode": 0,
       "inputs": [
         {
@@ -2345,7 +2345,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 43,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -2383,7 +2383,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 31,
+      "order": 16,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2421,7 +2421,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 22,
+      "order": 17,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2454,7 +2454,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 12,
+      "order": 18,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2491,7 +2491,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 78,
+      "order": 79,
       "mode": 0,
       "inputs": [
         {
@@ -2530,7 +2530,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 61,
+      "order": 62,
       "mode": 0,
       "inputs": [
         {
@@ -2572,7 +2572,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 13,
+      "order": 19,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2611,7 +2611,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 14,
+      "order": 20,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2651,7 +2651,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 15,
+      "order": 21,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2691,7 +2691,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 16,
+      "order": 22,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2729,7 +2729,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 38,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -2799,7 +2799,7 @@
         "1": 520
       },
       "flags": {},
-      "order": 55,
+      "order": 56,
       "mode": 0,
       "inputs": [
         {
@@ -2829,7 +2829,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 17,
+      "order": 24,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -2870,7 +2870,7 @@
         "1": 70
       },
       "flags": {},
-      "order": 18,
+      "order": 25,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -2896,7 +2896,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 75,
+      "order": 76,
       "mode": 0,
       "inputs": [
         {
@@ -2940,7 +2940,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 72,
+      "order": 73,
       "mode": 0,
       "inputs": [
         {
@@ -2984,7 +2984,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 76,
+      "order": 77,
       "mode": 0,
       "inputs": [
         {
@@ -3021,7 +3021,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 30,
+      "order": 26,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3059,7 +3059,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 33,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -3102,7 +3102,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 45,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -3224,7 +3224,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 19,
+      "order": 29,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3260,7 +3260,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 29,
+      "order": 30,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3298,7 +3298,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 51,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -3372,7 +3372,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 34,
+      "order": 31,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -3409,7 +3409,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 56,
+      "order": 57,
       "mode": 0,
       "inputs": [
         {
@@ -3483,7 +3483,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 50,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -3557,7 +3557,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 39,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
@@ -3631,7 +3631,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 77,
+      "order": 78,
       "mode": 0,
       "inputs": [
         {
@@ -3697,14 +3697,14 @@
         "0": 2220,
         "1": 440
       },
-      "size": [
-        200,
-        50
-      ],
+      "size": {
+        "0": 200,
+        "1": 50
+      },
       "flags": {
         "collapsed": true
       },
-      "order": 49,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -3725,8 +3725,8 @@
           "links": [
             663
           ],
-          "shape": 3,
-          "slot_index": 0
+          "slot_index": 0,
+          "shape": 3
         }
       ],
       "title": "対中断OoM UnloadModel",
@@ -3734,6 +3734,58 @@
         "Node name for S&R": "UnloadModel"
       },
       "widgets_values": []
+    },
+    {
+      "id": 297,
+      "type": "CLIPNegPip",
+      "pos": {
+        "0": 940,
+        "1": -50
+      },
+      "size": [
+        140,
+        50
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 673
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 675
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            674
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            676
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPNegPip"
+      }
     }
   ],
   "links": [
@@ -4008,14 +4060,6 @@
       57,
       0,
       "INT"
-    ],
-    [
-      332,
-      39,
-      0,
-      43,
-      1,
-      "CLIP"
     ],
     [
       357,
@@ -4296,14 +4340,6 @@
       180,
       0,
       "UPSCALE_MODEL"
-    ],
-    [
-      530,
-      155,
-      0,
-      43,
-      0,
-      "MODEL"
     ],
     [
       532,
@@ -5011,6 +5047,102 @@
     ],
     [
       672,
+      45,
+      0,
+      281,
+      2,
+      "INT"
+    ],
+    [
+      673,
+      155,
+      0,
+      297,
+      0,
+      "MODEL"
+    ],
+    [
+      674,
+      297,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      675,
+      39,
+      0,
+      297,
+      1,
+      "CLIP"
+    ],
+    [
+      676,
+      297,
+      1,
+      43,
+      1,
+      "CLIP"
+    ],
+    [
+      677,
+      45,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      678,
+      45,
+      0,
+      43,
+      2,
+      "INT"
+    ],
+    [
+      679,
+      45,
+      0,
+      57,
+      0,
+      "INT"
+    ],
+    [
+      680,
+      45,
+      0,
+      99,
+      1,
+      "INT"
+    ],
+    [
+      681,
+      8,
+      0,
+      204,
+      0,
+      "IMAGE"
+    ],
+    [
+      682,
+      241,
+      0,
+      209,
+      0,
+      "IMAGE"
+    ],
+    [
+      683,
+      45,
+      0,
+      211,
+      1,
+      "INT"
+    ],
+    [
+      684,
       45,
       0,
       281,

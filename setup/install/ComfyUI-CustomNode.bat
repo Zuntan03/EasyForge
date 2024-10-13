@@ -72,6 +72,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_UPDATE ltdrdata ComfyUI-Manager main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/pamparamm/ComfyUI-ppm
+call :GITHUB_UPDATE pamparamm ComfyUI-ppm master
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM GGUF model_name
 @REM @REM https://github.com/receyuki/comfyui-prompt-reader-node
 @REM call :GITHUB_UPDATE receyuki comfyui-prompt-reader-node main
